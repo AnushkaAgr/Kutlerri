@@ -1,0 +1,27 @@
+/* [project]/app/avantgarde_71982880.module.css [app-client] (css) */
+@font-face {
+  font-family: avantGarde;
+  src: url("../media/AVGARDD2-s.p.160318a1.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: avantGarde Fallback;
+  src: local(Arial);
+  ascent-override: 90.4%;
+  descent-override: 22.3%;
+  line-gap-override: 0.0%;
+  size-adjust: 105.76%;
+}
+
+.avantgarde_71982880-module__aOAIva__className {
+  font-family: avantGarde, avantGarde Fallback;
+}
+
+.avantgarde_71982880-module__aOAIva__variable {
+  --font-avantgarde: "avantGarde", "avantGarde Fallback";
+}
+
+/*# sourceMappingURL=app_avantgarde_71982880_module_css_bad6b30c._.single.css.map*/

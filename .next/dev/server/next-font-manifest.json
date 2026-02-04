@@ -1,0 +1,19 @@
+{
+  "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/Gotham_Book-s.p.a141cde0.otf",
+      "static/media/Gotham_Medium-s.p.ca900f66.otf",
+      "static/media/Gotham_Bold-s.p.cee12252.otf",
+      "static/media/AVGARDD2-s.p.160318a1.woff"
+    ],
+    "[project]/app/page": [
+      "static/media/Gotham_Book-s.p.a141cde0.otf",
+      "static/media/Gotham_Medium-s.p.ca900f66.otf",
+      "static/media/Gotham_Bold-s.p.cee12252.otf",
+      "static/media/AVGARDD2-s.p.160318a1.woff"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

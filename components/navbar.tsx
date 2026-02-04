@@ -198,13 +198,13 @@ const [scrolled, setScrolled] = useState(false)
       </AnimatePresence>
 
       {/* TABLET + MOBILE SIMPLE DROPDOWN */}
-      {desktopProductsOpen && (
+  {mobileMenuOpen && (
   <div className="lg:hidden fixed top-[108px] left-0 right-0 bg-[#381D7D]/95 backdrop-blur-md z-40 p-6">
 
     {/* Products */}
     <button
       onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-      className="w-full flex justify-between items-center text-white font-gotham py-3"
+      className="w-full flex justify-between items-center text-white py-3"
     >
       Products
       <ChevronDown
@@ -213,7 +213,6 @@ const [scrolled, setScrolled] = useState(false)
       />
     </button>
 
-    {/* underline */}
     <div className="h-px bg-white/20" />
 
     {/* Products submenu */}
@@ -228,28 +227,26 @@ const [scrolled, setScrolled] = useState(false)
         <Link href="/products/business-expansion" className="block text-white/80">
           Business Expansion
         </Link>
-         {/* underline */}
-    <div className="h-px bg-white/20 my-3" />
+         <div className="h-px bg-white/20 my-3" />
       </div>
+      
+      
     )}
 
    
 
-    {/* Resources */}
-    <Link href="#resources" className="block text-white font-gotham py-2">
+    <Link href="#resources" className="block text-white py-2">
       Resources
     </Link>
 
-    {/* underline */}
     <div className="h-px bg-white/20 my-3" />
 
-    {/* Company */}
-    <Link href="#company" className="block text-white font-gotham py-2">
+    <Link href="#company" className="block text-white py-2">
       Company
     </Link>
-
   </div>
 )}
+
 
     </>
   )

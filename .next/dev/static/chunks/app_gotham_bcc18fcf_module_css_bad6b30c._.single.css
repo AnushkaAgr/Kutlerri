@@ -1,0 +1,43 @@
+/* [project]/app/gotham_bcc18fcf.module.css [app-client] (css) */
+@font-face {
+  font-family: gotham;
+  src: url("../media/Gotham_Book-s.p.a141cde0.otf") format("opentype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: gotham;
+  src: url("../media/Gotham_Medium-s.p.ca900f66.otf") format("opentype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: gotham;
+  src: url("../media/Gotham_Bold-s.p.cee12252.otf") format("opentype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: gotham Fallback;
+  src: local(Arial);
+  ascent-override: 70.47%;
+  descent-override: 17.62%;
+  line-gap-override: 17.62%;
+  size-adjust: 113.52%;
+}
+
+.gotham_bcc18fcf-module__G5ih0a__className {
+  font-family: gotham, gotham Fallback;
+}
+
+.gotham_bcc18fcf-module__G5ih0a__variable {
+  --font-gotham: "gotham", "gotham Fallback";
+}
+
+/*# sourceMappingURL=app_gotham_bcc18fcf_module_css_bad6b30c._.single.css.map*/
