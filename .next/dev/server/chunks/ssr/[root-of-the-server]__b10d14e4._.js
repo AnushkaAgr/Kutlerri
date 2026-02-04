@@ -901,7 +901,7 @@ function Hero() {
                                             y: -40
                                         },
                                         transition: {
-                                            duration: 1,
+                                            duration: 3,
                                             ease: [
                                                 0.22,
                                                 1,
