@@ -147,7 +147,7 @@ export function Hero() {
             </AnimatePresence>
           </div>
 
-          {/* BOTTOM-RIGHT : Description + Button */}
+          {/* BOTTOM-LEFT : Description + Button */}
           <div
             className="
               pb-16
@@ -156,14 +156,13 @@ export function Hero() {
               lg:pb-28
               xl:pb-32
               text-center
-              lg:text-right
-              ml-auto
+              lg:text-left
               max-w-full
-              lg:max-w-xl
+              lg:max-w-2xl
               flex
               flex-col
               items-center
-              lg:items-end
+              lg:items-start
               gap-6
             "
           >
@@ -178,12 +177,14 @@ export function Hero() {
                   text-white
                   font-gotham
                   leading-relaxed
-                  text-sm
-                  sm:text-base
-                  md:text-lg
-                  lg:text-xl
-                  xl:text-2xl
+                  text-xs
+                  sm:text-sm
+                  md:text-base
+                  lg:text-lg
+                  xl:text-xl
                   text-balance
+                  [zoom:0.95]
+                  lg:[zoom:1]
                 "
               >
                 {heroSlides[index].description}
