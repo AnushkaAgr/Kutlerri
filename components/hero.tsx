@@ -101,19 +101,18 @@ export function Hero() {
       {/* Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1E0758]/5 to-[#1E0758]" />
 
-      <div className="relative z-10 scale-100 md:scale-[0.9] origin-top">
+      <div className="relative z-10">
 
         {/* HERO */}
-        <div className="relative flex flex-col lg:flex min-h-screen px-6 sm:px-8 md:px-12 lg:px-[72px] pt-24 lg:pt-0 md:pt-32 mb-24">
+        <div className="relative min-h-screen px-6 sm:px-8 md:px-10 lg:px-16 xl:px-20 pt-32 sm:pt-32 md:pt-40 lg:pt-24 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
 
           {/* LEFT : Heading */}
           <div
             className="
-              relative
+              w-full
+              lg:w-1/2
+              flex-shrink-0
               text-center
-              max-w-full
-              mx-auto
-              lg:absolute lg:left-0 lg:top-[250px] lg:pl-[100px] lg:max-w-[800px]
               lg:text-left
             "
           >
@@ -129,11 +128,15 @@ export function Hero() {
                   font-avant
                   font-[700]
                   tracking-[-1px]
-                  leading-[108.905%]
-                  text-[28px]
-                  sm:text-[34px]
-                  md:text-[42px]
-                  lg:text-[58px]
+                  leading-[1.15]
+                  text-3xl
+                  sm:text-4xl
+                  md:text-5xl
+                  lg:text-6xl
+                  xl:text-7xl
+                  text-balance
+                  mb-8
+                  lg:mb-0
                 "
                 style={{ fontVariantNumeric: "slashed-zero" }}
               >
@@ -145,12 +148,15 @@ export function Hero() {
           {/* RIGHT : Description + Button */}
           <div
             className="
-              mt-10
+              w-full
+              lg:w-1/2
+              flex-shrink-0
               text-center
-              max-w-full
-              mx-auto
-              lg:ml-[900px] lg:max-w-[600px] lg:mt-[400px]
               lg:text-left
+              flex
+              flex-col
+              items-center
+              lg:items-start
             "
           >
             <AnimatePresence mode="wait">
@@ -164,11 +170,15 @@ export function Hero() {
                   text-white
                   font-gotham
                   leading-relaxed
-                  mb-6
-                  text-[15px]
-                  sm:text-[16px]
-                  md:text-[18px]
-                  lg:text-[22px]
+                  mb-8
+                  text-sm
+                  sm:text-base
+                  md:text-lg
+                  lg:text-xl
+                  xl:text-2xl
+                  max-w-full
+                  lg:max-w-lg
+                  text-balance
                 "
               >
                 {heroSlides[index].description}
@@ -177,18 +187,23 @@ export function Hero() {
 
             <button
               className="
-                h-[44px]
-                sm:h-[48px]
-                px-[32px]
-                sm:px-[42px]
+                h-11
+                sm:h-12
+                md:h-13
+                px-8
+                sm:px-10
+                md:px-12
                 rounded-full
                 bg-[#9F7CEF]
                 text-white
-                text-[14px]
-                sm:text-[15px]
-                lg:text-[16px]
+                text-sm
+                sm:text-base
+                md:text-lg
                 transition
-                hover:scale-[1.05]
+                hover:scale-105
+                hover:bg-opacity-90
+                active:scale-95
+                whitespace-nowrap
               "
             >
               Get a Demo
