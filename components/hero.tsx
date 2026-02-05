@@ -147,7 +147,7 @@ export function Hero() {
             </AnimatePresence>
           </div>
 
-          {/* BOTTOM-LEFT : Description + Button */}
+          {/* BOTTOM-RIGHT : Description + Button */}
           <div
             className="
               pb-16
@@ -159,10 +159,11 @@ export function Hero() {
               lg:text-left
               max-w-full
               lg:max-w-2xl
+              ml-auto
               flex
               flex-col
               items-center
-              lg:items-start
+              lg:items-end
               gap-6
             "
           >
@@ -183,6 +184,7 @@ export function Hero() {
                   lg:text-lg
                   xl:text-xl
                   text-balance
+                  text-left
                   [zoom:0.95]
                   lg:[zoom:1]
                 "
