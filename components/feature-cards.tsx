@@ -37,7 +37,7 @@ export function FeatureCards() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="relative z-20 pb-32 overflow-hidden">
+    <section ref={ref} className="relative z-20 pb-32 overflow-hidden pt-24 md:pt-32 lg:pt-40">
 
       {/* ✅ Smooth background blend */}
       <div className="absolute inset-0 bg-gradient-to-b 
@@ -46,8 +46,8 @@ export function FeatureCards() {
         to-[#1E0758]" 
       />
 
-      <div className="relative z-10 mx-auto max-w-[1700px] px-[24px] md:px-[64px] lg:px-[132px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] justify-items-center">
+      <div className="relative z-10 mx-auto max-w-[1700px] px-6 sm:px-8 md:px-12 lg:px-[132px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-[20px] justify-items-center">
 
           {features.map((feature, index) => (
             <motion.div
@@ -64,9 +64,11 @@ export function FeatureCards() {
               <div
                 className="
                   relative
-                  w-full max-w-[470px] min-h-[520px]
+                  w-full max-w-[470px] min-h-[500px]
                   flex flex-col justify-between
-                  p-8
+                  p-6
+                  sm:p-7
+                  md:p-8
                   rounded-[7.469px]
                   backdrop-blur-[12px]
                   bg-[linear-gradient(180deg,rgba(31,29,34,0.82)_0%,rgba(42,18,102,0.82)_100%)]
@@ -91,7 +93,7 @@ export function FeatureCards() {
                   
                   {/* Header */}
                   <div>
-                    <div className="flex items-center gap-6 mb-4">
+                    <div className="flex items-center gap-4 sm:gap-5 md:gap-6 mb-3 sm:mb-4">
                       <Image
                         src={PointerIcon}
                         alt="pointer"
@@ -104,26 +106,29 @@ export function FeatureCards() {
                         className="
                           text-white
                           font-avant
-                          text-[28px]
+                          text-xl
+                          sm:text-2xl
+                          md:text-[28px]
                           font-[500]
                           tracking-[-0.6px]
+                          line-clamp-2
                         "
                       >
                         {feature.title}
                       </h2>
                     </div>
 
-                    <p className="text-purple-300 text-[20px] leading-relaxed mb-6">
+                    <p className="text-purple-300 text-sm sm:text-base md:text-lg lg:text-[20px] leading-relaxed mb-3 sm:mb-4">
                       {feature.description}
                     </p>
                   </div>
 
                   {/* Image below description */}
-                  <div className="flex justify-center my-6">
+                  <div className="flex justify-center mt-4 sm:mt-5 md:mt-6">
                     <Image
                       src={feature.image}
                       alt={feature.title}
-                      className="object-contain"
+                      className="object-contain w-full h-auto max-h-56 sm:max-h-64 md:max-h-72 lg:max-h-80"
                     />
                   </div>
 
