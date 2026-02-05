@@ -104,16 +104,20 @@ export function Hero() {
       <div className="relative z-10">
 
         {/* HERO */}
-        <div className="relative min-h-screen px-6 sm:px-8 md:px-10 lg:px-16 xl:px-20 pt-32 sm:pt-32 md:pt-40 lg:pt-24 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
+        <div className="relative min-h-screen px-6 sm:px-8 md:px-10 lg:px-16 xl:px-20 flex flex-col justify-between">
 
-          {/* LEFT : Heading */}
+          {/* TOP : Heading */}
           <div
             className="
-              w-full
-              lg:w-1/2
-              flex-shrink-0
+              pt-24
+              sm:pt-28
+              md:pt-32
+              lg:pt-24
+              xl:pt-32
               text-center
               lg:text-left
+              max-w-full
+              lg:max-w-2xl
             "
           >
             <AnimatePresence mode="wait">
@@ -135,8 +139,6 @@ export function Hero() {
                   lg:text-6xl
                   xl:text-7xl
                   text-balance
-                  mb-8
-                  lg:mb-0
                 "
                 style={{ fontVariantNumeric: "slashed-zero" }}
               >
@@ -145,18 +147,24 @@ export function Hero() {
             </AnimatePresence>
           </div>
 
-          {/* RIGHT : Description + Button */}
+          {/* BOTTOM-RIGHT : Description + Button */}
           <div
             className="
-              w-full
-              lg:w-1/2
-              flex-shrink-0
+              pb-16
+              sm:pb-20
+              md:pb-24
+              lg:pb-28
+              xl:pb-32
               text-center
-              lg:text-left
+              lg:text-right
+              ml-auto
+              max-w-full
+              lg:max-w-xl
               flex
               flex-col
               items-center
-              lg:items-start
+              lg:items-end
+              gap-6
             "
           >
             <AnimatePresence mode="wait">
@@ -170,14 +178,11 @@ export function Hero() {
                   text-white
                   font-gotham
                   leading-relaxed
-                  mb-8
                   text-sm
                   sm:text-base
                   md:text-lg
                   lg:text-xl
                   xl:text-2xl
-                  max-w-full
-                  lg:max-w-lg
                   text-balance
                 "
               >

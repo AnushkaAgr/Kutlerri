@@ -37,7 +37,7 @@ export function FeatureCards() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="relative -mt-[160px] z-20 pb-32 overflow-hidden">
+    <section ref={ref} className="relative z-20 pb-32 overflow-hidden">
 
       {/* ✅ Smooth background blend */}
       <div className="absolute inset-0 bg-gradient-to-b 
