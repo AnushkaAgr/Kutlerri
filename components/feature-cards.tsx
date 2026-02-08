@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import Image from "next/image"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
-import PointerIcon from "../public/images/HomePage/Pointer.png"
-import CardPattern from "../public/images/HomePage/CardPattern.png"
+import PointerIcon from "../public/images/HomePage/Pointer.png";
+import CardPattern from "../public/images/HomePage/CardPattern.png";
 
-import Img1 from "../public/images/HomePage/RevenueGrowthSuite.png"
-import Img2 from "../public/images/HomePage/Cost ControlCo-Pilot.png"
-import Img3 from "../public/images/HomePage/Business Expansio Co-Pilot.png"
+import Img1 from "../public/images/HomePage/RevenueGrowthSuite.png";
+import Img2 from "../public/images/HomePage/CostControlSuite.png";
+import Img3 from "../public/images/HomePage/BusinessExpansionSuite.png";
 
 const features = [
   {
@@ -30,110 +30,93 @@ const features = [
       "Helps guide smarter restaurant expansion decisions using real-time analytics.",
     image: Img3,
   },
-]
+];
 
 export function FeatureCards() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative -mt-[160px] z-20 pb-32 overflow-hidden">
-
-      {/* ✅ Smooth background blend */}
-      <div className="absolute inset-0 bg-gradient-to-b 
-        from-transparent 
-        via-[#1E0758]/60 
-        to-[#1E0758]" 
-      />
-
-      <div className="relative z-10 mx-auto max-w-[1700px] px-[24px] md:px-[64px] lg:px-[132px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] justify-items-center">
-
+    <section
+      ref={ref}
+      className="relative -mt-[220px] z-20 pb-28 overflow-hidden"
+    >
+      <div className="relative mx-auto max-w-[1700px] px-6 md:px-16 lg:px-[132px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
           {features.map((feature, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 80 }}
+              key={feature.title}
+              initial={{ opacity: 0, y: 60 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{
-                duration: 0.6,
-                delay: index * 0.15,
+                duration: 0.5,
+                delay: index * 0.12,
                 ease: "easeOut",
               }}
               className="w-full flex justify-center"
             >
+              {/* Card */}
               <div
                 className="
                   relative
-                  w-full max-w-[470px] min-h-[520px]
+                  w-full max-w-[460px] min-h-[440px]
+                  px-6 py-5
                   flex flex-col justify-between
-                  p-8
-                  rounded-[7.469px]
+                  rounded-lg
                   backdrop-blur-[12px]
                   bg-[linear-gradient(180deg,rgba(31,29,34,0.82)_0%,rgba(42,18,102,0.82)_100%)]
-                  shadow-[0_4.268px_4.268px_rgba(0,0,0,0.25)]
                   border border-white/10
+                  shadow-[0_8px_30px_rgba(0,0,0,0.35)]
                   transition-all duration-300
-                  hover:border-purple-400/50
-                  hover:shadow-[0_0_30px_rgba(124,92,255,0.25)]
+                  hover:border-purple-400/40
+                  hover:shadow-[0_0_28px_rgba(124,92,255,0.22)]
                   overflow-hidden
                 "
               >
-                {/* Pattern Overlay */}
+                {/* Subtle pattern overlay */}
                 <Image
                   src={CardPattern}
-                  alt="pattern"
+                  alt=""
                   fill
-                  className="object-cover opacity-20"
+                  className="object-cover opacity-[0.15]"
                 />
 
-                {/* Content */}
                 <div className="relative z-10 flex flex-col justify-between h-full">
-                  
-                  {/* Header */}
+                  {/* Header + text */}
                   <div>
-                    <div className="flex items-center gap-6 mb-4">
+                    <div className="flex items-center gap-3 mb-2">
                       <Image
                         src={PointerIcon}
-                        alt="pointer"
-                        width={16}
-                        height={16}
-                        className="shrink-0"
+                        alt=""
+                        width={14}
+                        height={14}
+                        className="shrink-0 opacity-80"
                       />
 
-                      <h2
-                        className="
-                          text-white
-                          font-avant
-                          text-[28px]
-                          font-[500]
-                          tracking-[-0.6px]
-                        "
-                      >
+                      <h3 className="text-white font-avant text-[22px] font-medium tracking-[-0.3px]">
                         {feature.title}
-                      </h2>
+                      </h3>
                     </div>
 
-                    <p className="text-purple-300 text-[20px] leading-relaxed mb-6">
+                    <p className="text-purple-300 text-[16px] leading-[1.65]">
                       {feature.description}
                     </p>
                   </div>
 
-                  {/* Image below description */}
-                  <div className="flex justify-center my-6">
+                  {/* Illustration */}
+                  <div className="flex justify-center mt-4">
                     <Image
                       src={feature.image}
                       alt={feature.title}
-                      className="object-contain"
+                      className="object-contain max-h-[190px]"
                     />
                   </div>
-
                 </div>
               </div>
             </motion.div>
           ))}
-
         </div>
       </div>
     </section>
-  )
+  );
 }
