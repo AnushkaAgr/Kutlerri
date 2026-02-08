@@ -83,7 +83,7 @@ export function AgentSection({ agents }: AgentSectionProps) {
   }
 
   return (
-    <section ref={sectionRef} className="relative bg-[#F6F0FF] rounded-[40px] py-16 px-6 w-full  pt-40">
+    <section ref={sectionRef} className="relative bg-[#F6F0FF] rounded-t-[40px] py-16 px-6 w-full  pt-40">
       <div className="mx-auto max-w-[1700px]">
         <div className="flex gap-5">
 
@@ -117,69 +117,68 @@ export function AgentSection({ agents }: AgentSectionProps) {
           </div>
 
 
-          {/* CONTENT */}
+
           {/* CONTENT */}
           <div className="flex-1 space-y-16 md:space-y-32">
             {agents.map((a) => (
               <motion.div
                 key={a.id}
-                className="bg-gradient-to-b from-[#F3ECFE] to-[#E2D5FF] 
-                 p-6 md:p-10 rounded-[10px]"
+                className="bg-gradient-to-b from-[#F3ECFE] to-[#E2D5FF] p-6 md:p-10 rounded-[10px]"
               >
                 {/* TOP */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-10 md:mb-16">
+                <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-10 md:mb-16">
 
                   <div>
                     <h2 className="font-avant tracking-[-0.916px] text-[#300B60] 
-                         text-[22px] md:text-[30.545px] font-bold mb-3 md:mb-4">
+                         text-[24px] md:text-[30.545px] font-bold mb-3 md:mb-4">
                       {a.title}
                     </h2>
-                    <p className="text-sm md:text-lg text-[#2E312E]/60 max-w-xl">
+                    <p className="text-base md:text-lg text-[#2E312E]/60 max-w-xl leading-relaxed">
                       {a.description}
                     </p>
                   </div>
 
                   {/* IMAGE */}
-                  <div className="bg-white rounded-2xl shadow p-3 md:p-0">
+                  <div className="w-full flex justify-center">
                     <Image
                       src={a.image}
                       alt={a.imageAlt || a.title}
-                      width={350}
-                      height={200}
-                      className="rounded-xl w-full h-auto object-cover"
+                      width={1000}
+                      height={800}
+                      className="w-[85%] h-auto object-contain"
                     />
                   </div>
                 </div>
 
                 {/* CARDS */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 ">
+                <div className={`grid grid-cols-1 md:grid-cols-2 ${a.cards.length < 3 ? 'lg:flex lg:justify-center' : 'lg:grid-cols-3'} gap-4 md:gap-6`}>
                   {a.cards.map((card, i) => (
                     <div
                       key={i}
-                      className="relative rounded-[16px] bg-[linear-gradient(188deg,#D9CCFA_-1.86%,#D4C4FF_89.1%)]/90
+                      className={`relative rounded-[16px] bg-[linear-gradient(188deg,#D9CCFA_-1.86%,#D4C4FF_89.1%)]/90
                        min-h-[320px] md:min-h-[420px] 
-                       flex flex-col items-center shadow"
+                       flex flex-col items-center shadow w-full ${a.cards.length < 3 ? 'lg:max-w-[400px]' : ''}`}
                     >
                       {/* Card Title */}
                       <h5 className="font-avant text-[#300B60] text-[16px] md:text-[20px]
-                           mb-4 md:mb-6 text-center bg-[#F8F2FF] shadow-[inset_0_0_172.7px_rgba(255,255,255,0.25)] w-full h-16 md:h-20
-                           rounded-t-[8px] flex items-center justify-center px-3 shadow">
+                           mb-4 md:mb-6 text-center bg-[#F8F2FF] shadow-[inset_0_0_172.7px_rgba(255,255,255,0.25)] w-full min-h-16 md:min-h-20 py-2
+                           rounded-t-[8px] flex items-center justify-center px-3 shadow leading-tight">
                         {card.title}
                       </h5>
 
                       {/* Items */}
-                      <div className="relative flex flex-col gap-4 md:gap-6 w-full items-end pl-3 md:pl-6">
+                      <div className="relative flex flex-col gap-3 md:gap-5 w-full items-end pl-2 md:pl-6 pb-6">
 
                         {card.items.map((item, j) => (
                           <div
                             key={j}
                             className="relative z-10 
-                             w-full max-w-[426px] h-[56px] md:h-[66px]
-                             rounded-l-[16.535px]
+                             w-full max-w-[95%] md:max-w-[426px] min-h-[50px] md:min-h-[66px]
+                             rounded-l-[12px] md:rounded-l-[16.535px]
                              bg-gradient-to-r from-white to-[rgba(241,236,253,0)]
                              shadow-[inset_0_0_36.708px_rgba(255,255,255,0.25)]
                              flex items-center justify-center
-                             text-[#323232] text-xs md:text-sm text-center px-3 md:px-5"
+                             text-[#323232] text-xs md:text-sm text-center px-2 md:px-5 py-2 leading-tight"
                           >
                             {item}
                           </div>

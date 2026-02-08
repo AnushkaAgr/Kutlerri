@@ -3,7 +3,9 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 import pattern from "../public/images/HomePage/FullyManagedServicePattern.png"
+import ManagedServicesImg from "../public/images/ManagedServices.png"
 
 export function ManagedServices() {
   const ref = useRef(null)
@@ -26,9 +28,6 @@ export function ManagedServices() {
             from-[#12003A]
             via-[#1E0758]
             to-[#3A1CA8]
-
-            lg:aspect-[4/1]
-            flex items-center
           "
         >
           {/* 🔹 Pattern Background */}
@@ -38,7 +37,7 @@ export function ManagedServices() {
               backgroundImage: `url(${pattern.src})`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              backgroundSize: "140%",
+              backgroundSize: "cover",
               opacity: 0.35,
             }}
           />
@@ -46,36 +45,54 @@ export function ManagedServices() {
           {/* subtle glow */}
           <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_right,rgba(255,255,255,0.15),transparent_60%)] z-[1]" />
 
-          {/* Content */}
-          <div className="relative z-10 p-8 md:p-10 lg:p-14 w-full text-center md:text-center lg:text-left">
+          {/* Content Container - Two Column Layout */}
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-stretch">
 
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-avant font-[500] text-white mb-4">
-              Fully Managed Services
-            </h2>
+            {/* Left - Text Content */}
+            <div className="p-8 md:p-10 lg:p-14 text-center lg:text-left flex flex-col justify-center">
 
-            <p className="text-white text-[18px] md:text-[16px] lg:text-[20px] leading-[1.4] mb-6 max-w-2xl mx-auto lg:mx-0 font-gotham">
-              We work like an extension of your team, handling analysis, execution,
-              and follow-through so you can focus on running your restaurant.
-            </p>
+              <h2 className="text-2xl md:text-3xl lg:text-5xl font-avant font-[500] text-white mb-4">
+                Fully Managed Services
+              </h2>
 
-            <div className="flex justify-center lg:justify-start">
-              <button
-                className="
-                  inline-flex items-center gap-2
-                  rounded-full
-                  bg-[#9F7CEF]
-                  px-7 py-3
-                  text-white
-                  font-gotham font-[350]
-                  text-[15px]
-                  transition-all duration-300
-                  hover:scale-[1.05]
-                  
-                "
-              >
-                See How We Work
-                <ArrowRight size={18} />
-              </button>
+              <p className="text-white text-[16px] md:text-[18px] lg:text-[20px] leading-[1.4] mb-6 max-w-2xl mx-auto lg:mx-0 font-gotham">
+                We work like an extension of your team, handling analysis, execution, and follow-through so you can focus on running your restaurant.
+              </p>
+
+              <div className="flex justify-center lg:justify-start">
+                <button
+                  className="
+                    inline-flex items-center gap-2
+                    rounded-full
+                    bg-[#9F7CEF]
+                    px-7 py-3
+                    text-white
+                    font-gotham font-[350]
+                    text-[15px]
+                    transition-all duration-300
+                    hover:scale-[1.05]
+                    hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
+                    cursor-pointer
+                    whitespace-nowrap
+                  "
+                >
+                  See How We Work
+                  <ArrowRight size={18} />
+                </button>
+              </div>
+
+            </div>
+
+            {/* Right - Chart Image */}
+            <div className="flex justify-center md:justify-end items-end">
+              <div className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[450px] xl:max-w-[500px]">
+                <Image
+                  src={ManagedServicesImg}
+                  alt="Geographic Catering Opportunity Map"
+                  className="w-full h-auto object-contain block"
+                  priority
+                />
+              </div>
             </div>
 
           </div>

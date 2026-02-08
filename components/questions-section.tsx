@@ -5,15 +5,18 @@ import { motion, useInView } from "framer-motion"
 import pattern from "../public/images/GlobalPattern.png"
 
 const questions = [
-  { avatar: "JM", question: "Which menu items have the highest profit margin this month?" },
-  { avatar: "SK", question: "How does our Tuesday lunch revenue compare to last quarter?" },
-  { avatar: "AL", question: "What's causing the spike in food waste on weekends?" },
-  { avatar: "RW", question: "Which servers are generating the most upsells?" },
-  { avatar: "DP", question: "How can we optimize our staff scheduling for the holiday rush?" },
-  { avatar: "MH", question: "What's the ROI on our latest marketing campaign?" },
-  { avatar: "CB", question: "Which suppliers should we renegotiate contracts with?" },
-  { avatar: "TN", question: "What's driving the increase in customer return rate?" },
+  { avatar: "JM", question: "Which nearby businesses are most likely to order catering in the next 30–60 days?" },
+  { avatar: "SK", question: "What do guests ask for that we don’t offer?" },
+  { avatar: "AL", question: "What is the true attach rate by item, channel, and daypart?" },
+  { avatar: "RW", question: "Who are our top 10% guests?" },
+  { avatar: "DP", question: "Why did our rating drop this week?" },
+  { avatar: "MH", question: "How much revenue did a 0.1 rating drop cost?" },
+  { avatar: "CB", question: "Which ingredient is the biggest waste dollar driver?" },
+  { avatar: "TN", question: "Which SKUs expire before we use them?" },
+  { avatar: "KR", question: "Did we prep the right amount today?" },
+  { avatar: "LS", question: "Where is overtime coming from?" },
 ]
+
 
 export function QuestionsSection() {
   const ref = useRef(null)
@@ -28,12 +31,12 @@ export function QuestionsSection() {
           backgroundImage: `url(${pattern.src})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "80%", 
-          opacity: 0.7, 
+          backgroundSize: "cover",
+          opacity: 0.7,
         }}
       />
-      
-      
+
+
 
       {/* Soft gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#F8F0FF] via-transparent to-[#F8F0FF] z-[1]" />
@@ -47,12 +50,11 @@ export function QuestionsSection() {
           className="text-center"
         >
           <h2 className="text-3xl md:text-5xl font-avante font-bold text-[#300B60] mb-6 text-balance">
-            The Questions our Agents Answer
+            Questions Our Agents Answer
           </h2>
 
           <p className="text-[#2E312E] font-gotham text-[18px] md:text-[20px] max-w-2xl mx-auto">
-            Clear, data-backed answers to everyday restaurant operator questions,
-            delivered automatically by Kutlerri’s AI agents.
+            Clear, data-backed answers to everyday restaurant operator questions, delivered automatically by our 50+ AI agents.
           </p>
         </motion.div>
       </div>

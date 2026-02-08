@@ -13,21 +13,21 @@ import Img3 from "../public/images/HomePage/BusinessExpansionSuite.png";
 
 const features = [
   {
-    title: "Revenue Growth Co-pilot",
+    title: "Revenue Growth Agents",
     description:
-      "Runs AI agents on your restaurant’s data to find and grow revenue. Catering, menus, upsells, and repeat customers.",
+      "AI agents to turn your restaurant’s data into revenue opportunities across catering, menus, upsells, and repeat customers.",
     image: Img1,
   },
   {
-    title: "Cost Control Co-pilot",
+    title: "Cost Control Agents",
     description:
-      "Runs AI agents on your restaurant’s data to control costs and improve margins intelligently.",
+      "AI agents to turn cost data into savings by fixing prep, labor, menus, and unprofitable marketing spend.",
     image: Img2,
   },
   {
-    title: "Business Expansion Suite",
+    title: "Business Expansion Agents",
     description:
-      "Helps guide smarter restaurant expansion decisions using real-time analytics.",
+      "AI agents to analyze demand, sales, and market data to assess new locations, highlighting where expansion makes sense.",
     image: Img3,
   },
 ];

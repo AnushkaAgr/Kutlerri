@@ -7,201 +7,83 @@ import { ProductHero } from "@/components/products/ProductHero"
 
 const agentsData: Agent[] = [
   {
-    id: "revenue",
-    title: "Revenue Growth Agent",
+    id: "store-decision",
+    title: "New Store Decision Agent",
     description:
-      "Boost revenue using AI-powered demand forecasting and upsell optimization to capture missed opportunities and maximize profitability.",
-    image: "/images/agents/revenue.png",
-    imageAlt: "Revenue growth dashboard",
+      "The Expansion Fit & Go/No-Go Decision Agent helps you choose the right next location by learning what makes your current stores succeed, comparing that “success fingerprint” against each candidate trade area, and producing a clear Go/No-Go decision with conditions and risks.",
+    image: "/images/agents/store-decision.png",
+    imageAlt: "New store decision dashboard",
     cards: [
       {
-        title: "Opportunities",
+        title: "Store Success Blueprint Agent",
         items: [
-          "Menu mix optimization",
-          "Dynamic pricing strategies",
-          "Automated upsell suggestions",
+          "Ingest historical performance from existing stores (sales, margins, channel mix, dayparts)",
+          "Identify the strongest drivers of success by store type (In-Store, Delivery, Catering)",
+          "Create archetypes of “winning store models” you can replicate",
         ],
       },
       {
-        title: "Insights",
+        title: "Trade Area Match Agent",
         items: [
-          "Top selling items",
-          "Low margin alerts",
-          "Peak hour revenue trends",
-        ],
-      },
-      {
-        title: "Actions",
-        items: [
-          "Launch smart campaigns",
-          "Adjust menu pricing",
-          "Create profitable combos",
+          "Compare each candidate trade area against your winning store archetypes",
+          "Flag mismatches that typically break performance",
+          "Gives a GO/NO-GO/GO-WITH-CONDITIONS per trade area",
         ],
       },
     ],
   },
 
   {
-    id: "cost",
-    title: "Cost Optimization Agent",
+    id: "trade-area-demand",
+    title: "Trade Area Demand Intelligence Agent",
     description:
-      "Reduce operational expenses with AI-driven inventory control and waste management to protect your margins.",
-    image: "/images/agents/cost.png",
-    imageAlt: "Cost optimization dashboard",
+      "The Trade Area Demand Heatmap & Forecast Agent estimates how much demand exists in each trade area, when it shows up by daypart and day-of-week",
+    image: "/images/agents/trade-area.png",
+    imageAlt: "Trade area demand heatmap dashboard",
     cards: [
       {
-        title: "Inventory",
+        title: "Trade Area Demand Heatmap Agent",
         items: [
-          "Smart stock alerts",
-          "Vendor price tracking",
-          "Auto reordering system",
+          "Build a Mon–Sun × daypart demand intensity map per trade area",
+          "Identify peaks, dead zones, and demand consistency",
+          "Highlight demand drivers behind the shape",
         ],
       },
       {
-        title: "Waste Control",
+        title: "Channel Mix Forecasting Agent",
         items: [
-          "Spoilage detection",
-          "Overproduction alerts",
-          "Usage analytics",
-        ],
-      },
-      {
-        title: "Savings",
-        items: [
-          "Monthly savings report",
-          "Cost leakage detection",
-          "Profit margin improvement",
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "customer",
-    title: "Customer Experience Agent",
-    description:
-      "Understand your guests better using sentiment analysis and behavioral insights to improve satisfaction and loyalty.",
-    image: "/images/agents/customer.png",
-    imageAlt: "Customer experience dashboard",
-    cards: [
-      {
-        title: "Feedback",
-        items: [
-          "Review sentiment analysis",
-          "Complaint trend tracking",
-          "NPS score monitoring",
-        ],
-      },
-      {
-        title: "Behavior",
-        items: [
-          "Repeat visit rate",
-          "Order preferences",
-          "Peak time patterns",
-        ],
-      },
-      {
-        title: "Engagement",
-        items: [
-          "Personalized offers",
-          "Loyalty rewards",
-          "Retention campaigns",
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "operations",
-    title: "Operations Intelligence Agent",
-    description:
-      "Optimize kitchen and staff operations using real-time performance metrics and AI-based efficiency tracking.",
-    image: "/images/agents/operations.png",
-    imageAlt: "Operations intelligence dashboard",
-    cards: [
-      {
-        title: "Kitchen",
-        items: [
-          "Prep time analysis",
-          "Order bottleneck detection",
-          "Throughput tracking",
-        ],
-      },
-      {
-        title: "Staff",
-        items: [
-          "Shift productivity",
-          "Overtime alerts",
-          "Smart scheduling",
-        ],
-      },
-      {
-        title: "Quality",
-        items: [
-          "Order accuracy",
-          "Service speed",
-          "Compliance checks",
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "expansion",
-    title: "Business Expansion Agent",
-    description:
-      "Identify growth opportunities with market intelligence and location analytics for confident business expansion.",
-    image: "/images/agents/expansion.png",
-    imageAlt: "Business expansion dashboard",
-    cards: [
-      {
-        title: "Market",
-        items: [
-          "Demand heatmaps",
-          "Competitor analysis",
-          "Area growth trends",
-        ],
-      },
-      {
-        title: "Locations",
-        items: [
-          "Site scoring",
-          "Footfall prediction",
-          "Risk assessment",
-        ],
-      },
-      {
-        title: "Strategy",
-        items: [
-          "Expansion roadmap",
-          "Franchise planning",
-          "ROI forecasting",
+          "Forecast demand split by channel (dine-in / pickup / delivery / catering)",
+          "Predict how channel mix impacts operations (labor load, packaging costs, throughput)",
+          "Flag channel risks (delivery-heavy areas that compress margins)",
         ],
       },
     ],
   },
 ]
 
+
+
 export default function Page() {
   return (
     <main className="">
-        <Navbar />
-         <ProductHero
-        title="Revenue Growth Suite"
-        description="Grow revenue with AI-powered insights across menus, pricing, upsells, and customer behavior."
-        ctaText="Get a Demo"
+      <Navbar />
+      <ProductHero
+        title="New Store Expansion Agent"
+        description="Our agents combine your existing store performance with trade-area demand, competition, catering demand, walkability, work population, home population, demographics to forecast sales, pressure-test unit economics, and deliver a clear Go/No-Go recommendations so you open in the right place with confidence, not guesswork"
+        ctaText="See It In Action"
         image={RevenueImg}
         agents={[
-          "Menu Optimization Agent",
-          "Pricing Agent",
-          "Upsell Agent",
-          "Customer Insights Agent",
+          "Trade Area Demand Heatmap & Forecast Agent",
+          "Expansion Fit & Go/No-Go Decision Agent",
+          "Catering Demand Analysis Agent",
+          "Competitive Density & Risk Agent",
         ]}
       />
+
       <AgentSection agents={agentsData} />
       <ManagedServices />
-     {/* <Footer /> */}
+      {/* <Footer /> */}
     </main>
-    
+
   )
 }

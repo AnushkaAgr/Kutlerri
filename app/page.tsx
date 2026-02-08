@@ -4,7 +4,7 @@ import { FeatureCards } from "@/components/feature-cards"
 import { GrowthSection } from "@/components/growth-section"
 import { QuestionsSection } from "@/components/questions-section"
 import { ManagedServices } from "@/components/managed-services"
-import { Footer } from "@/components/footer"
+
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <GrowthSection />
       <QuestionsSection />
       <ManagedServices />
-      {/* <Footer /> */}
+
     </main>
   )
 }

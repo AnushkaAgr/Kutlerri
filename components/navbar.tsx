@@ -118,10 +118,10 @@ export function Navbar() {
             <div className="hidden md:block">
               <button
                 className="
-                  bg-[#9F7CEF] text-white rounded-full transition cursor-pointer
+                  bg-[#9F7CEF] text-white rounded-full transition-all duration-300 cursor-pointer
                   px-6 py-2 text-[18px]
                   lg:px-7 lg:py-3 lg:text-[16px]
-                  hover:scale-105 font-bold
+                  hover:scale-105 font-bold hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
                 "
               >
                 Get a Demo
@@ -166,7 +166,7 @@ export function Navbar() {
                       <Link
                         href={agent.link}
                         onClick={() => setDesktopProductsOpen(false)}
-                        className="inline-block bg-[#9F7CEF] text-[#2B145F] px-6 py-2 rounded-full hover:scale-105 transition"
+                        className="inline-block bg-[#9F7CEF] text-[#2B145F] px-6 py-2 rounded-full hover:scale-105 hover:shadow-[0_0_20px_rgba(159,124,239,0.5)] transition"
                       >
                         Learn More
                       </Link>
@@ -176,25 +176,20 @@ export function Navbar() {
                     <div className="bg-white/20 w-[1px]" />
 
                     {/* Column 1 */}
-                    <div className="space-y-4">
-                      <h4 className="text-white font-medium">Catering Agents</h4>
-                      <p className="text-white/70 text-sm">Identify hidden demand.</p>
-                      <h4 className="text-white font-medium">Menu Agents</h4>
-                      <p className="text-white/70 text-sm">Protect visibility.</p>
+                    <div className="space-y-6">
+                      <h4 className="text-white font-gotham font-medium text-[16px]">Catering Agents</h4>
+                      <h4 className="text-white font-gotham font-medium text-[16px]">Menu Agents</h4>
                     </div>
 
                     {/* Column 2 */}
-                    <div className="space-y-4">
-                      <h4 className="text-white font-medium">Upsell Agents</h4>
-                      <p className="text-white/70 text-sm">Increase order value.</p>
-                      <h4 className="text-white font-medium">Retention Agents</h4>
-                      <p className="text-white/70 text-sm">Improve repeat business.</p>
+                    <div className="space-y-6">
+                      <h4 className="text-white font-gotham font-medium text-[16px]">Upsell Agents</h4>
+                      <h4 className="text-white font-gotham font-medium text-[16px]">Retention Agents</h4>
                     </div>
 
                     {/* Column 3 */}
-                    <div className="space-y-4">
-                      <h4 className="text-white font-medium">Reputation Agents</h4>
-                      <p className="text-white/70 text-sm">Grow brand visibility.</p>
+                    <div className="space-y-6">
+                      <h4 className="text-white font-gotham font-medium text-[16px]">Reputation Agents</h4>
                     </div>
 
                   </div>

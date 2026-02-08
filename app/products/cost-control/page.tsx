@@ -5,179 +5,144 @@ import { ProductHero } from "@/components/products/ProductHero"
 import { ManagedServices } from "@/components/managed-services"
 import { Footer } from "@/components/footer"
 import RevenueImg from "@/public/images/ProductPage/ProductHero.png"
+import PrepForecastImg from "@/public/images/AgentGraphs/PrepForecastAgent.png"
+import WasteControltImg from "@/public/images/AgentGraphs/WasteControlAgents.png"
+import WorkForceImg from "@/public/images/AgentGraphs/WorkAgent.png"
 
 
 const agentsData: Agent[] = [
   {
-    id: "revenue",
-    title: "Revenue Growth Agent",
+    id: "waste-control",
+    title: "Waste Control Agent",
     description:
-      "Boost revenue using AI-powered demand forecasting and upsell optimization to capture missed opportunities and maximize profitability.",
-    image: "/images/agents/revenue.png",
-    imageAlt: "Revenue growth dashboard",
+      "The Waste Control Agents reduce food waste and avoidable cost by identifying where waste is coming from, why it repeats, and how prep and shelf-life practices can be corrected.",
+    image: WasteControltImg,
+    imageAlt: "Waste control dashboard",
     cards: [
       {
-        title: "Opportunities",
+        title: "Structural Waste Detection Agent",
         items: [
-          "Menu mix optimization",
-          "Dynamic pricing strategies",
-          "Automated upsell suggestions",
+          "Waste data collection & source mapping",
+          "Identify major and repeat waste drivers",
         ],
       },
       {
-        title: "Insights",
+        title: "Prep vs Demand Mismatch Agent",
         items: [
-          "Top selling items",
-          "Low margin alerts",
-          "Peak hour revenue trends",
+          "Compare prep quantities with actual sales",
+          "Identify consistent over-prep and shortage zones",
+          "Link over-prep directly to waste",
         ],
       },
       {
-        title: "Actions",
+        title: "Shelf-Life Usage Agent",
         items: [
-          "Launch smart campaigns",
-          "Adjust menu pricing",
-          "Create profitable combos",
+          "Document shelf-life and holding limits",
+          "Measure real usage vs allowed life",
+          "Calculate shelf-life loss",
         ],
       },
     ],
   },
 
   {
-    id: "cost",
-    title: "Cost Optimization Agent",
+    id: "prep-forecast",
+    title: "Prep Forecast Agents",
     description:
-      "Reduce operational expenses with AI-driven inventory control and waste management to protect your margins.",
-    image: "/images/agents/cost.png",
-    imageAlt: "Cost optimization dashboard",
+      "The Demand-Led Prep Agents ensure your restaurant prepares the right items and ingredients in the right quantities by aligning prep planning with real demand patterns.",
+    image: PrepForecastImg,
+    imageAlt: "Prep forecasting dashboard",
     cards: [
       {
-        title: "Inventory",
+        title: "Menu-Item Demand Forecasting Agent",
         items: [
-          "Smart stock alerts",
-          "Vendor price tracking",
-          "Auto reordering system",
+          "Build item-level demand patterns",
+          "Forecast item demand by day and daypart",
         ],
       },
       {
-        title: "Waste Control",
+        title: "Ingredient-Level Demand Forecasting Agent",
         items: [
-          "Spoilage detection",
-          "Overproduction alerts",
-          "Usage analytics",
-        ],
-      },
-      {
-        title: "Savings",
-        items: [
-          "Monthly savings report",
-          "Cost leakage detection",
-          "Profit margin improvement",
+          "Ingredient demand mapping",
+          "Adjust waste and safety buffers",
         ],
       },
     ],
   },
 
   {
-    id: "customer",
-    title: "Customer Experience Agent",
+    id: "labor-optimization",
+    title: "Labor Cost Optimization Agents",
     description:
-      "Understand your guests better using sentiment analysis and behavioral insights to improve satisfaction and loyalty.",
-    image: "/images/agents/customer.png",
-    imageAlt: "Customer experience dashboard",
+      "The Workforce Management Agents align staffing levels and roles with real customer demand to reduce overstaffing, understaffing, idle hours, and unnecessary overtime.",
+    image: WorkForceImg,
+    imageAlt: "Labor optimization dashboard",
     cards: [
       {
-        title: "Feedback",
+        title: "Demand-Aligned Staffing Agent",
         items: [
-          "Review sentiment analysis",
-          "Complaint trend tracking",
-          "NPS score monitoring",
+          "Build hourly demand and staffing view",
+          "Detect overstaffing and understaffing patterns",
         ],
       },
       {
-        title: "Behavior",
+        title: "Labor Utilization Detection Agent",
         items: [
-          "Repeat visit rate",
-          "Order preferences",
-          "Peak time patterns",
-        ],
-      },
-      {
-        title: "Engagement",
-        items: [
-          "Personalized offers",
-          "Loyalty rewards",
-          "Retention campaigns",
+          "Map overtime, long-shift, and idle-hour patterns",
+          "Identify overtime-risk and idle-labor windows",
         ],
       },
     ],
   },
 
   {
-    id: "operations",
-    title: "Operations Intelligence Agent",
+    id: "menu-engineering",
+    title: "Menu Mix & Margin Optimization Agents",
     description:
-      "Optimize kitchen and staff operations using real-time performance metrics and AI-based efficiency tracking.",
-    image: "/images/agents/operations.png",
-    imageAlt: "Operations intelligence dashboard",
+      "The Menu Engineering Agents improves menu profitability by identifying which items truly make money, which create hidden costs, and how menu items should be adjusted across channels.",
+    image: "/images/agents/menu.png",
+    imageAlt: "Menu engineering dashboard",
     cards: [
       {
-        title: "Kitchen",
+        title: "PMIX Profitability and Demand Agent",
         items: [
-          "Prep time analysis",
-          "Order bottleneck detection",
-          "Throughput tracking",
+          "Build and classify the PMIX table",
+          "Validate PMIX by channel.",
+          "Identify PMIX problems and opportunities",
         ],
       },
       {
-        title: "Staff",
+        title: "Channel Margin Leakage Agent",
         items: [
-          "Shift productivity",
-          "Overtime alerts",
-          "Smart scheduling",
-        ],
-      },
-      {
-        title: "Quality",
-        items: [
-          "Order accuracy",
-          "Service speed",
-          "Compliance checks",
+          "Compare item performance by channel",
+          "Detect channel-driven cost leakage",
         ],
       },
     ],
   },
 
   {
-    id: "expansion",
-    title: "Business Expansion Agent",
+    id: "marketing-efficiency",
+    title: "Marketing Spend Efficiency Agent",
     description:
-      "Identify growth opportunities with market intelligence and location analytics for confident business expansion.",
-    image: "/images/agents/expansion.png",
-    imageAlt: "Business expansion dashboard",
+      "The Marketing Spend Efficiency Agents ensure promos and ads generate profitable orders without increasing refunds, errors, or visibility risk on delivery platforms.",
+    image: "/images/agents/marketing.png",
+    imageAlt: "Marketing spend efficiency dashboard",
     cards: [
       {
-        title: "Market",
+        title: "Uber Eats Marketing Spend Agent",
         items: [
-          "Demand heatmaps",
-          "Competitor analysis",
-          "Area growth trends",
+          "Audit historical marketing spend",
+          "Identify revenue leakage in promotions",
+          "Analyze promo timing effectiveness",
+          "Study customer behavior under promos",
         ],
       },
       {
-        title: "Locations",
+        title: "DoorDash Marketing Spend Agent",
         items: [
-          "Site scoring",
-          "Footfall prediction",
-          "Risk assessment",
-        ],
-      },
-      {
-        title: "Strategy",
-        items: [
-          "Expansion roadmap",
-          "Franchise planning",
-          "ROI forecasting",
+          "Build spend, profit, and reliability view",
+          "Identify risky spend patterns and visibility threats",
         ],
       },
     ],
@@ -185,26 +150,28 @@ const agentsData: Agent[] = [
 ]
 
 
+
 export default function AgentsScrollPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-       <ProductHero
-        title="Revenue Growth Suite"
-        description="Grow revenue with AI-powered insights across menus, pricing, upsells, and customer behavior."
-        ctaText="Get a Demo"
+      <ProductHero
+        title="Cost Control Agents"
+        description="Our agents bring together your prep, inventory, labor, marketing, and delivery data to spot waste, demand mismatches, and inefficiencies surfacing clear actions to control costs without disrupting operations."
+        ctaText="See It In Action"
         image={RevenueImg}
         agents={[
-          "Menu Optimization Agent",
-          "Pricing Agent",
-          "Upsell Agent",
-          "Customer Insights Agent",
+          "Waste Control Agent",
+          "Demand-Led Prep Agent",
+          "Workforce Management Agent",
+          "Marketing Spend Efficiency Agent",
         ]}
       />
+
       <div className="pt-16">
         <AgentSection agents={agentsData} />
       </div>
-        <ManagedServices />
+      <ManagedServices />
 
       {/* <Footer /> */}
     </main>

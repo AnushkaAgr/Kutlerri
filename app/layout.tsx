@@ -2,6 +2,7 @@ import React from "react"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
+import { Footer } from "@/components/footer"
 
 // Gotham font
 const gotham = localFont({
@@ -60,6 +61,8 @@ export const metadata: Metadata = {
   },
 }
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -69,6 +72,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${gotham.variable} ${avantGarde.variable} antialiased`}>
         {children}
+        <Footer />
       </body>
     </html>
   )

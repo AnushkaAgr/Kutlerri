@@ -158,7 +158,10 @@ export function Hero() {
           font-medium
           text-white
           hover:bg-[#8a68e0]
-          transition
+          hover:scale-105
+          hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
+          transition-all duration-300
+          cursor-pointer
         "
               >
                 {slide.rightContent.ctaText}

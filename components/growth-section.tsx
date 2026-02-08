@@ -20,61 +20,67 @@ const agents = [
     icon: Icon1,
   },
   {
-    title: "Online Reviews Management Agent",
-    desc: "Tracks reviews and ratings so problems get fixed before they hurt traffic and orders.",
-    icon: Icon2,
-  },
-  {
-    title: "Menu Mix Optimization Agent",
-    desc: "Shows which menu items hurt profits and what to fix, remove, or reposition.",
-    icon: Icon3,
-  },
-  {
-    title: "Demand-Driven Menu Agent",
+    title: "Demand-to-Menu Agent",
     desc: "Adjusts your menu based on what actually sells by location, channel, and time of day.",
-    icon: Icon4,
-  },
-  {
-    title: "Waste Control Agent",
-    desc: "Flags food getting wasted from over-prep, spoilage, and poor shelf control before margins drop.",
-    icon: Icon5,
-  },
-  {
-    title: "UberEats Spend Efficiency Agent",
-    desc: "Makes sure promos and ads bring orders not losses and cuts wasted spend.",
-    icon: Icon6,
+    icon: Icon2,
   },
   {
     title: "Upsell & Attach Agent",
     desc: "Boosts order value by adding the right sides and add-ons at the right time.",
-    icon: Icon7,
-  },
-  {
-    title: "Prep Forecast Agent",
-    desc: "Tells your kitchen exactly what to prep and how much so you don’t overcook or run out.",
-    icon: Icon8,
-  },
-  {
-    title: "DoorDash Spend Efficiency Agent",
-    desc: "Makes sure promos and ads bring orders not losses and cuts wasted spend.",
-    icon: Icon6,
+    icon: Icon3,
   },
   {
     title: "Customer Lifecycle & Retention Agent",
-    desc: "Shows who your regulars are, who’s dropping off, and where revenue is leaking.",
+    desc: "Shows who your regulars are, who’s dropping off, and where repeat revenue is leaking.",
+    icon: Icon4,
+  },
+  {
+    title: "Online Reputation Management Agent",
+    desc: "Tracks reviews and ratings so problems get fixed before they hurt traffic and orders.",
+    icon: Icon5,
+  },
+  {
+    title: "Waste Control Agent",
+    desc: "Flags food getting wasted from over-prep, spoilage, and poor shelf control before margins drop.",
+    icon: Icon6,
+  },
+  {
+    title: "Demand-Led Prep Agent",
+    desc: "Tells your kitchen exactly what to prep and how much, so you don’t overcook or run out.",
+    icon: Icon7,
+  },
+  {
+    title: "Workforce Management Agent",
+    desc: "Helps schedule the right number of staff for each shift — no overstaffing, no burnout.",
+    icon: Icon8,
+  },
+  {
+    title: "Menu Engineering Agent",
+    desc: "Shows which menu items hurt profits and what to fix, remove, or reposition.",
     icon: Icon9,
   },
   {
-    title: "Labor Cost Optimization Agent",
-    desc: "Helps schedule the right number of staff per shift — no overstaffing, no burnout.",
+    title: "Marketing Spend Efficiency Agent",
+    desc: "Makes sure promos and ads bring orders — not losses — and cuts wasted spend.",
+    icon: Icon10,
+  },
+  {
+    title: "Trade Area Demand Heatmap & Forecast Agent",
+    desc: "For a potential trade area, produces a daypart heatmap and weekly demand forecast.",
+    icon: Icon10,
+  },
+  {
+    title: "Expansion Fit & Go/No-Go Decision Agent",
+    desc: "Evaluates potential trade areas, learns what made your current stores win, and scores each new area against those drivers.",
     icon: Icon10,
   },
 ]
 
+
 export function GrowthSection() {
   return (
     <section className="w-full bg-white py-20 px-6 md:px-12 lg:px-20">
-      
+
       {/* Heading */}
       <h1 className="text-center text-[#2B0A5B] font-avant text-[28px] md:text-[36px] lg:text-[48px] font-[600] mb-16">
         For Every Growth Lever We Have An Agent
