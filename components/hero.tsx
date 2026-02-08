@@ -39,6 +39,14 @@ export function Hero() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
+      {/* Bottom purple gradient */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[40%] pointer-events-none"
+        style={{
+          background: 'linear-gradient(180deg, rgba(30, 7, 88, 0.00) 0%, #1E0758 100%)'
+        }}
+      />
+
       {/* Content */}
       <div className="relative z-10 w-full px-6 sm:px-10 md:px-14 lg:px-[72px]">
         <div className="max-w-[1400px] mx-auto">
@@ -51,9 +59,9 @@ export function Hero() {
               pt-[140px]
               md:pt-[170px]
               lg:pt-[190px]
-              pb-[220px]
-              md:pb-[260px]
-              lg:pb-[320px]
+              pb-[320px]
+              md:pb-[380px]
+              lg:pb-[420px]
             "
           >
             {/* LEFT */}

@@ -73,6 +73,7 @@ export function Footer() {
                 transition-all
                 hover:scale-105
                 hover:shadow-[0_0_20px_rgba(109,74,255,0.6)]
+                cursor-pointer
               "
             >
               Get a Demo

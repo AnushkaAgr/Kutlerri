@@ -2,16 +2,25 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, ChevronDown } from "lucide-react"
 import LogoImage from "../public/images/Logo/WhiteLogo.png"
 import Logo2 from "../public/images/Logo/WhiteOutlineFavLogo.png"
 
 export function Navbar() {
-const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [desktopProductsOpen, setDesktopProductsOpen] = useState(false)
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false)
+  const pathname = usePathname()
+
+  // Close dropdowns on route change
+  useEffect(() => {
+    setDesktopProductsOpen(false)
+    setMobileMenuOpen(false)
+    setMobileProductsOpen(false)
+  }, [pathname])
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 1)
@@ -30,11 +39,10 @@ const [scrolled, setScrolled] = useState(false)
     <>
       {/* NAVBAR */}
       <motion.nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-[#381D7D] backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-[#381D7D] backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
+          : "bg-transparent"
+          }`}
       >
         <div className="relative flex w-full h-[108px] px-6 md:px-10 lg:px-[72px] items-center">
 
@@ -110,7 +118,7 @@ const [scrolled, setScrolled] = useState(false)
             <div className="hidden md:block">
               <button
                 className="
-                  bg-[#9F7CEF] text-white rounded-full transition
+                  bg-[#9F7CEF] text-white rounded-full transition cursor-pointer
                   px-6 py-2 text-[18px]
                   lg:px-7 lg:py-3 lg:text-[16px]
                   hover:scale-105 font-bold
@@ -138,9 +146,9 @@ const [scrolled, setScrolled] = useState(false)
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
-            className="hidden lg:block fixed top-[108px] left-0 right-0 h-[calc(100vh-108px)] bg-[#2B145F] z-40 overflow-hidden"
+            className="hidden md:block fixed top-[108px] left-0 right-0 h-[calc(100vh-108px)] bg-[#2B145F] z-40 overflow-y-auto"
           >
-            <div className="px-[72px] py-6 h-full flex flex-col justify-center space-y-12">
+            <div className="px-6 md:px-10 lg:px-[72px] py-8 lg:py-12 min-h-full flex flex-col justify-start space-y-8 lg:space-y-12">
 
               {agentBlocks.map((agent, idx) => (
                 <div key={idx} className="border-b border-white/20 pb-8">
@@ -157,6 +165,7 @@ const [scrolled, setScrolled] = useState(false)
                       </p>
                       <Link
                         href={agent.link}
+                        onClick={() => setDesktopProductsOpen(false)}
                         className="inline-block bg-[#9F7CEF] text-[#2B145F] px-6 py-2 rounded-full hover:scale-105 transition"
                       >
                         Learn More
@@ -198,54 +207,52 @@ const [scrolled, setScrolled] = useState(false)
       </AnimatePresence>
 
       {/* TABLET + MOBILE SIMPLE DROPDOWN */}
-  {mobileMenuOpen && (
-  <div className="lg:hidden fixed top-[108px] left-0 right-0 bg-[#381D7D]/95 backdrop-blur-md z-40 p-6">
+      {mobileMenuOpen && (
+        <div className="lg:hidden fixed top-[108px] left-0 right-0 bg-[#381D7D]/95 backdrop-blur-md z-40 p-6">
 
-    {/* Products */}
-    <button
-      onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-      className="w-full flex justify-between items-center text-white py-3"
-    >
-      Products
-      <ChevronDown
-        size={16}
-        className={`transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`}
-      />
-    </button>
+          {/* Products */}
+          <button
+            onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+            className="w-full flex justify-between items-center text-white py-3"
+          >
+            Products
+            <ChevronDown
+              size={16}
+              className={`transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`}
+            />
+          </button>
 
-    <div className="h-px bg-white/20" />
+          <div className="h-px bg-white/20" />
 
-    {/* Products submenu */}
-    {mobileProductsOpen && (
-      <div className="ml-4 mt-3 space-y-3">
-        <Link href="/products/revenue-growth" className="block text-white/80">
-          Revenue Growth
-        </Link>
-        <Link href="/products/cost-control" className="block text-white/80">
-          Cost Control
-        </Link>
-        <Link href="/products/business-expansion" className="block text-white/80">
-          Business Expansion
-        </Link>
-         <div className="h-px bg-white/20 my-3" />
-      </div>
-      
-      
-    )}
+          {/* Products submenu */}
+          {mobileProductsOpen && (
+            <div className="ml-4 mt-3 space-y-3">
+              <Link href="/products/revenue-growth" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
+                Revenue Growth
+              </Link>
+              <Link href="/products/cost-control" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
+                Cost Control
+              </Link>
+              <Link href="/products/business-expansion" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
+                Business Expansion
+              </Link>
+              <div className="h-px bg-white/20 my-3" />
+            </div>
+          )}
 
-   
 
-    <Link href="#resources" className="block text-white py-2">
-      Resources
-    </Link>
 
-    <div className="h-px bg-white/20 my-3" />
+          <Link href="#resources" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
+            Resources
+          </Link>
 
-    <Link href="#company" className="block text-white py-2">
-      Company
-    </Link>
-  </div>
-)}
+          <div className="h-px bg-white/20 my-3" />
+
+          <Link href="#company" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
+            Company
+          </Link>
+        </div>
+      )}
 
 
     </>

@@ -41,8 +41,8 @@ export function FeatureCards() {
       ref={ref}
       className="relative -mt-[220px] z-20 pb-28 overflow-hidden"
     >
-      <div className="relative mx-auto max-w-[1700px] px-6 md:px-16 lg:px-[132px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
+      <div className="relative mx-auto max-w-[1700px] px-4 md:px-6 lg:px-[132px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-5 justify-items-center">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -59,8 +59,8 @@ export function FeatureCards() {
               <div
                 className="
                   relative
-                  w-full max-w-[460px] min-h-[440px]
-                  px-6 py-5
+                  w-full max-w-[460px] min-h-[320px] md:min-h-[360px] lg:min-h-[510px]
+                  px-4 md:px-4 lg:px-6 py-4 md:py-4 lg:py-5
                   flex flex-col justify-between
                   rounded-lg
                   backdrop-blur-[12px]
@@ -84,31 +84,31 @@ export function FeatureCards() {
                 <div className="relative z-10 flex flex-col justify-between h-full">
                   {/* Header + text */}
                   <div>
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-2 md:gap-2 lg:gap-3 mb-1 md:mb-1 lg:mb-2">
                       <Image
                         src={PointerIcon}
                         alt=""
                         width={14}
                         height={14}
-                        className="shrink-0 opacity-80"
+                        className="shrink-0 opacity-80 w-[10px] h-[10px] md:w-[12px] md:h-[12px] lg:w-[14px] lg:h-[14px]"
                       />
 
-                      <h3 className="text-white font-avant text-[22px] font-medium tracking-[-0.3px]">
+                      <h3 className="text-white font-avant text-[14px] md:text-[16px] lg:text-[22px] font-medium tracking-[-0.3px]">
                         {feature.title}
                       </h3>
                     </div>
 
-                    <p className="text-purple-300 text-[16px] leading-[1.65]">
+                    <p className="text-purple-300 text-[12px] md:text-[13px] lg:text-[16px] leading-[1.5] md:leading-[1.55] lg:leading-[1.65]">
                       {feature.description}
                     </p>
                   </div>
 
                   {/* Illustration */}
-                  <div className="flex justify-center mt-4">
+                  <div className="flex justify-center mt-2 md:mt-3 lg:mt-4">
                     <Image
                       src={feature.image}
                       alt={feature.title}
-                      className="object-contain max-h-[190px]"
+                      className="object-contain max-h-[140px] md:max-h-[180px] lg:max-h-[260px] w-auto"
                     />
                   </div>
                 </div>
