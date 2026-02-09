@@ -80,7 +80,7 @@ export function Navbar() {
     <>
       {/* NAVBAR */}
       <motion.nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || desktopProductsOpen || mobileMenuOpen
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || desktopProductsOpen || mobileMenuOpen || pathname === "/get-a-demo"
           ? "bg-[#381D7D] backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
           : "bg-transparent"
           }`}
@@ -157,16 +157,18 @@ export function Navbar() {
 
             {/* CTA (smaller on tablet) */}
             <div className="hidden md:block">
-              <button
-                className="
-                  bg-[#9F7CEF] text-white rounded-full transition-all duration-300 cursor-pointer
-                  px-6 py-2 text-[18px]
-                  lg:px-7 lg:py-3 lg:text-[16px]
-                  hover:scale-105 font-bold hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
-                "
-              >
-                Get a Demo
-              </button>
+              <Link href="/get-a-demo">
+                <button
+                  className="
+                    bg-[#9F7CEF] text-white rounded-full transition-all duration-300 cursor-pointer
+                    px-6 py-2 text-[18px]
+                    lg:px-7 lg:py-3 lg:text-[16px]
+                    hover:scale-105 font-bold hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
+                  "
+                >
+                  Get a Demo
+                </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
