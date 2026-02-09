@@ -29,17 +29,58 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (desktopProductsOpen || mobileMenuOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [desktopProductsOpen, mobileMenuOpen])
+
   const agentBlocks = [
-    { title: "Revenue Growth Co-pilot", link: "/products/revenue-growth" },
-    { title: "Cost Control Co-pilot", link: "/products/cost-control" },
-    { title: "Business Expansion Co-pilot", link: "/products/business-expansion" },
+    {
+      title: "Revenue Growth Agents",
+      link: "/products/revenue-growth",
+      subAgents: [
+        "Catering Growth Agent",
+        "Demand-Driven Menu Agent",
+        "Upsell and Attach Agent",
+        "Customer Retention Agent",
+        "Online Reputation Agent"
+      ]
+    },
+    {
+      title: "Cost Control Agents",
+      link: "/products/cost-control",
+      subAgents: [
+        "Waste Control Agent",
+        "Prep Forecast Agents",
+        "Labor Cost Optimization Agents",
+        "Menu Mix Agents",
+        "Marketing Efficiency Agent"
+      ]
+    },
+    {
+      title: "New Store Expansion Agent",
+      link: "/products/business-expansion",
+      subAgents: [
+        "New Store Decision Agent",
+        "",
+        "Trade Area Demand Agent",
+
+      ]
+    },
   ]
 
   return (
     <>
       {/* NAVBAR */}
       <motion.nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || desktopProductsOpen || mobileMenuOpen
           ? "bg-[#381D7D] backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
           : "bg-transparent"
           }`}
@@ -177,19 +218,23 @@ export function Navbar() {
 
                     {/* Column 1 */}
                     <div className="space-y-6">
-                      <h4 className="text-white font-gotham font-medium text-[16px]">Catering Agents</h4>
-                      <h4 className="text-white font-gotham font-medium text-[16px]">Menu Agents</h4>
+                      {agent.subAgents.slice(0, 2).map((sub, i) => (
+                        <h3 key={i} className="text-white font-gotham font-medium text-[16px]">{sub}</h3>
+                      ))}
                     </div>
 
                     {/* Column 2 */}
                     <div className="space-y-6">
-                      <h4 className="text-white font-gotham font-medium text-[16px]">Upsell Agents</h4>
-                      <h4 className="text-white font-gotham font-medium text-[16px]">Retention Agents</h4>
+                      {agent.subAgents.slice(2, 4).map((sub, i) => (
+                        <h3 key={i} className="text-white font-gotham font-medium text-[16px]">{sub}</h3>
+                      ))}
                     </div>
 
                     {/* Column 3 */}
                     <div className="space-y-6">
-                      <h4 className="text-white font-gotham font-medium text-[16px]">Reputation Agents</h4>
+                      {agent.subAgents.slice(4).map((sub, i) => (
+                        <h3 key={i} className="text-white font-gotham font-medium text-[16px]">{sub}</h3>
+                      ))}
                     </div>
 
                   </div>
@@ -223,13 +268,13 @@ export function Navbar() {
           {mobileProductsOpen && (
             <div className="ml-4 mt-3 space-y-3">
               <Link href="/products/revenue-growth" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
-                Revenue Growth
+                Revenue Growth Agents
               </Link>
               <Link href="/products/cost-control" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
-                Cost Control
+                Cost Control Agents
               </Link>
               <Link href="/products/business-expansion" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
-                Business Expansion
+                New Store Expansion Agent
               </Link>
               <div className="h-px bg-white/20 my-3" />
             </div>
