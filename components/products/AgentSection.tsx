@@ -145,7 +145,7 @@ export function AgentSection({ agents }: AgentSectionProps) {
                       alt={a.imageAlt || a.title}
                       width={1000}
                       height={800}
-                      className="w-[85%] h-auto object-contain"
+                      className="w-[85%] h-auto object-contain rounded-[10px]"
                     />
                   </div>
                 </div>
