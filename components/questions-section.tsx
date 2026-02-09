@@ -32,7 +32,7 @@ export function QuestionsSection() {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          opacity: 0.7,
+          opacity: 0.4,
         }}
       />
 
