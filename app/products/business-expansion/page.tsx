@@ -68,7 +68,7 @@ export default function Page() {
     <main className="">
       <Navbar />
       <ProductHero
-        title="New Store Expansion Agent"
+        title="New Store Expansion Agents"
         description="Our agents combine your existing store performance with trade-area demand, competition, catering demand, walkability, work population, home population, demographics to forecast sales, pressure-test unit economics, and deliver a clear Go/No-Go recommendations so you open in the right place with confidence, not guesswork"
         ctaText="See It In Action"
         image={RevenueImg}

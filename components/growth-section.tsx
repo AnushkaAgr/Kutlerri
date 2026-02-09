@@ -36,7 +36,7 @@ const agents = [
   },
   {
     title: "Online Reputation Management Agent",
-    desc: "Tracks reviews and ratings so problems get fixed before they hurt traffic and orders.",
+    desc: "Tracks reviews and ratings so that problems get fixed before they hurt traffic and orders.",
     icon: Icon5,
   },
   {
@@ -51,7 +51,7 @@ const agents = [
   },
   {
     title: "Workforce Management Agent",
-    desc: "Helps schedule the right number of staff for each shift — no overstaffing, no burnout.",
+    desc: "Helps schedule the right number of staff for each shift. No overstaffing. No burnout.",
     icon: Icon8,
   },
   {
@@ -61,7 +61,7 @@ const agents = [
   },
   {
     title: "Marketing Spend Efficiency Agent",
-    desc: "Makes sure promos and ads bring orders — not losses — and cuts wasted spend.",
+    desc: "Makes sure promos and ads bring orders,not losses. Also, cuts wasted spend.",
     icon: Icon10,
   },
   {

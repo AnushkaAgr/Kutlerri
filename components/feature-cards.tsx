@@ -15,7 +15,7 @@ const features = [
   {
     title: "Revenue Growth Agents",
     description:
-      "AI agents to turn your restaurant’s data into revenue opportunities across catering, menus, upsells, and repeat customers.",
+      "AI agents to turn your restaurant’s data into revenue opportunities across catering, upsells, and repeat customers.",
     image: Img1,
   },
   {
@@ -25,7 +25,7 @@ const features = [
     image: Img2,
   },
   {
-    title: "Business Expansion Agents",
+    title: "New Store Expansion Agents",
     description:
       "AI agents to analyze demand, sales, and market data to assess new locations, highlighting where expansion makes sense.",
     image: Img3,

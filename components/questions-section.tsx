@@ -54,7 +54,7 @@ export function QuestionsSection() {
           </h2>
 
           <p className="text-[#2E312E] font-gotham text-[18px] md:text-[20px] max-w-2xl mx-auto">
-            Clear, data-backed answers to everyday restaurant operator questions, delivered automatically by our 50+ AI agents.
+            Clear and data-backed answers to everyday questions asked by restaurant operators, delivered automatically by our 50+ AI agents.
           </p>
         </motion.div>
       </div>

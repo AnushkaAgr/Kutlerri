@@ -119,14 +119,14 @@ export function AgentSection({ agents }: AgentSectionProps) {
 
 
           {/* CONTENT */}
-          <div className="flex-1 space-y-16 md:space-y-32">
+          <div className="flex-1 space-y-8 md:space-y-12">
             {agents.map((a) => (
               <motion.div
                 key={a.id}
                 className="bg-gradient-to-b from-[#F3ECFE] to-[#E2D5FF] p-6 md:p-10 rounded-[10px]"
               >
                 {/* TOP */}
-                <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-10 md:mb-16">
+                <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:items-start mb-10 md:mb-16">
 
                   <div>
                     <h2 className="font-avant tracking-[-0.916px] text-[#300B60] 

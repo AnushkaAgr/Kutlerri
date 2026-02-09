@@ -7,6 +7,8 @@ import { AgentSection, type Agent } from "@/components/products/AgentSection"
 import { ManagedServices } from "@/components/managed-services"
 import CateringImg from "@/public/images/AgentGraphs/Catering.png"
 import UpsellnAttachImg from "@/public/images/AgentGraphs/UpsellandAttachAgent.png"
+import CustomerLifecycleImg from "@/public/images/AgentGraphs/CustomerLifecycle.png"
+import OnlineReputationImg from "@/public/images/AgentGraphs/CustomerLifecycle.png"
 
 import RevenueImg from "@/public/images/ProductPage/ProductHero.png"
 
@@ -118,7 +120,7 @@ export default function RevenueGrowthPage() {
       title: "Customer Lifecycle & Retention Agents",
       description:
         "The Customer Lifecycle and Retention Agents help your restaurant understand how customers behave over time, identify where revenue is being lost due to drop-offs, and highlight the best opportunities to retain, reactivate, and upgrade customers.",
-      image: "/images/agents/customer.png",
+      image: CustomerLifecycleImg,
       imageAlt: "Customer lifecycle dashboard",
       cards: [
         {
@@ -145,7 +147,7 @@ export default function RevenueGrowthPage() {
       title: "Online Reviews Management Agent",
       description:
         "The Online Reputation Management Agents protect your restaurant visibility and order flow by monitoring reviews and ratings, identifying the real causes behind rating changes, and prioritizing fixes before performance is impacted.",
-      image: "/images/agents/reputation.png",
+      image: OnlineReputationImg,
       imageAlt: "Online reputation dashboard",
       cards: [
         {

@@ -65,7 +65,7 @@ export function Navbar() {
       ]
     },
     {
-      title: "New Store Expansion Agent",
+      title: "New Store Expansion Agents",
       link: "/products/business-expansion",
       subAgents: [
         "New Store Decision Agent",
@@ -274,7 +274,7 @@ export function Navbar() {
                 Cost Control Agents
               </Link>
               <Link href="/products/business-expansion" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
-                New Store Expansion Agent
+                New Store Expansion Agents
               </Link>
               <div className="h-px bg-white/20 my-3" />
             </div>
