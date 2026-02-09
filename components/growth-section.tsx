@@ -3,15 +3,17 @@
 import Image from "next/image"
 
 import Icon1 from "../public/images/icons/CateringGrowthAgent.svg"
-import Icon2 from "../public/images/icons/OnlineReputationManagementAgent.svg"
-import Icon3 from "../public/images/icons/MenuEngineeringAgent.svg"
-import Icon4 from "../public/images/icons/Demand-To-MenuAgent.svg"
-import Icon5 from "../public/images/icons/WasteControlAgent.svg"
-import Icon6 from "../public/images/icons/MarketingSpendEfficiencyAgent.svg"
-import Icon7 from "../public/images/icons/UpsellandAttachAgent.svg"
-import Icon8 from "../public/images/icons/Demand-LedPrepAgent.svg"
-import Icon9 from "../public/images/icons/CustomerLifecycleandRetentionAgent.svg"
-import Icon10 from "../public/images/icons/WorkforceManagementAgent.svg"
+import Icon2 from "../public/images/icons/Demand-To-MenuAgent.svg"
+import Icon3 from "../public/images/icons/UpsellandAttachAgent.svg/"
+import Icon4 from "../public/images/icons/CustomerLifecycleandRetentionAgent.svg"
+import Icon5 from "../public/images/icons/OnlineReputationManagementAgent.svg"
+import Icon6 from "../public/images/icons/WasteControlAgent.svg"
+import Icon7 from "../public/images/icons/Demand-LedPrepAgent.svg"
+import Icon8 from "../public/images/icons/WorkforceManagementAgent.svg"
+import Icon9 from "../public/images/icons/MenuEngineeringAgent.svg"
+import Icon10 from "../public/images/icons/MarketingSpendEfficiencyAgent.svg"
+import Icon11 from "../public/images/icons/TradeAreaDemand.svg"
+import Icon12 from "../public/images/icons/ExpansionFit.svg"
 
 const agents = [
   {
@@ -67,12 +69,12 @@ const agents = [
   {
     title: "Trade Area Demand Heatmap & Forecast Agent",
     desc: "For a potential trade area, produces a daypart heatmap and weekly demand forecast.",
-    icon: Icon10,
+    icon: Icon11,
   },
   {
     title: "Expansion Fit & Go/No-Go Decision Agent",
     desc: "Evaluates potential trade areas, learns what made your current stores win, and scores each new area against those drivers.",
-    icon: Icon10,
+    icon: Icon12,
   },
 ]
 

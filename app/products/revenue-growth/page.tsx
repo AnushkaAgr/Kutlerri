@@ -8,9 +8,11 @@ import { ManagedServices } from "@/components/managed-services"
 import CateringImg from "@/public/images/AgentGraphs/Catering.png"
 import UpsellnAttachImg from "@/public/images/AgentGraphs/UpsellandAttachAgent.png"
 import CustomerLifecycleImg from "@/public/images/AgentGraphs/CustomerLifecycle.png"
-import OnlineReputationImg from "@/public/images/AgentGraphs/CustomerLifecycle.png"
+import OnlineReputationImg from "@/public/images/AgentGraphs/OnlineReputation.png"
+import DemandDrivenMenuImg from "@/public/images/AgentGraphs/Demand-DrivenMenuAgent.png"
 
-import RevenueImg from "@/public/images/ProductPage/ProductHero.png"
+
+import RevenueImg from "@/public/images/ProductPage/RevenueGrowthHomePage.png"
 
 export default function RevenueGrowthPage() {
   const agentsData: Agent[] = [
@@ -56,7 +58,7 @@ export default function RevenueGrowthPage() {
       title: "Demand Driven Menu Agent",
       description:
         "Demand to Menu Agents aligns your menu with what customers actually want and structures it so the right items sell better across dine-in, delivery, and catering.",
-      image: "/images/agents/menu-demand.png",
+      image: DemandDrivenMenuImg,
       imageAlt: "Demand driven menu dashboard",
       cards: [
         {

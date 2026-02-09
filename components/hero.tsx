@@ -15,7 +15,7 @@ export function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % heroSlides.length);
-    }, 10000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -67,11 +67,12 @@ export function Hero() {
             {/* LEFT */}
             <div
               className="
-    max-w-[620px]
-    relative
-    lg:-top-[32px]
-    xl:-top-[48px]
-  "
+                max-w-[620px]
+                relative
+                lg:-top-[32px]
+                xl:-top-[48px]
+                min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[220px]
+              "
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -83,6 +84,7 @@ export function Hero() {
                     duration: 0.6,
                     ease: "easeInOut",
                   }}
+                  className="overflow-hidden"
                 >
                   <HeroHeading title={slide.title} />
                 </motion.div>
@@ -90,57 +92,99 @@ export function Hero() {
             </div>
 
             {/* RIGHT */}
-            {/* RIGHT */}
             <div
               className="
-    max-w-[620px] lg:max-w-[600px]
-    text-white
-    font-gotham
-    relative
-    lg:top-[32px]
-    xl:top-[48px]
-    lg:ml-[40px]
-    xl:ml-[100px]
-  "
+                max-w-[620px] lg:max-w-[600px]
+                text-white
+                font-gotham
+                relative
+                lg:top-[32px]
+                xl:top-[48px]
+                lg:ml-[40px]
+                xl:ml-[100px]
+                min-h-[380px] sm:min-h-[320px] md:min-h-[280px] lg:min-h-[340px]
+              "
             >
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={slide.title} // 🔥 SAME KEY = PERFECT SYNC
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -16 }}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeInOut",
+                  key={slide.title}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={{
+                    hidden: { opacity: 0, y: 10 },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        staggerChildren: 0.1,
+                        delayChildren: 0.1,
+                        duration: 0.5
+                      }
+                    }
                   }}
+                  className="overflow-hidden"
                 >
                   {/* Paragraph 1 */}
-                  <p className="text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed">
-                    <span className="opacity-80">
-                      {slide.rightContent.paragraph1.split(".")[0]}.
-                    </span>{" "}
-                    <span className="font-semibold">
-                      {slide.rightContent.paragraph1
-                        .split(".")
-                        .slice(1)
-                        .join(".")
-                        .trim()}
-                    </span>
-                  </p>
+                  <motion.p
+                    variants={{
+                      hidden: { opacity: 0, y: 10 },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                    }}
+                    className="text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed"
+                  >
+                    {(() => {
+                      const p1 = slide.rightContent.paragraph1;
+                      const sentences = p1.match(/[^.!?]+[.!?]+/g) || [p1];
+                      if (sentences.length <= 1) {
+                        return <span className="font-semibold">{p1}</span>;
+                      }
+                      const last = sentences.pop();
+                      const rest = sentences.join(" ");
+                      return (
+                        <>
+                          <span className="opacity-80">{rest} </span>
+                          <span className="font-semibold">{last}</span>
+                        </>
+                      );
+                    })()}
+                  </motion.p>
 
                   {/* Paragraph 2 */}
-                  <p className="mt-6 text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed">
-                    <span className="font-semibold text-[#9F7CEF]">
-                      Kutlerri’s
-                    </span>{" "}
-                    <span className="font-semibold">
-                      New Store Expansion Agents
-                    </span>{" "}
-                    <span className="opacity-80">
-                      pressure-test demand, competition, and unit economics
-                      before you sign.
-                    </span>
-                  </p>
+                  <motion.p
+                    variants={{
+                      hidden: { opacity: 0, y: 10 },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                    }}
+                    className="mt-6 text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed"
+                  >
+                    {(() => {
+                      const p2 = slide.rightContent.paragraph2;
+                      const agentsIndex = p2.indexOf("Agents");
+                      const colonIndex = p2.indexOf(":");
+                      const splitIndex = colonIndex !== -1 ? colonIndex : (agentsIndex !== -1 ? agentsIndex + 6 : -1);
+
+                      if (splitIndex !== -1) {
+                        const namePart = p2.substring(0, splitIndex).trim();
+                        const descPart = p2.substring(splitIndex).trim();
+
+                        return (
+                          <>
+                            <span className="font-semibold ">
+                              {namePart.startsWith("Kutlerri’s") ? "Kutlerri’s" : ""}
+                            </span>{" "}
+                            <span className="font-semibold">
+                              {namePart.startsWith("Kutlerri’s") ? namePart.replace("Kutlerri’s", "").trim() : namePart}
+                            </span>{" "}
+                            <span className="opacity-80">
+                              {descPart}
+                            </span>
+                          </>
+                        );
+                      }
+                      return <span className="opacity-80">{p2}</span>;
+                    })()}
+                  </motion.p>
                 </motion.div>
               </AnimatePresence>
               {/* CTA */}

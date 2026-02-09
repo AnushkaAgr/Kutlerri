@@ -4,10 +4,12 @@ import { AgentSection, type Agent } from "@/components/products/AgentSection"
 import { ProductHero } from "@/components/products/ProductHero"
 import { ManagedServices } from "@/components/managed-services"
 import { Footer } from "@/components/footer"
-import RevenueImg from "@/public/images/ProductPage/ProductHero.png"
+import RevenueImg from "@/public/images/ProductPage/CostControl.png"
 import PrepForecastImg from "@/public/images/AgentGraphs/PrepForecastAgent.png"
 import WasteControltImg from "@/public/images/AgentGraphs/WasteControlAgents.png"
-import WorkForceImg from "@/public/images/AgentGraphs/WorkAgent.png"
+import WorkForceImg from "@/public/images/AgentGraphs/WorkforceManagement.png"
+import MenuEngineeringImg from "@/public/images/AgentGraphs/MenuEngineeringAgent.png"
+import MarketingSpendImg from "@/public/images/AgentGraphs/MarketingSpendDoorDash.png"
 
 
 const agentsData: Agent[] = [
@@ -100,7 +102,7 @@ const agentsData: Agent[] = [
     title: "Menu Mix & Margin Optimization Agents",
     description:
       "The Menu Engineering Agents improves menu profitability by identifying which items truly make money, which create hidden costs, and how menu items should be adjusted across channels.",
-    image: "/images/agents/menu.png",
+    image: MenuEngineeringImg,
     imageAlt: "Menu engineering dashboard",
     cards: [
       {
@@ -126,7 +128,7 @@ const agentsData: Agent[] = [
     title: "Marketing Spend Efficiency Agent",
     description:
       "The Marketing Spend Efficiency Agents ensure promos and ads generate profitable orders without increasing refunds, errors, or visibility risk on delivery platforms.",
-    image: "/images/agents/marketing.png",
+    image: MarketingSpendImg,
     imageAlt: "Marketing spend efficiency dashboard",
     cards: [
       {

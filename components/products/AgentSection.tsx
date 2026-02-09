@@ -126,7 +126,7 @@ export function AgentSection({ agents }: AgentSectionProps) {
                 className="bg-gradient-to-b from-[#F3ECFE] to-[#E2D5FF] p-6 md:p-10 rounded-[10px]"
               >
                 {/* TOP */}
-                <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:items-start mb-10 md:mb-16">
+                <div className="flex flex-col-reverse lg:grid lg:grid-cols-[2fr_3fr] gap-8 lg:gap-12 items-center lg:items-start mb-10 md:mb-16">
 
                   <div>
                     <h2 className="font-avant tracking-[-0.916px] text-[#300B60] 
@@ -143,9 +143,9 @@ export function AgentSection({ agents }: AgentSectionProps) {
                     <Image
                       src={a.image}
                       alt={a.imageAlt || a.title}
-                      width={1000}
-                      height={800}
-                      className="w-[85%] h-auto object-contain rounded-[10px]"
+                      width={1200}
+                      height={1000}
+                      className="w-full h-auto object-contain rounded-[10px]"
                     />
                   </div>
                 </div>
