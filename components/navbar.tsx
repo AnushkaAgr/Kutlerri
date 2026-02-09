@@ -89,7 +89,7 @@ export function Navbar() {
 
           {/* Logo */}
           <div className="flex-1 flex justify-start">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" onClick={() => { setDesktopProductsOpen(false); setMobileMenuOpen(false) }} className="flex items-center gap-2">
               <img src={LogoImage.src} alt="Logo" className="hidden lg:block h-[40px]" />
               <img src={Logo2.src} alt="Logo Mobile" className="block lg:hidden h-[36px]" />
             </Link>
