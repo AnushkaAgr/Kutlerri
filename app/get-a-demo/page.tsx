@@ -12,7 +12,7 @@ export default function GetDemoPage() {
 
             <div className="relative pt-32 pb-20 px-6">
                 {/* Decorative background elements */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-gradient-to-b from-[#E2D5FF]/50 to-transparent blur-[120px] -z-10" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-linear-to-b from-[#E2D5FF]/50 to-transparent blur-[120px] -z-10" />
 
                 <div className="mx-auto max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
