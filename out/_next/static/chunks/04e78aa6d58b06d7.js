@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,15999,t=>{t.v("/_next/static/media/WhiteOutlineFavLogo.97834f1c.png")}]);

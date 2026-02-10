@@ -123,7 +123,8 @@ export function AgentSection({ agents }: AgentSectionProps) {
             {agents.map((a) => (
               <motion.div
                 key={a.id}
-                className="bg-gradient-to-b from-[#F3ECFE] to-[#E2D5FF] p-6 md:p-10 rounded-[10px]"
+                id={a.id}
+                className="scroll-mt-[140px] bg-gradient-to-b from-[#F3ECFE] to-[#E2D5FF] p-6 md:p-10 rounded-[10px]"
               >
                 {/* TOP */}
                 <div className="flex flex-col-reverse lg:grid lg:grid-cols-[2fr_3fr] gap-8 lg:gap-12 items-center lg:items-start mb-10 md:mb-16">

@@ -1,10 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown, TrendingUp, DollarSign, MapPin } from "lucide-react"
 import LogoImage from "../public/images/Logo/WhiteLogo.png"
 import Logo2 from "../public/images/Logo/WhiteOutlineFavLogo.png"
 
@@ -13,13 +13,18 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [desktopProductsOpen, setDesktopProductsOpen] = useState(false)
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState(0)
   const pathname = usePathname()
+
+  const dropdownRef = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   // Close dropdowns on route change
   useEffect(() => {
     setDesktopProductsOpen(false)
     setMobileMenuOpen(false)
     setMobileProductsOpen(false)
+    setActiveTab(0)
   }, [pathname])
 
   useEffect(() => {
@@ -41,40 +46,61 @@ export function Navbar() {
     }
   }, [desktopProductsOpen, mobileMenuOpen])
 
+  // Click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        desktopProductsOpen &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setDesktopProductsOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [desktopProductsOpen])
+
   const agentBlocks = [
     {
       title: "Revenue Growth Agents",
       link: "/products/revenue-growth",
-      description: "Our agents bring together your orders, menus, reviews, and delivery data to identify missed demand, increase order value, and flag customer drop-offs, with clear actions to grow revenue without guesswork.",
+      description: "Identify hidden demand, expand order value, and protect visibility.",
+      icon: TrendingUp,
       subAgents: [
-        "Catering Growth Agent",
-        "Demand-Driven Menu Agent",
-        "Upsell and Attach Agent",
-        "Customer Retention Agent",
-        "Online Reputation Agent"
+        { title: "Catering Growth Agent", desc: "Unlock corporate and event revenue streams.", href: "/products/revenue-growth#catering-growth" },
+        { title: "Demand-Driven Menu Agent", desc: "Optimize your menu for profitability.", href: "/products/revenue-growth#demand-driven-menu" },
+        { title: "Upsell and Attach Agent", desc: "Increase average order value automatically.", href: "/products/revenue-growth#upsell-attach" },
+        { title: "Customer Retention Agent", desc: "Reduce churn and boost loyalty.", href: "/products/revenue-growth#customer-lifecycle-retention" },
+        { title: "Online Reputation Agent", desc: "Manage and improve your online presence.", href: "/products/revenue-growth#online-reputation" }
       ]
     },
     {
       title: "Cost Control Agents",
       link: "/products/cost-control",
-      description: "Our agents bring together your prep, inventory, labor, marketing, and delivery data to spot waste, demand mismatches, and inefficiencies surfacing clear actions to control costs without disrupting operations.",
+      description: "Reduce waste, optimize labor, and control food costs automatically.",
+      icon: DollarSign,
       subAgents: [
-        "Waste Control Agent",
-        "Prep Forecast Agents",
-        "Labor Cost Optimization Agents",
-        "Menu Mix Agents",
-        "Marketing Efficiency Agent"
+        { title: "Waste Control Agent", desc: "Track and minimize food waste.", href: "/products/cost-control#waste-control" },
+        { title: "Prep Forecast Agents", desc: "Predict prep needs with high accuracy.", href: "/products/cost-control#prep-forecast" },
+        { title: "Labor Cost Optimization Agents", desc: "Schedule smarter to save on labor.", href: "/products/cost-control#labor-optimization" },
+        { title: "Menu Mix Agents", desc: "Analyze profitability by item.", href: "/products/cost-control#menu-engineering" },
+        { title: "Marketing Efficiency Agent", desc: "Ensure every ad dollar drives revenue.", href: "/products/cost-control#marketing-efficiency" }
       ]
     },
     {
       title: "New Store Expansion Agents",
       link: "/404",
-      description: "Kutlerri’s Revenue Growth Agents turn catering into a repeatable engine while quietly lifting margins with demand-led menus, executable upsells, and retention loops that keep customers coming back.",
+      description: "Data-driven site selection to ensure your next location succeeds.",
+      icon: MapPin,
       subAgents: [
-        "New Store Decision Agent",
-        "",
-        "Trade Area Demand Agent",
-
+        { title: "New Store Decision Agent", desc: "Evaluate locations with data confidence.", href: "/404" },
+        { title: "Trade Area Demand Agent", desc: "Map local demand hotspots.", href: "/404" }
       ]
     },
   ]
@@ -103,17 +129,18 @@ export function Navbar() {
 
             {/* Products */}
             <button
+              ref={buttonRef}
               onClick={() => setDesktopProductsOpen(!desktopProductsOpen)}
-              className="
-                relative text-white font-gotham font-medium
+              className={`
+                relative font-gotham font-medium
                 text-[16px] md:text-[18px] lg:text-[20.778px]
                 tracking-[-0.533px]
                 transition-colors duration-300
-                hover:text-[#9F7CEF]
                 flex items-center gap-1
-              "
+                ${desktopProductsOpen ? "text-[#9F7CEF]" : "text-white hover:text-[#9F7CEF]"}
+              `}
             >
-              Products <ChevronDown size={16} />
+              Products <ChevronDown size={16} className={`transition-transform duration-300 ${desktopProductsOpen ? "rotate-180" : ""}`} />
             </button>
 
             {/* Resources */}
@@ -185,67 +212,105 @@ export function Navbar() {
         </div>
       </motion.nav>
 
-      {/* DESKTOP MEGA DROPDOWN */}
+      {/* DESKTOP MEGA DROPDOWN (Master-Detail Layout) */}
       <AnimatePresence>
         {desktopProductsOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -30 }}
+            ref={dropdownRef}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            className="hidden md:block fixed top-[108px] left-0 right-0 h-[calc(100vh-108px)] bg-[#2B145F] z-40 overflow-y-auto"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="hidden lg:block fixed top-[108px] left-0 right-0 bg-[#2B145F] border-t border-white/10 shadow-2xl z-40"
           >
-            <div className="px-6 md:px-10 lg:px-[72px] py-8 lg:py-12 min-h-full flex flex-col justify-start space-y-8 lg:space-y-12">
+            <div className="mx-auto max-w-[1400px] p-8">
+              <div className="grid grid-cols-12 gap-8 min-h-[400px]">
 
-              {agentBlocks.map((agent, idx) => (
-                <div key={idx} className="border-b border-white/20 pb-8">
+                {/* LEFT SIDEBAR - Categories */}
+                <div className="col-span-4 border-r border-white/10 pr-6 space-y-2">
+                  <h3 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-4 px-4">
+                    Product Categories
+                  </h3>
 
-                  <div className="grid grid-cols-[1.2fr_1px_1fr_1fr_1fr] gap-10">
+                  {agentBlocks.map((agent, idx) => (
+                    <Link
+                      key={idx}
+                      href={agent.link}
+                      onMouseEnter={() => setActiveTab(idx)}
+                      onClick={() => setActiveTab(idx)}
+                      className={`
+                        group flex items-start gap-4 p-4 rounded-xl cursor-pointer transition-all duration-300
+                        ${activeTab === idx ? "bg-white/10 shadow-lg" : "hover:bg-white/5"}
+                      `}
+                    >
+                      <div className={`
+                        p-2 rounded-lg transition-colors
+                        ${activeTab === idx ? "bg-[#9F7CEF] text-white" : "bg-white/5 text-white/70 group-hover:text-white"}
+                      `}>
+                        <agent.icon size={24} />
+                      </div>
 
-                    {/* LEFT MAIN */}
-                    <div className="space-y-4">
-                      <h2 className="text-white text-2xl font-semibold">
-                        {agent.title}
-                      </h2>
-                      <p className="text-white/80 text-sm max-w-md">
-                        {agent.description}
-                      </p>
-                      <Link
-                        href={agent.link}
-                        onClick={() => setDesktopProductsOpen(false)}
-                        className="inline-block bg-[#9F7CEF] text-[#2B145F] px-6 py-2 rounded-full hover:scale-105 hover:shadow-[0_0_20px_rgba(159,124,239,0.5)] transition"
-                      >
-                        Learn More
-                      </Link>
-                    </div>
+                      <div>
+                        <h4 className={`font-avant font-bold text-lg mb-1 leading-tight ${activeTab === idx ? "text-white" : "text-white/90"}`}>
+                          {agent.title}
+                        </h4>
+                        <p className={`font-gotham text-xs leading-relaxed ${activeTab === idx ? "text-white/80" : "text-white/50"}`}>
+                          {agent.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
 
-                    {/* Divider */}
-                    <div className="bg-white/20 w-[1px]" />
-
-                    {/* Column 1 */}
-                    <div className="space-y-6">
-                      {agent.subAgents.slice(0, 2).map((sub, i) => (
-                        <h3 key={i} className="text-white font-gotham font-medium text-[16px]">{sub}</h3>
-                      ))}
-                    </div>
-
-                    {/* Column 2 */}
-                    <div className="space-y-6">
-                      {agent.subAgents.slice(2, 4).map((sub, i) => (
-                        <h3 key={i} className="text-white font-gotham font-medium text-[16px]">{sub}</h3>
-                      ))}
-                    </div>
-
-                    {/* Column 3 */}
-                    <div className="space-y-6">
-                      {agent.subAgents.slice(4).map((sub, i) => (
-                        <h3 key={i} className="text-white font-gotham font-medium text-[16px]">{sub}</h3>
-                      ))}
-                    </div>
-
+                  <div className="mt-8 px-4 pt-4 border-t border-white/10">
+                    <Link href="/get-a-demo" className="text-[#9F7CEF] font-bold text-sm hover:underline flex items-center gap-2">
+                      View Full Platform <ChevronDown className="-rotate-90" size={12} />
+                    </Link>
                   </div>
                 </div>
-              ))}
 
+                {/* RIGHT CONTENT - Sub Agents */}
+                <div className="col-span-8 pl-4">
+                  <div className="flex justify-between items-center mb-6">
+                    <h3 className="text-white font-avant font-bold text-2xl uppercase">
+                      {agentBlocks[activeTab].title}
+                    </h3>
+                    <Link
+                      href={agentBlocks[activeTab].link}
+                      className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-xs font-bold transition-colors"
+                    >
+                      Explore Category
+                    </Link>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-x-12 gap-y-8">
+                    {agentBlocks[activeTab].subAgents.map((sub, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, x: 10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.05 }}
+                      >
+                        <Link href={sub.href} onClick={() => setDesktopProductsOpen(false)} className="group cursor-pointer block">
+                          <h5 className="text-white font-bold text-[16px] mb-1 group-hover:text-[#9F7CEF] transition-colors">{sub.title}</h5>
+                          <p className="text-white/50 text-sm leading-snug">{sub.desc}</p>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Decorative / Image placeholder could go here */}
+                  <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-[#381D7D] to-transparent border border-white/5 flex items-center justify-between">
+                    <div>
+                      <h4 className="text-white font-bold mb-1">Need help deciding?</h4>
+                      <p className="text-white/60 text-sm">Our team can help you audit your operations.</p>
+                    </div>
+                    <Link href="/get-a-demo" className="text-white bg-[#9F7CEF] hover:bg-[#8a68e0] px-4 py-2 rounded-lg text-sm font-bold transition-colors">
+                      Book Audit
+                    </Link>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </motion.div>
         )}
@@ -253,7 +318,7 @@ export function Navbar() {
 
       {/* TABLET + MOBILE SIMPLE DROPDOWN */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed top-[108px] left-0 right-0 bg-[#381D7D]/95 backdrop-blur-md z-40 p-6">
+        <div className="lg:hidden fixed top-[108px] left-0 right-0 bg-[#381D7D]/95 backdrop-blur-md z-40 p-6 h-[calc(100vh-108px)] overflow-y-auto">
 
           {/* Products */}
           <button
@@ -271,21 +336,27 @@ export function Navbar() {
 
           {/* Products submenu */}
           {mobileProductsOpen && (
-            <div className="ml-4 mt-3 space-y-3">
-              <Link href="/products/revenue-growth" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
-                Revenue Growth Agents
-              </Link>
-              <Link href="/products/cost-control" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
-                Cost Control Agents
-              </Link>
-              <Link href="/404" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
-                New Store Expansion Agents
-              </Link>
+            <div className="ml-4 mt-3 space-y-6">
+              {agentBlocks.map((agent, i) => (
+                <div key={i}>
+                  <Link
+                    href={agent.link}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-white font-bold mb-1"
+                  >
+                    {agent.title}
+                  </Link>
+                  <p className="text-white/50 text-xs mb-3 pr-4">{agent.description}</p>
+                  <ul className="border-l-2 border-white/10 pl-4 space-y-2">
+                    {agent.subAgents.map((sub, j) => (
+                      <li key={j} className="text-white/70 text-sm">{sub.title}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
               <div className="h-px bg-white/20 my-3" />
             </div>
           )}
-
-
 
           <Link href="/404" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
             Resources
@@ -298,8 +369,6 @@ export function Navbar() {
           </Link>
         </div>
       )}
-
-
     </>
   )
 }
