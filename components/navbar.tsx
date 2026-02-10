@@ -95,12 +95,12 @@ export function Navbar() {
     },
     {
       title: "New Store Expansion Agents",
-      link: "/404",
+      link: "/products/new-store-expansion",
       description: "Data-driven site selection to ensure your next location succeeds.",
       icon: MapPin,
       subAgents: [
-        { title: "New Store Decision Agent", desc: "Evaluate locations with data confidence.", href: "/404" },
-        { title: "Trade Area Demand Agent", desc: "Map local demand hotspots.", href: "/404" }
+        { title: "New Store Decision Agent", desc: "Evaluate locations with data confidence.", href: "/products/new-store-expansion" },
+        { title: "Trade Area Demand Agent", desc: "Map local demand hotspots.", href: "/products/new-store-expansion" }
       ]
     },
   ]
@@ -109,7 +109,7 @@ export function Navbar() {
     <>
       {/* NAVBAR */}
       <motion.nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || desktopProductsOpen || mobileMenuOpen || pathname === "/get-a-demo"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || desktopProductsOpen || mobileMenuOpen || pathname !== "/"
           ? "bg-[#381D7D] backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
           : "bg-transparent"
           }`}
@@ -164,7 +164,7 @@ export function Navbar() {
 
             {/* Company */}
             <Link
-              href="/404"
+              href="/company"
               className="
                 relative text-white font-gotham font-medium
                 text-[16px] md:text-[18px] lg:text-[20.778px]
@@ -364,7 +364,7 @@ export function Navbar() {
 
           <div className="h-px bg-white/20 my-3" />
 
-          <Link href="/404" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
+          <Link href="/company" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
             Company
           </Link>
         </div>

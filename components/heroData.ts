@@ -7,7 +7,7 @@ export const heroSlides = [
 
     rightContent: {
       paragraph1:
-        "Catering is a $60B+ opportunity hiding in plain sight. If it still depends on “when someone calls,” that’s not a channel - it’s luck. Do you have a growth engine, or just a set of tactics?",
+        "Catering is a huge opportunity hiding in plain sight. If it still depends on “when someone calls,” that’s not a channel - it’s luck. Do you have a growth engine, or just a set of tactics?",
 
       paragraph2:
         "Kutlerri’s Revenue Growth Agents turn catering into a repeatable engine while quietly lifting margins with demand-led menus, executable upsells, and retention loops that keep customers coming back.",

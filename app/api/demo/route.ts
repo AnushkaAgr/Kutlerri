@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const data = await req.json();
+    console.log("data", data);
 
     // Basic server-side validation
     const { firstName, lastName, email, restaurantName, locations, pos } = data;
@@ -36,6 +37,7 @@ export async function POST(req: Request) {
             submittedAt: new Date().toISOString(),
           }),
         });
+        console.log("response", response);
         if (!response.ok) {
           console.error("Failed to send data to Google Sheets");
         }

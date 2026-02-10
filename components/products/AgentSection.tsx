@@ -2,13 +2,13 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 export type Agent = {
   id: string
   title: string
   description: string
-  image: string
+  image: string | StaticImageData
   imageAlt?: string
   cards: {
     title: string

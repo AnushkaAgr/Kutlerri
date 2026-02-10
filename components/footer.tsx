@@ -69,7 +69,7 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/expansion" className="hover:text-white transition-colors">
+                  <Link href="/products/new-store-expansion" className="hover:text-white transition-colors">
                     New Store Expansion Agents
                   </Link>
                 </li>
@@ -81,14 +81,14 @@ export function Footer() {
               <h4 className="font-avant font-bold text-[18px] mb-6">Company</h4>
               <ul className="space-y-4 text-white/80 font-gotham text-sm">
                 <li>
-                  <Link href="/about" className="hover:text-white transition-colors">
-                    About
+                  <Link href="/company" className="hover:text-white transition-colors">
+                    About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
+                  {/* <Link href="/contact" className="hover:text-white transition-colors">
                     Contact
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </div>

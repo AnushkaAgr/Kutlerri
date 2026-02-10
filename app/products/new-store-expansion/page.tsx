@@ -4,8 +4,8 @@ import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
 import RevenueImg from "@/public/images/ProductPage/CostControl.png"
 import { ProductHero } from "@/components/products/ProductHero"
-// import StoreSuccessImg from "@/public/images/AgentGraphs/"
-// import TradeAreaMatchImg from "@/public/images/AgentGraphs/TradeAreaMatchAgent.png"
+import StoreSuccessImg from "@/public/images/AgentGraphs/LocationAgent1.png"
+import TradeAreaMatchImg from "@/public/images/AgentGraphs/TradeArea.png"
 
 const agentsData: Agent[] = [
   {
@@ -13,7 +13,7 @@ const agentsData: Agent[] = [
     title: "New Store Decision Agent",
     description:
       "The Expansion Fit & Go/No-Go Decision Agent helps you choose the right next location by learning what makes your current stores succeed, comparing that “success fingerprint” against each candidate trade area, and producing a clear Go/No-Go decision with conditions and risks.",
-    image: "/images/agents/store-decision.png",
+    image: StoreSuccessImg,
     imageAlt: "New store decision dashboard",
     cards: [
       {
@@ -32,6 +32,14 @@ const agentsData: Agent[] = [
           "Gives a GO/NO-GO/GO-WITH-CONDITIONS per trade area",
         ],
       },
+      {
+        title: "Trade Area Scorecard Agent",
+        items: [
+          "Generate a one-page scorecard for each candidate trade area with 5–7 core metrics",
+          "Roll them into a single Score (0–100) with a Go / No-Go label.",
+          "Highlight the top 3 pros and top 3 risks for that area.",
+        ],
+      },
     ],
   },
 
@@ -40,7 +48,7 @@ const agentsData: Agent[] = [
     title: "Trade Area Demand Intelligence Agent",
     description:
       "The Trade Area Demand Heatmap & Forecast Agent estimates how much demand exists in each trade area, when it shows up by daypart and day-of-week",
-    image: "/images/agents/store-decision.png",
+    image: TradeAreaMatchImg,
     imageAlt: "Trade area demand intelligence dashboard",
     cards: [
       {
@@ -59,9 +67,18 @@ const agentsData: Agent[] = [
           "Flag channel risks (delivery-heavy areas that compress margins)",
         ],
       },
+      {
+        title: "Catering Demand Index Agent",
+        items: [
+          "Score catering demand using simple trade-area signals within 1/3/5 miles.",
+          "Estimate catering volume and order size ranges for the area (low/medium/high).",
+          "Highlight the top catering pockets and output a prioritized prospect list for outreach.",
+        ],
+      },
     ],
   },
 ]
+
 
 
 
