@@ -72,6 +72,14 @@ const agentsData: Agent[] = [
           "Guides smarter purchasing and par levels",
         ],
       },
+      {
+        title: "Stockout and 86 prevention Agent",
+        items: [
+          "86 event tracking by item and ingredients",
+          "Root Cause classification for each 86",
+          "Item and Ingredient level reorder triggers, buffer alerts",
+        ],
+      },
     ],
   },
 
@@ -99,6 +107,14 @@ const agentsData: Agent[] = [
           "Highlights where schedule tweaks reduce cost without hurting service",
         ],
       },
+      {
+        title: "Demand Based Schedule Generation Agent",
+        items: [
+          "Recommended demand-based schedule generation",
+          "Start time and end-time optimization",
+          "Impact Preview - Cost & Service Impact viewed together",
+        ],
+      },
     ],
   },
 
@@ -124,6 +140,14 @@ const agentsData: Agent[] = [
           "Compares item performance across channels",
           "Detects channel-driven cost and margin leakage",
           "Identifies items that should be pushed, fixed, or limited by channel",
+        ],
+      },
+      {
+        title: "Pricing & Promo Leakage Agent",
+        items: [
+          "Track PMIX under promos and discounts",
+          "Identify Promo driven margin killers",
+          "Set Promo eligibility guardrails from PMIX",
         ],
       },
     ],
@@ -155,9 +179,19 @@ const agentsData: Agent[] = [
           "Detects visibility and penalty risks early",
         ],
       },
+      {
+        title: "Cross-Platform Spend Control Agent",
+        items: [
+          "Unify Uber Eats + DoorDash Spend into one view",
+          "Budget recommendations split between DoorDash and UberEats",
+          "Pause and Cap Spend rules determination",
+          "Library of Promotions created as a playbook",
+        ],
+      },
     ],
   },
 ]
+
 
 
 
