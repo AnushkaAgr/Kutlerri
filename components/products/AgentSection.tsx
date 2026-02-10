@@ -140,13 +140,15 @@ export function AgentSection({ agents }: AgentSectionProps) {
 
                   {/* IMAGE */}
                   <div className="w-full flex justify-center">
-                    <Image
-                      src={a.image}
-                      alt={a.imageAlt || a.title}
-                      width={1200}
-                      height={1000}
-                      className="w-full h-auto object-contain rounded-[10px]"
-                    />
+                    <div className="w-full max-w-[650px]">
+                      <Image
+                        src={a.image}
+                        alt={a.imageAlt || a.title}
+                        width={800}
+                        height={550}
+                        className="w-full h-auto object-cover rounded-[10px]"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -161,8 +163,8 @@ export function AgentSection({ agents }: AgentSectionProps) {
                     >
                       {/* Card Title */}
                       <h5 className="font-avant text-[#300B60] text-[16px] md:text-[20px]
-                           mb-4 md:mb-6 text-center bg-[#F8F2FF] shadow-[inset_0_0_172.7px_rgba(255,255,255,0.25)] w-full min-h-16 md:min-h-20 py-2
-                           rounded-t-[8px] flex items-center justify-center px-3 shadow leading-tight">
+                           mb-4 md:mb-6 text-center bg-[#F8F2FF] shadow-[inset_0_0_172.7px_rgba(255,255,255,0.25)] w-full min-h-16 md:min-h-20 py-4 md:py-5
+                           rounded-t-[8px] flex items-center justify-center px-4 md:px-6 shadow leading-tight whitespace-normal">
                         {card.title}
                       </h5>
 
@@ -177,8 +179,8 @@ export function AgentSection({ agents }: AgentSectionProps) {
                              rounded-l-[12px] md:rounded-l-[16.535px]
                              bg-gradient-to-r from-white to-[rgba(241,236,253,0)]
                              shadow-[inset_0_0_36.708px_rgba(255,255,255,0.25)]
-                             flex items-center justify-center
-                             text-[#323232] text-xs md:text-sm text-center px-2 md:px-5 py-2 leading-tight"
+                             flex items-center justify-start
+                             text-[#323232] text-xs md:text-sm text-left px-4 md:px-6 py-2 leading-tight"
                           >
                             {item}
                           </div>

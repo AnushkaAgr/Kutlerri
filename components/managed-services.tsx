@@ -3,9 +3,9 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { ArrowRight } from "lucide-react"
-import Image from "next/image"
+import Lottie from "lottie-react"
 import pattern from "../public/images/HomePage/FullyManagedServicePattern.png"
-import ManagedServicesImg from "../public/images/ManagedServices.png"
+import animationData from "../public/lottie/FullyManagedService.json"
 
 export function ManagedServices() {
   const ref = useRef(null)
@@ -83,14 +83,14 @@ export function ManagedServices() {
 
             </div>
 
-            {/* Right - Chart Image */}
-            <div className="flex justify-center md:justify-end items-end">
-              <div className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[450px] xl:max-w-[500px]">
-                <Image
-                  src={ManagedServicesImg}
-                  alt="Geographic Catering Opportunity Map"
-                  className="w-full h-auto object-contain block"
-                  priority
+            {/* Right - Lottie Animation */}
+            <div className="flex justify-center lg:justify-end items-end mt-5 -mb-10 lg:mb-0">
+              <div className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[450px] xl:max-w-[500px] lg:overflow-hidden ">
+                <Lottie
+                  animationData={animationData}
+                  loop={true}
+                  autoplay={true}
+                  className="w-full h-auto scale-125 origin-top lg:scale-[1.45] lg:origin-top-left"
                 />
               </div>
             </div>

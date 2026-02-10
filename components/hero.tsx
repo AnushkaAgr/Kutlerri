@@ -59,9 +59,9 @@ export function Hero() {
               pt-[140px]
               md:pt-[170px]
               lg:pt-[190px]
-              pb-[320px]
-              md:pb-[380px]
-              lg:pb-[420px]
+              pb-[220px]
+              md:pb-[260px]
+              lg:pb-[340px]
             "
           >
             {/* LEFT */}
@@ -102,7 +102,7 @@ export function Hero() {
                 xl:top-[48px]
                 lg:ml-[40px]
                 xl:ml-[100px]
-                min-h-[380px] sm:min-h-[320px] md:min-h-[280px] lg:min-h-[340px]
+                min-h-[480px] sm:min-h-[420px] md:min-h-[380px] lg:min-h-[400px]
               "
             >
               <AnimatePresence mode="wait">
@@ -187,29 +187,31 @@ export function Hero() {
                   </motion.p>
                 </motion.div>
               </AnimatePresence>
-              {/* CTA */}
-              <button
-                className="
-          mt-8
-          inline-flex
-          items-center
-          justify-center
-          rounded-full
-          bg-[#9F7CEF]
-          px-6
-          py-3
-          text-sm
-          font-medium
-          text-white
-          hover:bg-[#8a68e0]
-          hover:scale-105
-          hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
-          transition-all duration-300
-          cursor-pointer
-        "
-              >
-                {slide.rightContent.ctaText}
-              </button>
+
+              {/* CTA - Fixed Position */}
+              <div className="absolute bottom-0 left-0 mb-3">
+                <button
+                  className="
+            inline-flex
+            items-center
+            justify-center
+            rounded-full
+            bg-[#9F7CEF]
+            px-6
+            py-3
+            text-sm
+            font-medium
+            text-white
+            hover:bg-[#8a68e0]
+            hover:scale-105
+            hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
+            transition-all duration-300
+            cursor-pointer
+          "
+                >
+                  {slide.rightContent.ctaText}
+                </button>
+              </div>
             </div>
           </div>
         </div>

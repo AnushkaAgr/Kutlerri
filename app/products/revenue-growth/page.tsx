@@ -25,29 +25,30 @@ export default function RevenueGrowthPage() {
       imageAlt: "Catering growth dashboard",
       cards: [
         {
-          title: "Catering Opportunity Mapping Agent",
+          title: " Catering Revenue Potential Analysis ",
           items: [
             "5-mile radius catering prospect mapping",
-            "Catering-fit business filtering",
-            "Company size and profile enrichment",
-            "Catering potential segmentation",
+            "Identify subsets of business relevant to the restaurant type",
+            "Attach company size and profile data",
+            "Segment companies by catering potential",
           ],
         },
         {
-          title: "Location-Level Catering Demand Agent",
+          title: "Location-Level Catering Demand Analysis",
           items: [
-            "Catering performance data collection",
-            "Comparable restaurant benchmark selection",
-            "Benchmark performance comparison",
-            "Catering revenue share measurement",
+            "Collect current catering performance data",
+            "Identify comparable restaurant benchmarks",
+            "Compare catering performance vs benchmarks",
+            "Measure catering share of total sales",
           ],
         },
         {
-          title: "Catering Marketing Outreach Agent",
+          title: "Catering Marketing Outreach Audit",
           items: [
-            "Catering order source classification",
-            "Existing outreach audit",
-            "Outreach coverage mapping",
+            "Collect and classify catering order sources",
+            "Audit existing catering outreach efforts",
+            "Map outreach coverage vs opportunity",
+            "Catering outbound playbook & back-office setup",
           ],
         },
       ],
@@ -67,6 +68,7 @@ export default function RevenueGrowthPage() {
             "Identify competition",
             "Menu analysis",
             "Demand pattern analysis",
+            "Missing menu items recommendations",
           ],
         },
         {
