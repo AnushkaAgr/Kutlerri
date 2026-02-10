@@ -53,7 +53,6 @@ export default function RevenueGrowthPage() {
         },
       ],
     },
-
     {
       id: "demand-driven-menu",
       title: "Demand Driven Menu Agent",
@@ -92,7 +91,6 @@ export default function RevenueGrowthPage() {
         },
       ],
     },
-
     {
       id: "upsell-attach",
       title: "Upsell and Attach Agent",
@@ -127,7 +125,6 @@ export default function RevenueGrowthPage() {
         },
       ],
     },
-
     {
       id: "customer-lifecycle-retention",
       title: "Customer Lifecycle & Retention Agents",
@@ -152,11 +149,18 @@ export default function RevenueGrowthPage() {
             "Links behavior drops to operational triggers",
           ],
         },
+        {
+          title: "Autonomous Retention Campaign Agent",
+          items: [
+            "Build “who to target this week” lists",
+            "Recommend the right lever per segment",
+            "Determine the best sequence  for each segment",
+          ],
+        },
       ],
     },
-
     {
-      id: "online-reputation",
+      id: "online-reviews-management",
       title: "Online Reviews Management Agent",
       description:
         "The Online Reputation Management Agents protect your restaurant visibility and order flow by monitoring reviews and ratings, identifying the real causes behind rating changes, and prioritizing fixes before performance is impacted.",
@@ -181,9 +185,19 @@ export default function RevenueGrowthPage() {
             "Compares performance with similar nearby restaurants",
           ],
         },
+        {
+          title: "Cross-Platform Review Recovery Agent",
+          items: [
+            "Unified cross-platform review inbox with issue tagging",
+            "Store-level “Whatto foix” scorecard with top issues and quantify impacts",
+            "Plug-and-play response templates",
+            "Turn top complaints into short SOP checklists",
+          ],
+        },
       ],
     },
   ]
+
 
 
 
