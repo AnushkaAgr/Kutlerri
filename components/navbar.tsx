@@ -261,11 +261,11 @@ export function Navbar() {
                     </Link>
                   ))}
 
-                  <div className="mt-8 px-4 pt-4 border-t border-white/10">
+                  {/* <div className="mt-8 px-4 pt-4 border-t border-white/10">
                     <Link href="/get-a-demo" className="text-[#9F7CEF] font-bold text-sm hover:underline flex items-center gap-2">
                       View Full Platform <ChevronDown className="-rotate-90" size={12} />
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* RIGHT CONTENT - Sub Agents */}
