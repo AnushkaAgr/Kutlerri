@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { ArrowRight } from "lucide-react"
@@ -60,7 +62,8 @@ export function ManagedServices() {
               </p>
 
               <div className="flex justify-center lg:justify-start">
-                <button
+                <Link
+                  href="/get-a-demo"
                   className="
                     inline-flex items-center gap-2
                     rounded-full
@@ -78,7 +81,7 @@ export function ManagedServices() {
                 >
                   See How We Work
                   <ArrowRight size={18} />
-                </button>
+                </Link>
               </div>
 
             </div>

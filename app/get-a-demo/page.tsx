@@ -31,10 +31,10 @@ export default function GetDemoPage() {
                             Experience Kutlerri
                         </div>
 
-                        <h1 className="text-4xl md:text-6xl font-bold text-[#300B60] leading-[1.1] font-avant tracking-tight">
-                            See how our agents <br />
-                            <span className="text-[#7C5CFA]">scale your restaurant.</span>
-                        </h1>
+                        <h2 className="text-4xl md:text-6xl font-bold text-[#300B60] leading-[1.1] font-avant tracking-tight">
+                            See how our agents {" "}
+                            <span className="text-[#7C5CFA] whitespace-nowrap">scale your restaurant.</span>
+                        </h2>
 
                         <p className="text-lg md:text-xl text-[#2E312E]/70 max-w-lg leading-relaxed">
                             Get a personalized walkthrough of how our AI agents can optimize your revenue,
@@ -66,7 +66,7 @@ export default function GetDemoPage() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-white/40 backdrop-blur-xl p-8 md:p-12 rounded-[32px] border border-white/60 shadow-2xl shadow-purple-500/5 relative"
+                        className="mt-[50px] bg-white/40 backdrop-blur-xl p-8 md:p-12 rounded-[32px] border border-white/60 shadow-2xl shadow-purple-500/5 relative"
                     >
                         <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#7C5CFA]/10 blur-3xl rounded-full" />
                         <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#E2D5FF]/20 blur-3xl rounded-full" />

@@ -282,11 +282,11 @@ export function GetDemoForm() {
             )}
           </Button>
 
-          <p className="text-center text-xs text-[#2E312E]/50 px-4">
+          {/* <p className="text-center text-xs text-[#2E312E]/50 px-4">
             By clicking "Get My Demo", you agree to our terms of service and
             privacy policy. We'll never share your information with third
             parties.
-          </p>
+          </p> */}
         </form>
       </Form>
     </div>

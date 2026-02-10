@@ -29,7 +29,8 @@ export function Footer() {
             </p>
 
             <div className="mt-8 lg:mt-auto pt-4 text-white/50 text-sm space-y-1 font-gotham">
-              <button
+              <Link
+                href="/get-a-demo"
                 className="
                   mb-6
                   rounded-full
@@ -40,10 +41,11 @@ export function Footer() {
                   hover:scale-105 transition-all duration-300
                   hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
                   cursor-pointer
+                  inline-block
                 "
               >
                 Get a Demo
-              </button>
+              </Link>
               <p>Copyright @ 2026</p>
               <p>Kutlerri tech Corporation</p>
             </div>
@@ -58,17 +60,17 @@ export function Footer() {
               <ul className="space-y-4 text-white/80 font-gotham text-sm">
                 <li>
                   <Link href="/products/revenue-growth" className="hover:text-white transition-colors">
-                    Revenue Growth Agent
+                    Revenue Growth Agents
                   </Link>
                 </li>
                 <li>
                   <Link href="/products/cost-control" className="hover:text-white transition-colors">
-                    Cost Control Agent
+                    Cost Control Agents
                   </Link>
                 </li>
                 <li>
                   <Link href="/products/expansion" className="hover:text-white transition-colors">
-                    New Store Expansion Agent
+                    New Store Expansion Agents
                   </Link>
                 </li>
               </ul>
@@ -105,13 +107,13 @@ export function Footer() {
             </div>
 
             {/* Column 4: Resources */}
-            <div>
+            {/* <div>
               <h4 className="font-avant font-bold text-[18px] mb-6">
                 <Link href="/resources" className="hover:text-purple-300 transition-colors">
                   Resources
                 </Link>
               </h4>
-            </div>
+            </div> */}
 
           </div>
 

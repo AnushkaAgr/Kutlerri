@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import Image, { StaticImageData } from "next/image"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
@@ -45,7 +46,8 @@ export function ProductHero({
             {description}
           </p>
 
-          <button
+          <Link
+            href="/get-a-demo"
             className="
               inline-flex items-center gap-2
               rounded-full bg-[#9F7CEF]
@@ -60,7 +62,7 @@ export function ProductHero({
           >
             {ctaText}
             <ArrowRight size={18} />
-          </button>
+          </Link>
         </motion.div>
 
         {/* RIGHT IMAGE */}

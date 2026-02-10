@@ -9,7 +9,7 @@ import { ProductHero } from "@/components/products/ProductHero"
 
 const agentsData: Agent[] = [
   {
-    id: "store-decision",
+    id: "new-store-decision",
     title: "New Store Decision Agent",
     description:
       "The Expansion Fit & Go/No-Go Decision Agent helps you choose the right next location by learning what makes your current stores succeed, comparing that “success fingerprint” against each candidate trade area, and producing a clear Go/No-Go decision with conditions and risks.",
@@ -36,12 +36,12 @@ const agentsData: Agent[] = [
   },
 
   {
-    id: "trade-area-demand",
+    id: "trade-area-demand-intelligence",
     title: "Trade Area Demand Intelligence Agent",
     description:
       "The Trade Area Demand Heatmap & Forecast Agent estimates how much demand exists in each trade area, when it shows up by daypart and day-of-week",
-    image: "/images/agents/trade-area.png",
-    imageAlt: "Trade area demand heatmap dashboard",
+    image: "/images/agents/store-decision.png",
+    imageAlt: "Trade area demand intelligence dashboard",
     cards: [
       {
         title: "Trade Area Demand Heatmap Agent",
@@ -62,6 +62,7 @@ const agentsData: Agent[] = [
     ],
   },
 ]
+
 
 
 

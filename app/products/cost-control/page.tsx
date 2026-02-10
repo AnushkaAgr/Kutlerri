@@ -6,8 +6,8 @@ import { ManagedServices } from "@/components/managed-services"
 import { Footer } from "@/components/footer"
 import RevenueImg from "@/public/images/ProductPage/CostControl.png"
 import PrepForecastImg from "@/public/images/AgentGraphs/PrepForecastAgent.png"
-import WasteControltImg from "@/public/images/AgentGraphs/WasteControlAgents.png"
-import WorkForceImg from "@/public/images/AgentGraphs/WorkforceManagement.png"
+import WasteControlImg from "@/public/images/AgentGraphs/WasteControlAgents.png"
+import LaborOptimizationImg from "@/public/images/AgentGraphs/WorkforceManagement.png"
 import MenuEngineeringImg from "@/public/images/AgentGraphs/MenuEngineeringAgent.png"
 import MarketingSpendImg from "@/public/images/AgentGraphs/MarketingSpendDoorDash.png"
 
@@ -18,30 +18,31 @@ const agentsData: Agent[] = [
     title: "Waste Control Agent",
     description:
       "The Waste Control Agents reduce food waste and avoidable cost by identifying where waste is coming from, why it repeats, and how prep and shelf-life practices can be corrected.",
-    image: WasteControltImg,
+    image: WasteControlImg,
     imageAlt: "Waste control dashboard",
     cards: [
       {
         title: "Structural Waste Detection Agent",
         items: [
-          "Waste data collection & source mapping",
-          "Identify major and repeat waste drivers",
+          "Collects and maps waste by item, ingredient, and location",
+          "Identifies the biggest and most repeat waste drivers",
+          "Quantifies waste impact on food cost and margins",
         ],
       },
       {
         title: "Prep vs Demand Mismatch Agent",
         items: [
-          "Compare prep quantities with actual sales",
-          "Identify consistent over-prep and shortage zones",
-          "Link over-prep directly to waste",
+          "Compares prep quantities with what actually sells",
+          "Identifies consistent over-prep and shortage patterns",
+          "Links over-prep directly to waste and lost sales",
         ],
       },
       {
         title: "Shelf-Life Usage Agent",
         items: [
-          "Document shelf-life and holding limits",
-          "Measure real usage vs allowed life",
-          "Calculate shelf-life loss",
+          "Documents shelf-life and holding limits by item and ingredient",
+          "Measures real usage against allowed shelf life",
+          "Calculates shelf-life loss in real dollars",
         ],
       },
     ],
@@ -53,20 +54,22 @@ const agentsData: Agent[] = [
     description:
       "The Demand-Led Prep Agents ensure your restaurant prepares the right items and ingredients in the right quantities by aligning prep planning with real demand patterns.",
     image: PrepForecastImg,
-    imageAlt: "Prep forecasting dashboard",
+    imageAlt: "Prep forecast dashboard",
     cards: [
       {
         title: "Menu-Item Demand Forecasting Agent",
         items: [
-          "Build item-level demand patterns",
-          "Forecast item demand by day and daypart",
+          "Builds item-level demand patterns from historical sales",
+          "Forecasts item demand by day and daypart",
+          "Turns demand forecasts into prep-ready guidance",
         ],
       },
       {
         title: "Ingredient-Level Demand Forecasting Agent",
         items: [
-          "Ingredient demand mapping",
-          "Adjust waste and safety buffers",
+          "Maps ingredient demand from item-level forecasts",
+          "Adjusts for waste, prep loss, and safety buffers",
+          "Guides smarter purchasing and par levels",
         ],
       },
     ],
@@ -77,21 +80,23 @@ const agentsData: Agent[] = [
     title: "Labor Cost Optimization Agents",
     description:
       "The Workforce Management Agents align staffing levels and roles with real customer demand to reduce overstaffing, understaffing, idle hours, and unnecessary overtime.",
-    image: WorkForceImg,
+    image: LaborOptimizationImg,
     imageAlt: "Labor optimization dashboard",
     cards: [
       {
         title: "Demand-Aligned Staffing Agent",
         items: [
-          "Build hourly demand and staffing view",
-          "Detect overstaffing and understaffing patterns",
+          "Builds an hourly view of demand and staffing by role",
+          "Detects overstaffing and understaffing patterns",
+          "Highlights where staffing changes protect service and margin",
         ],
       },
       {
         title: "Labor Utilization Detection Agent",
         items: [
-          "Map overtime, long-shift, and idle-hour patterns",
-          "Identify overtime-risk and idle-labor windows",
+          "Maps overtime, long shifts, and idle hours by role and shift",
+          "Identifies high-risk overtime and idle-labor windows",
+          "Highlights where schedule tweaks reduce cost without hurting service",
         ],
       },
     ],
@@ -108,16 +113,17 @@ const agentsData: Agent[] = [
       {
         title: "PMIX Profitability and Demand Agent",
         items: [
-          "Build and classify the PMIX table",
-          "Validate PMIX by channel.",
-          "Identify PMIX problems and opportunities",
+          "Builds and classifies your PMIX by demand and margin",
+          "Validates PMIX performance by channel",
+          "Identifies clear PMIX problems and opportunities.",
         ],
       },
       {
         title: "Channel Margin Leakage Agent",
         items: [
-          "Compare item performance by channel",
-          "Detect channel-driven cost leakage",
+          "Compares item performance across channels",
+          "Detects channel-driven cost and margin leakage",
+          "Identifies items that should be pushed, fixed, or limited by channel",
         ],
       },
     ],
@@ -129,22 +135,24 @@ const agentsData: Agent[] = [
     description:
       "The Marketing Spend Efficiency Agents ensure promos and ads generate profitable orders without increasing refunds, errors, or visibility risk on delivery platforms.",
     image: MarketingSpendImg,
-    imageAlt: "Marketing spend efficiency dashboard",
+    imageAlt: "Marketing spend dashboard",
     cards: [
       {
         title: "Uber Eats Marketing Spend Agent",
         items: [
-          "Audit historical marketing spend",
-          "Identify revenue leakage in promotions",
-          "Analyze promo timing effectiveness",
-          "Study customer behavior under promos",
+          "Audits historical Uber Eats promos and ad spend",
+          "Identifies revenue leakage in promotions",
+          "Analyzes promo timing and impact",
+          "Studies customer behavior under promotions",
         ],
       },
       {
         title: "DoorDash Marketing Spend Agent",
         items: [
-          "Build spend, profit, and reliability view",
-          "Identify risky spend patterns and visibility threats",
+          "Audits historical DoorDash promos and ad spend",
+          "Builds a unified view of spend, profit, and reliability",
+          "Identifies risky spend patterns",
+          "Detects visibility and penalty risks early",
         ],
       },
     ],

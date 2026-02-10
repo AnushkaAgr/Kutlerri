@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -190,7 +191,8 @@ export function Hero() {
 
               {/* CTA - Fixed Position */}
               <div className="absolute bottom-0 left-0 mb-3">
-                <button
+                <Link
+                  href="/get-a-demo"
                   className="
             inline-flex
             items-center
@@ -210,7 +212,7 @@ export function Hero() {
           "
                 >
                   {slide.rightContent.ctaText}
-                </button>
+                </Link>
               </div>
             </div>
           </div>

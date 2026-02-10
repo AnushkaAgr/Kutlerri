@@ -45,6 +45,7 @@ export function Navbar() {
     {
       title: "Revenue Growth Agents",
       link: "/products/revenue-growth",
+      description: "Our agents bring together your orders, menus, reviews, and delivery data to identify missed demand, increase order value, and flag customer drop-offs, with clear actions to grow revenue without guesswork.",
       subAgents: [
         "Catering Growth Agent",
         "Demand-Driven Menu Agent",
@@ -56,6 +57,7 @@ export function Navbar() {
     {
       title: "Cost Control Agents",
       link: "/products/cost-control",
+      description: "Our agents bring together your prep, inventory, labor, marketing, and delivery data to spot waste, demand mismatches, and inefficiencies surfacing clear actions to control costs without disrupting operations.",
       subAgents: [
         "Waste Control Agent",
         "Prep Forecast Agents",
@@ -66,7 +68,8 @@ export function Navbar() {
     },
     {
       title: "New Store Expansion Agents",
-      link: "/products/business-expansion",
+      link: "/404",
+      description: "Kutlerri’s Revenue Growth Agents turn catering into a repeatable engine while quietly lifting margins with demand-led menus, executable upsells, and retention loops that keep customers coming back.",
       subAgents: [
         "New Store Decision Agent",
         "",
@@ -115,7 +118,7 @@ export function Navbar() {
 
             {/* Resources */}
             <Link
-              href="#resources"
+              href="/404"
               className="
                 relative text-white font-gotham font-medium
                 text-[16px] md:text-[18px] lg:text-[20.778px]
@@ -134,7 +137,7 @@ export function Navbar() {
 
             {/* Company */}
             <Link
-              href="#company"
+              href="/404"
               className="
                 relative text-white font-gotham font-medium
                 text-[16px] md:text-[18px] lg:text-[20.778px]
@@ -204,7 +207,7 @@ export function Navbar() {
                         {agent.title}
                       </h2>
                       <p className="text-white/80 text-sm max-w-md">
-                        Identify hidden demand, expand order value, and protect visibility.
+                        {agent.description}
                       </p>
                       <Link
                         href={agent.link}
@@ -275,7 +278,7 @@ export function Navbar() {
               <Link href="/products/cost-control" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
                 Cost Control Agents
               </Link>
-              <Link href="/products/business-expansion" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
+              <Link href="/404" onClick={() => setMobileMenuOpen(false)} className="block text-white/80">
                 New Store Expansion Agents
               </Link>
               <div className="h-px bg-white/20 my-3" />
@@ -284,13 +287,13 @@ export function Navbar() {
 
 
 
-          <Link href="#resources" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
+          <Link href="/404" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
             Resources
           </Link>
 
           <div className="h-px bg-white/20 my-3" />
 
-          <Link href="#company" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
+          <Link href="/404" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
             Company
           </Link>
         </div>
