@@ -97,10 +97,10 @@ export function Footer() {
             <div>
               <h4 className="font-avant font-bold text-[18px] mb-6">Connect</h4>
               <div className="flex gap-4">
-                <Link href="https://linkedin.com" target="_blank" className="hover:opacity-80 transition-opacity">
+                <Link href="https://www.linkedin.com/company/kutlerri/about/" target="_blank" className="hover:opacity-80 transition-opacity">
                   <Linkedin size={24} />
                 </Link>
-                <Link href="https://instagram.com" target="_blank" className="hover:opacity-80 transition-opacity">
+                <Link href="https://www.instagram.com/kutlerri?igsh=N3plbG82c2hoaDFx&utm_source=qr" target="_blank" className="hover:opacity-80 transition-opacity">
                   <Instagram size={24} />
                 </Link>
               </div>

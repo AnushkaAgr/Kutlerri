@@ -18,7 +18,7 @@ export const heroSlides = [
 
   {
     title:
-      "High Prime Cost? Your Profit Is Already Dead. You’re Just Finding Out Later",
+      "High Prime Cost? Your Profit Is Already Dead. You’re Just Finding Out Late",
 
     rightContent: {
       paragraph1:
