@@ -84,13 +84,13 @@ export function FeatureCards() {
                 <div className="relative z-10 flex flex-col justify-between h-full">
                   {/* Header + text */}
                   <div>
-                    <div className="flex items-center gap-2 md:gap-2 lg:gap-3 mb-1 md:mb-1 lg:mb-2">
+                    <div className="flex items-start gap-2 md:gap-2 lg:gap-3 mb-1 md:mb-1 lg:mb-2">
                       <Image
                         src={PointerIcon}
                         alt=""
                         width={14}
                         height={14}
-                        className="shrink-0 opacity-80 w-[10px] h-[10px] md:w-[12px] md:h-[12px] lg:w-[14px] lg:h-[14px]"
+                        className="shrink-0 opacity-80 w-[10px] h-[10px] md:w-[12px] md:h-[12px] lg:w-[14px] lg:h-[14px] mt-[5px] md:mt-[5px] lg:mt-[7px]"
                       />
 
                       <h3 className="text-white font-avant text-[14px] md:text-[16px] lg:text-[22px] font-medium tracking-[-0.3px]">
