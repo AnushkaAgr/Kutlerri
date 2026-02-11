@@ -50,7 +50,7 @@ const agentsData: Agent[] = [
 
   {
     id: "prep-forecast",
-    title: "Prep Forecast Agents",
+    title: "Prep Forecast Agent",
     description:
       "The Demand-Led Prep Agents ensure your restaurant prepares the right items and ingredients in the right quantities by aligning prep planning with real demand patterns.",
     image: PrepForecastImg,
@@ -84,8 +84,8 @@ const agentsData: Agent[] = [
   },
 
   {
-    id: "labor-optimization",
-    title: "Labor Cost Optimization Agents",
+    id: "labor-cost-optimization",
+    title: "Labor Cost Optimization Agent",
     description:
       "The Workforce Management Agents align staffing levels and roles with real customer demand to reduce overstaffing, understaffing, idle hours, and unnecessary overtime.",
     image: LaborOptimizationImg,
@@ -119,8 +119,8 @@ const agentsData: Agent[] = [
   },
 
   {
-    id: "menu-engineering",
-    title: "Menu Mix & Margin Optimization Agents",
+    id: "menu-mix-&-margin-optimization",
+    title: "Menu Mix & Margin Optimization ",
     description:
       "The Menu Engineering Agents improves menu profitability by identifying which items truly make money, which create hidden costs, and how menu items should be adjusted across channels.",
     image: MenuEngineeringImg,
@@ -154,8 +154,8 @@ const agentsData: Agent[] = [
   },
 
   {
-    id: "marketing-efficiency",
-    title: "Marketing Spend Efficiency Agent",
+    id: "doordash-spend-efficiency",
+    title: "DoorDash Spend Efficiency Agent",
     description:
       "The Marketing Spend Efficiency Agents ensure promos and ads generate profitable orders without increasing refunds, errors, or visibility risk on delivery platforms.",
     image: MarketingSpendImg,

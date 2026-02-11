@@ -4,7 +4,7 @@ import Image from "next/image"
 
 import Icon1 from "../public/images/icons/CateringGrowthAgent.svg"
 import Icon2 from "../public/images/icons/Demand-To-MenuAgent.svg"
-import Icon3 from "../public/images/icons/UpsellandAttachAgent.svg/"
+import Icon3 from "../public/images/icons/UpsellandAttachAgent.svg"
 import Icon4 from "../public/images/icons/CustomerLifecycleandRetentionAgent.svg"
 import Icon5 from "../public/images/icons/OnlineReputationManagementAgent.svg"
 import Icon6 from "../public/images/icons/WasteControlAgent.svg"
@@ -22,7 +22,7 @@ const agents = [
     icon: Icon1,
   },
   {
-    title: "Demand-to-Menu Agent",
+    title: "Demand-Driven Menu Agent",
     desc: "Adjusts your menu based on what actually sells by location, channel, and time of day.",
     icon: Icon2,
   },
@@ -37,7 +37,7 @@ const agents = [
     icon: Icon4,
   },
   {
-    title: "Online Reputation Management Agent",
+    title: "Online Reviews Management Agent",
     desc: "Tracks reviews and ratings so that problems get fixed before they hurt traffic and orders.",
     icon: Icon5,
   },
@@ -47,32 +47,32 @@ const agents = [
     icon: Icon6,
   },
   {
-    title: "Demand-Led Prep Agent",
+    title: "Prep Forecast Agent",
     desc: "Tells your kitchen exactly what to prep and how much, so you don’t overcook or run out.",
     icon: Icon7,
   },
   {
-    title: "Workforce Management Agent",
+    title: "Labor Cost Optimization Agent",
     desc: "Helps schedule the right number of staff for each shift. No overstaffing. No burnout.",
     icon: Icon8,
   },
   {
-    title: "Menu Engineering Agent",
+    title: "Menu Mix & Margin Optimization ",
     desc: "Shows which menu items hurt profits and what to fix, remove, or reposition.",
     icon: Icon9,
   },
   {
-    title: "Marketing Spend Efficiency Agent",
+    title: "DoorDash Spend Efficiency Agent",
     desc: "Makes sure promos and ads bring orders,not losses. Also, cuts wasted spend.",
     icon: Icon10,
   },
   {
-    title: "Trade Area Demand Heatmap & Forecast Agent",
+    title: "Trade Area Demand Intelligence Agent",
     desc: "For a potential trade area, produces a daypart heatmap and weekly demand forecast.",
     icon: Icon11,
   },
   {
-    title: "Expansion Fit & Go/No-Go Decision Agent",
+    title: "New Store Decision Agent",
     desc: "Evaluates potential trade areas, learns what made your current stores win, and scores each new area against those drivers.",
     icon: Icon12,
   },

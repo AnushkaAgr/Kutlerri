@@ -77,7 +77,7 @@ export default function RevenueGrowthPage() {
             "Measures real item visibility on delivery apps",
             "Connects item placement to real business impact",
             "Compares menu structure across in-store, delivery, and catering",
-            "Flags structural friction that blocks discovery and upsells",
+            // "Flags structural friction that blocks discovery and upsells",
           ],
         },
         {
@@ -127,7 +127,7 @@ export default function RevenueGrowthPage() {
     },
     {
       id: "customer-lifecycle-retention",
-      title: "Customer Lifecycle & Retention Agents",
+      title: "Customer Lifecycle & Retention Engine",
       description:
         "The Customer Lifecycle and Retention Agents help your restaurant understand how customers behave over time, identify where revenue is being lost due to drop-offs, and highlight the best opportunities to retain, reactivate, and upgrade customers.",
       image: CustomerLifecycleImg,

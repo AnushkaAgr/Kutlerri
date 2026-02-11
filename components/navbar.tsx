@@ -76,8 +76,8 @@ export function Navbar() {
         { title: "Catering Growth Agent", desc: "Unlock corporate and event revenue streams.", href: "/products/revenue-growth#catering-growth" },
         { title: "Demand-Driven Menu Agent", desc: "Optimize your menu for profitability.", href: "/products/revenue-growth#demand-driven-menu" },
         { title: "Upsell and Attach Agent", desc: "Increase average order value automatically.", href: "/products/revenue-growth#upsell-attach" },
-        { title: "Customer Lifecycle & Retention Agent", desc: "Reduce churn and boost loyalty.", href: "/products/revenue-growth#customer-lifecycle-retention" },
-        { title: "Online Reputation Management Agent", desc: "Manage and improve your online presence.", href: "/products/revenue-growth#online-reputation" }
+        { title: "Customer Lifecycle & Retention Engine", desc: "Reduce churn and boost loyalty.", href: "/products/revenue-growth#customer-lifecycle-retention" },
+        { title: "Online Reviews Management Agent", desc: "Manage and improve your online presence.", href: "/products/revenue-growth#online-reviews-management" }
       ]
     },
     {
@@ -87,10 +87,10 @@ export function Navbar() {
       icon: DollarSign,
       subAgents: [
         { title: "Waste Control Agent", desc: "Track and minimize food waste.", href: "/products/cost-control#waste-control" },
-        { title: "Demand-Led Prep Agent", desc: "Predict prep needs with high accuracy.", href: "/products/cost-control#prep-forecast" },
-        { title: "Workforce Management Agent", desc: "Schedule smarter to save on labor.", href: "/products/cost-control#labor-optimization" },
-        { title: "Menu Engineering Agent", desc: "Analyze profitability by item.", href: "/products/cost-control#menu-engineering" },
-        { title: "Marketing Spend Efficiency Agent", desc: "Ensure every ad dollar drives revenue.", href: "/products/cost-control#marketing-efficiency" }
+        { title: "Prep Forecast Agent", desc: "Predict prep needs with high accuracy.", href: "/products/cost-control#prep-forecast" },
+        { title: "Labor Cost Optimization Agent", desc: "Schedule smarter to save on labor.", href: "/products/cost-control#labor-cost-optimization" },
+        { title: "Menu Mix & Margin Optimisation", desc: "Analyze profitability by item.", href: "/products/cost-control#menu-mix-&-margin-optimization" },
+        { title: "DoorDash Spend Efficiency Agent", desc: "Ensure every ad dollar drives revenue.", href: "/products/cost-control#doordash-spend-efficiency" }
       ]
     },
     {
@@ -99,8 +99,8 @@ export function Navbar() {
       description: "Data-driven site selection to ensure your next location succeeds.",
       icon: MapPin,
       subAgents: [
-        { title: "New Store Decision Agent", desc: "Evaluate locations with data confidence.", href: "/products/new-store-expansion" },
-        { title: "Trade Area Demand Intelligence Agent", desc: "Map local demand hotspots.", href: "/products/new-store-expansion" }
+        { title: "New Store Decision Agent", desc: "Evaluate locations with data confidence.", href: "/products/new-store-expansion#new-store-decision" },
+        { title: "Trade Area Demand Intelligence Agent", desc: "Map local demand hotspots.", href: "/products/new-store-expansion#trade-area-demand-intelligence" }
       ]
     },
   ]
@@ -145,7 +145,7 @@ export function Navbar() {
 
             {/* Resources */}
             <Link
-              href="/404"
+              href="/Resources"
               className="
                 relative text-white font-gotham font-medium
                 text-[16px] md:text-[18px] lg:text-[20.778px]

@@ -38,7 +38,7 @@ export default function NotFound() {
                                 hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
                             "
                         >
-                            Talk to a human (we don&apos;t bite)
+                            Talk to a human
                         </Link>
 
                         {/* Home CTA */}
