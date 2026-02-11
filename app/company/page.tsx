@@ -37,10 +37,10 @@ export default function CompanyPage() {
 
                         <div className="space-y-6">
                             <p>
-                                And it’s not because you’re not working hard enough. You’re working too hard—just to stitch together the truth.
+                                And it’s not because you’re not working hard enough. You’re working too hard-just to stitch together the truth.
                             </p>
                             <p>
-                                POS in one tab. Delivery platforms in another. Labor, invoices, reviews—everywhere. Your team spends nights reconciling, explaining, guessing. Decisions get delayed. Then the same mistakes repeat because no one had a clean signal early enough.
+                                POS in one tab. Delivery platforms in another. Labor, invoices, reviews-everywhere. Your team spends nights reconciling, explaining, guessing. Decisions get delayed. Then the same mistakes repeat because no one had a clean signal early enough.
                             </p>
                         </div>
 
@@ -50,7 +50,7 @@ export default function CompanyPage() {
                             Kutlerri turns that chaos into clarity.
                         </p>
                         <p>
-                            We connect scattered signals and translate them into operator-grade decisions you can trust—fast, consistent, and repeatable across every store.
+                            We connect scattered signals and translate them into operator-grade decisions you can trust-fast, consistent, and repeatable across every store.
                         </p>
 
 
@@ -59,7 +59,7 @@ export default function CompanyPage() {
                                 Because winning brands won’t be built on more dashboards.
                             </p>
                             <p>
-                                They’ll be built on the shortest path from signal → decision → action—before the damage is done.
+                                They’ll be built on the shortest path from signal → decision → action-before the damage is done.
                             </p>
                         </div>
 
