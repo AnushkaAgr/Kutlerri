@@ -31,7 +31,7 @@ export default function CompanyPage() {
                                 At one location, you can run on instinct. You know your people. You feel the floor. You catch problems before they hit the P&amp;L.
                             </p>
                             <p>
-                                At 3–20 locations, that superpower breaks. The business starts moving faster than your visibility. A little over-prep here, a little labor drift there, one promo that quietly loses money—multiplied across stores—until margin disappears and you only see it when month-end closes.
+                                At 3-20 locations, that superpower breaks. The business starts moving faster than your visibility. A little over-prep here, a little labor drift there, one promo that quietly loses money-multiplied across stores-until margin disappears and you only see it when month-end closes.
                             </p>
                         </div>
 
