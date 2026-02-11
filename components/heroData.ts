@@ -37,7 +37,7 @@ export const heroSlides = [
 
     rightContent: {
       paragraph1:
-        "A typical restaurant runs around 5–9% pre-tax profit, one bad lease, one wrong trade area, one miss on demand… and you’re cooked. Did your last location grow profit or just grow rent?",
+        "A typical restaurant runs around 5-9% pre-tax profit, one bad lease, one wrong trade area, one miss on demand… and you’re cooked. Did your last location grow profit or just grow rent?",
 
       paragraph2:
         "Kutlerri’s New Store Expansion Agents pressure-test demand, competition, and unit economics before you sign.",
