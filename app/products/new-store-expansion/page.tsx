@@ -2,10 +2,10 @@ import { AgentSection, type Agent } from "@/components/products/AgentSection"
 import { ManagedServices } from "@/components/managed-services"
 import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
-import RevenueImg from "@/public/images/ProductPage/CostControl.png"
+import RevenueImg from "@/public/images/AgentGraphs/NewStoreExpansion.png"
 import { ProductHero } from "@/components/products/ProductHero"
-import StoreSuccessImg from "@/public/images/AgentGraphs/LocationAgent1.png"
-import TradeAreaMatchImg from "@/public/images/AgentGraphs/TradeArea.png"
+import StoreSuccessImg from "@/public/images/AgentGraphs/NewStoreDecision.png"
+import TradeAreaMatchImg from "@/public/images/AgentGraphs/TradeAreaDemand.png"
 
 const agentsData: Agent[] = [
   {
