@@ -109,8 +109,7 @@ export function GetDemoForm() {
           within 24 hours.
         </p>
         <Button
-          variant="ghost"
-          className="mt-8 border border-[#7C5CFA] text-[#7C5CFA] hover:bg-[#7C5CFA]/5 rounded-[12px]"
+          className="mt-8 bg-white border-2 border-[#7C5CFA] text-[#7C5CFA] hover:bg-[#7C5CFA] hover:text-white h-12 px-8 rounded-[12px] font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
           onClick={() => setIsSuccess(false)}
         >
           Send another request
