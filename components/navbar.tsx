@@ -114,7 +114,7 @@ export function Navbar() {
           : "bg-transparent"
           }`}
       >
-        <div className="relative flex w-full h-[108px] px-6 md:px-10 lg:px-[72px] items-center">
+        <div className="relative flex w-full h-[72px] px-6 md:px-10 lg:px-[72px] items-center">
 
           {/* Logo */}
           <div className="flex-1 flex justify-start">
@@ -221,7 +221,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="hidden lg:block fixed top-[108px] left-0 right-0 bg-[#2B145F] border-t border-white/10 shadow-2xl z-40"
+            className="hidden lg:block fixed top-[72px] left-0 right-0 bg-[#2B145F] border-t border-white/10 shadow-2xl z-40"
           >
             <div className="mx-auto max-w-[1400px] p-8">
               <div className="grid grid-cols-12 gap-8 min-h-[400px]">
@@ -318,7 +318,7 @@ export function Navbar() {
 
       {/* TABLET + MOBILE SIMPLE DROPDOWN */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed top-[108px] left-0 right-0 bg-[#381D7D]/95 backdrop-blur-md z-40 p-6 h-[calc(100vh-108px)] overflow-y-auto">
+        <div className="lg:hidden fixed top-[72px] left-0 right-0 bg-[#381D7D]/95 backdrop-blur-md z-40 p-6 h-[calc(100vh-72px)] overflow-y-auto">
 
           {/* Products */}
           <button
