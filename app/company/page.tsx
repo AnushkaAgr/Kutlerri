@@ -1,7 +1,18 @@
-"use client"
-
 import { Navbar } from "@/components/navbar"
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "About Kutlerri | Restaurant AI Company",
+  description:
+    "Kutlerri is a restaurant intelligence company building AI agents for revenue growth and prime cost control.",
+  openGraph: {
+    title: "About Kutlerri | Restaurant AI Company",
+    description:
+      "Kutlerri is a restaurant intelligence company building AI agents for revenue growth and prime cost control.",
+    url: "https://kutlerri.ai/company",
+    type: "website",
+  },
+};
 
 export default function CompanyPage() {
     return (

@@ -6,6 +6,27 @@ import RevenueImg from "@/public/images/AgentGraphs/NewStoreExpansion.png"
 import { ProductHero } from "@/components/products/ProductHero"
 import StoreSuccessImg from "@/public/images/AgentGraphs/NewStoreDecision.png"
 import TradeAreaMatchImg from "@/public/images/AgentGraphs/TradeAreaDemand.png"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "New Store Expansion AI | Site Selection & Trade Area Analysis | Kutlerri",
+  description:
+    "Kutlerri's New Store Expansion AI agents analyze trade areas, forecast demand, and deliver Go/No-Go recommendations to help restaurants expand with confidence.",
+  keywords: [
+    "Restaurant site selection AI",
+    "Trade area analysis software",
+    "Restaurant expansion planning",
+    "New store location intelligence",
+    "Restaurant growth strategy",
+  ],
+  openGraph: {
+    title: "New Store Expansion AI | Kutlerri",
+    description:
+      "AI-powered site selection and trade area analysis for confident restaurant expansion.",
+    url: "https://kutlerri.ai/products/new-store-expansion",
+    type: "website",
+  },
+};
 
 const agentsData: Agent[] = [
   {
