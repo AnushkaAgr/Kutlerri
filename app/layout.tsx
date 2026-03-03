@@ -8,22 +8,23 @@ import { Footer } from "@/components/footer"
 const gotham = localFont({
   src: [
     {
-      path: "../public/fonts/Gotham-Book.otf",
+      path: "../public/fonts/Gotham-Book.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/Gotham-Medium.otf",
+      path: "../public/fonts/Gotham-Medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../public/fonts/Gotham-Bold.otf",
+      path: "../public/fonts/Gotham-Bold.woff2",
       weight: "700",
       style: "normal",
     },
   ],
   variable: "--font-gotham",
+  display: "swap",
 })
 
 // AvantGarde font (replacing Garnett)
@@ -36,6 +37,7 @@ const avantGarde = localFont({
     },
   ],
   variable: "--font-avantgarde",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
