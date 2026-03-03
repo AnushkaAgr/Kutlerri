@@ -10,7 +10,26 @@ import WasteControlImg from "@/public/images/AgentGraphs/WasteControlAgents.png"
 import LaborOptimizationImg from "@/public/images/AgentGraphs/WorkforceManagement.png"
 import MenuEngineeringImg from "@/public/images/AgentGraphs/MenuEngineeringAgent.png"
 import MarketingSpendImg from "@/public/images/AgentGraphs/MarketingSpendDoorDash.png"
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Prime Cost Optimization AI | Reduce Food & Labor Costs | Kutlerri",
+  description:
+    "Kutlerri’s Prime Cost Optimization AI helps restaurants reduce food waste, optimize labor scheduling, and improve profitability through actionable insights.",
+  keywords: [
+    "Prime cost optimization software",
+    "Restaurant food cost control",
+    "Restaurant labor optimization",
+    "Reduce restaurant waste",
+    "Restaurant margin improvement",
+  ],
+  openGraph: {
+    title: "Prime Cost Optimization AI | Kutlerri",
+    description: "AI-driven prime cost control for food and labor efficiency.",
+    url: "https://kutlerri.ai/prime-cost-optimization",
+    type: "website",
+  },
+};
 
 const agentsData: Agent[] = [
   {

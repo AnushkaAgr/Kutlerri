@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import pattern from "../public/images/GlobalPattern.png"
+import pattern from "../public/images/GlobalPattern.webp"
 
 const questions = [
   { avatar: "JM", question: "Which nearby businesses are most likely to order catering in the next 30–60 days?" },
@@ -23,7 +23,7 @@ export function QuestionsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="relative pb-40 overflow-hidden bg-[#F8F0FF]">
+    <section ref={ref} className="relative pb-20 sm:pb-28 md:pb-40 overflow-hidden bg-[#F8F0FF]">
       <div className="h-[50px] bg-[#FFFFFF80] w-screen pb-30"></div>
       <div
         className="absolute inset-0 z-0 pointer-events-none"
@@ -49,11 +49,11 @@ export function QuestionsSection() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-5xl font-avante font-bold text-[#300B60] mb-6 text-balance">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-avante font-bold text-[#300B60] mb-6 text-balance">
             Questions Our Agents Answer
           </h2>
 
-          <p className="text-[#2E312E] font-gotham text-[18px] md:text-[20px] max-w-2xl mx-auto">
+          <p className="text-[#2E312E] font-gotham text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto">
             Clear and data-backed answers to everyday questions asked by restaurant operators, delivered automatically by our 50+ AI agents.
           </p>
         </motion.div>

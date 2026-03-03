@@ -6,7 +6,7 @@ import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import Lottie from "lottie-react"
-import pattern from "../public/images/HomePage/FullyManagedServicePattern.png"
+import pattern from "../public/images/HomePage/FullyManagedServicePattern.webp"
 import animationData from "../public/lottie/FullyManagedService.json"
 
 export function ManagedServices() {
@@ -15,7 +15,7 @@ export function ManagedServices() {
 
   return (
     <section ref={ref} className="py-16 bg-[#F8F0FF]">
-      <div className="mx-auto max-w-[1700px] px-[18px]">
+      <div className="mx-auto max-w-[1700px] px-4 sm:px-6">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,9 +51,9 @@ export function ManagedServices() {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-stretch">
 
             {/* Left - Text Content */}
-            <div className="p-8 md:p-10 lg:p-14 text-center lg:text-left flex flex-col justify-center">
+            <div className="p-6 sm:p-8 md:p-10 lg:p-14 text-center lg:text-left flex flex-col justify-center">
 
-              <h2 className="text-2xl md:text-3xl lg:text-5xl font-avant font-[500] text-white mb-4">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-avant font-[500] text-white mb-4">
                 Fully Managed Services
               </h2>
 
@@ -93,7 +93,7 @@ export function ManagedServices() {
                   animationData={animationData}
                   loop={true}
                   autoplay={true}
-                  className="w-full h-auto scale-125 origin-top lg:scale-[1.45] lg:origin-top-left"
+                  className="w-full h-auto scale-100 sm:scale-125 lg:scale-[1.45] origin-top lg:origin-top-left"
                 />
               </div>
             </div>

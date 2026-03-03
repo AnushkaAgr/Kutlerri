@@ -5,11 +5,11 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
 import PointerIcon from "../public/images/HomePage/Pointer.png";
-import CardPattern from "../public/images/HomePage/CardPattern.png";
+import CardPattern from "../public/images/HomePage/CardPattern.webp";
 
-import Img1 from "../public/images/HomePage/RevenueGrowthSuite.png";
-import Img2 from "../public/images/HomePage/CostControlSuite.png";
-import Img3 from "../public/images/HomePage/BusinessExpansionSuite.png";
+import Img1 from "../public/images/HomePage/RevenueGrowthSuite.webp";
+import Img2 from "../public/images/HomePage/CostControlSuite.webp";
+import Img3 from "../public/images/HomePage/BusinessExpansionSuite.webp";
 
 const features = [
   {
@@ -78,6 +78,7 @@ export function FeatureCards() {
                   src={CardPattern}
                   alt=""
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover opacity-[0.15]"
                 />
 

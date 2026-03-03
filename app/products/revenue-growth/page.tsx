@@ -1,5 +1,3 @@
-"use client"
-
 import { Navbar } from "@/components/navbar"
 
 import { ProductHero } from "@/components/products/ProductHero"
@@ -13,6 +11,28 @@ import DemandDrivenMenuImg from "@/public/images/AgentGraphs/Demand-DrivenMenuAg
 
 
 import RevenueImg from "@/public/images/ProductPage/RevenueGrowthHomePage.png"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Revenue Growth AI Agents | Increase Restaurant Sales & Orders | Kutlerri",
+  description:
+    "Kutlerri's Revenue Growth AI agents help restaurants increase sales through catering growth, menu optimization, upselling, customer retention, and online reputation management.",
+  keywords: [
+    "Restaurant revenue growth AI",
+    "Restaurant sales optimization",
+    "Catering growth software",
+    "Menu optimization AI",
+    "Restaurant customer retention",
+  ],
+  openGraph: {
+    title: "Revenue Growth AI Agents | Kutlerri",
+    description:
+      "AI agents that grow restaurant revenue through menu optimization, catering, upselling, and customer retention.",
+    url: "https://kutlerri.ai/products/revenue-growth",
+    type: "website",
+  },
+};
 
 export default function RevenueGrowthPage() {
   const agentsData: Agent[] = [
