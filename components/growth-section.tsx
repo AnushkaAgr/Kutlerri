@@ -81,15 +81,15 @@ const agents = [
 
 export function GrowthSection() {
   return (
-    <section className="w-full bg-white py-20 px-6 md:px-12 lg:px-20">
+    <section className="w-full bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-20">
 
       {/* Heading */}
-      <h1 className="text-center text-[#2B0A5B] font-avant text-[28px] md:text-[36px] lg:text-[48px] font-[600] mb-16">
+      <h2 className="text-center text-[#2B0A5B] font-avant text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px] font-[600] mb-10 sm:mb-12 md:mb-16">
         For Every Growth Lever We Have An Agent
-      </h1>
+      </h2>
 
       {/* Grid */}
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 md:gap-x-8 md:gap-y-8 lg:gap-x-12 lg:gap-y-10">
 
         {agents.map((agent, index) => (
           <div key={index} className="flex items-start gap-4">

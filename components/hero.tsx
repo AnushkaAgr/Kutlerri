@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import HeroImage from "@/public/images/HomePage/hero2.png";
+import HeroImage from "@/public/images/HomePage/hero2.webp";
 import { heroSlides } from "./heroData";
 import { HeroHeading } from "./HeroHeading";
 import { FeatureCards } from "./feature-cards";
@@ -34,6 +34,8 @@ export function Hero() {
         alt="Hero background"
         fill
         priority
+        sizes="100vw"
+        quality={80}
         className="object-cover object-[center_30%]"
       />
 
@@ -103,7 +105,7 @@ export function Hero() {
                 xl:top-[48px]
                 lg:ml-[40px]
                 xl:ml-[100px]
-                min-h-[480px] sm:min-h-[420px] md:min-h-[380px] lg:min-h-[400px]
+                min-h-[300px] sm:min-h-[420px] md:min-h-[380px] lg:min-h-[400px]
               "
             >
               <AnimatePresence mode="wait">
@@ -189,8 +191,8 @@ export function Hero() {
                 </motion.div>
               </AnimatePresence>
 
-              {/* CTA - Fixed Position */}
-              <div className="absolute bottom-0 left-0 mb-3">
+              {/* CTA */}
+              <div className="mt-6 lg:absolute lg:bottom-0 lg:left-0 lg:mb-3">
                 <Link
                   href="/get-a-demo"
                   className="

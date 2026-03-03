@@ -1,10 +1,11 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { FeatureCards } from "@/components/feature-cards"
-import { GrowthSection } from "@/components/growth-section"
-import { QuestionsSection } from "@/components/questions-section"
-import { ManagedServices } from "@/components/managed-services"
+import dynamic from "next/dynamic"
 import type { Metadata } from "next";
+
+const GrowthSection = dynamic(() => import("@/components/growth-section").then(mod => ({ default: mod.GrowthSection })))
+const QuestionsSection = dynamic(() => import("@/components/questions-section").then(mod => ({ default: mod.QuestionsSection })))
+const ManagedServices = dynamic(() => import("@/components/managed-services").then(mod => ({ default: mod.ManagedServices })))
 
 export const metadata: Metadata = {
   title: "AI Agents for Restaurant Revenue Growth & Cost Control | Kutlerri",

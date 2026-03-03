@@ -3,14 +3,14 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Linkedin, Instagram } from "lucide-react"
-import LogoImg from "../public/images/Logo/WhiteLogo.png"
+import LogoImg from "../public/images/Logo/WhiteLogo.webp"
 
 export function Footer() {
   return (
-    <footer className="bg-[#1E0758] text-white pt-20 pb-10">
-      <div className="mx-auto max-w-[1700px] px-6 md:px-12 lg:px-[132px]">
+    <footer className="bg-[#1E0758] text-white pt-12 sm:pt-16 md:pt-20 pb-10">
+      <div className="mx-auto max-w-[1700px] px-4 sm:px-6 md:px-12 lg:px-[132px]">
 
-        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 sm:gap-10 md:gap-12 lg:gap-24">
 
           {/* LEFT SECTION - Branding */}
           <div className="flex flex-col gap-6 max-w-sm">
@@ -20,6 +20,7 @@ export function Footer() {
                 src={LogoImg}
                 alt="Kutlerri"
                 fill
+                sizes="140px"
                 className="object-contain object-left"
               />
             </Link>
@@ -36,8 +37,8 @@ export function Footer() {
                   rounded-full
                   bg-[#9F7CEF]
                   text-white font-gotham font-bold
-                  px-6 py-2 text-[18px]
-                  lg:px-7 lg:py-3 lg:text-[16px]
+                  px-6 py-2 text-[16px]
+                  lg:px-7 lg:py-3
                   hover:scale-105 transition-all duration-300
                   hover:shadow-[0_0_20px_rgba(159,124,239,0.5)]
                   cursor-pointer
@@ -97,10 +98,10 @@ export function Footer() {
             <div>
               <h4 className="font-avant font-bold text-[18px] mb-6">Connect</h4>
               <div className="flex gap-4">
-                <Link href="https://www.linkedin.com/company/kutlerri/about/" target="_blank" className="hover:opacity-80 transition-opacity">
+                <Link href="https://www.linkedin.com/company/kutlerri/about/" target="_blank" className="hover:opacity-80 transition-opacity" aria-label="Kutlerri on LinkedIn">
                   <Linkedin size={24} />
                 </Link>
-                <Link href="https://www.instagram.com/kutlerri?igsh=N3plbG82c2hoaDFx&utm_source=qr" target="_blank" className="hover:opacity-80 transition-opacity">
+                <Link href="https://www.instagram.com/kutlerri?igsh=N3plbG82c2hoaDFx&utm_source=qr" target="_blank" className="hover:opacity-80 transition-opacity" aria-label="Kutlerri on Instagram">
                   <Instagram size={24} />
                 </Link>
               </div>

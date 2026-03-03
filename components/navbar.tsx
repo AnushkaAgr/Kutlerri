@@ -4,9 +4,10 @@ import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 import { Menu, X, ChevronDown, TrendingUp, DollarSign, MapPin } from "lucide-react"
-import LogoImage from "../public/images/Logo/WhiteLogo.png"
-import Logo2 from "../public/images/Logo/WhiteOutlineFavLogo.png"
+import LogoImage from "../public/images/Logo/WhiteLogo.webp"
+import Logo2 from "../public/images/Logo/WhiteOutlineFavLogo.webp"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -119,8 +120,8 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-1 flex justify-start">
             <Link href="/" onClick={() => { setDesktopProductsOpen(false); setMobileMenuOpen(false) }} className="flex items-center gap-2">
-              <img src={LogoImage.src} alt="Logo" className="hidden lg:block h-[40px]" />
-              <img src={Logo2.src} alt="Logo Mobile" className="block lg:hidden h-[36px]" />
+              <Image src={LogoImage} alt="Kutlerri Logo" width={140} height={40} className="hidden lg:block" priority />
+              <Image src={Logo2} alt="Kutlerri Logo" width={36} height={36} className="block lg:hidden" priority />
             </Link>
           </div>
 
@@ -131,6 +132,8 @@ export function Navbar() {
             <button
               ref={buttonRef}
               onClick={() => setDesktopProductsOpen(!desktopProductsOpen)}
+              aria-label="Products menu"
+              aria-expanded={desktopProductsOpen}
               className={`
                 relative font-gotham font-medium
                 text-[16px] md:text-[18px] lg:text-[20.778px]
@@ -205,6 +208,8 @@ export function Navbar() {
             <button
               className="md:hidden text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -323,6 +328,8 @@ export function Navbar() {
           {/* Products */}
           <button
             onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+            aria-label="Products menu"
+            aria-expanded={mobileProductsOpen}
             className="w-full flex justify-between items-center text-white py-3"
           >
             Products
