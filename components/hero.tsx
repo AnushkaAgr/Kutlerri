@@ -8,7 +8,7 @@ import HeroImage from "@/public/images/HomePage/hero2.webp";
 import { heroSlides } from "./heroData";
 import { HeroHeading } from "./HeroHeading";
 import { FeatureCards } from "./feature-cards";
-import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Hero() {
   const [index, setIndex] = useState(0);
@@ -27,7 +27,6 @@ export function Hero() {
   if (!slide) return null;
 
   return (
-    <LazyMotion features={domAnimation}>
     <section className="relative w-full min-h-screen overflow-hidden">
       {/* Background */}
       <Image
@@ -37,8 +36,6 @@ export function Hero() {
         priority
         sizes="100vw"
         quality={80}
-        placeholder="blur"
-        blurDataURL="data:image/webp;base64,UklGRrAAAABXRUJQVlA4WAoAAAAQAAAAEwAADwAAQUxQSBsAAAABF9D/iAgoaNuG8YZs/IFdBBH9n4BEjQI6zwEAVlA4IG4AAABQAwCdASoUABAAPzmEuVOvKKWisAgB4CcJZQAAKuBSQWKvgAD+O2kGEyKmqdwMUcRbX2g1JLQGQ4T6lXAG8spoVpi8eaXfsd8QVC6My+TRYwcorr2QGHXqo+f67tBNmU6OGj+xKsVacKBfVwAAAA=="
         className="object-cover object-[center_30%]"
       />
 
@@ -81,7 +78,7 @@ export function Hero() {
               "
             >
               <AnimatePresence mode="wait">
-                <m.div
+                <motion.div
                   key={slide.title} // 🔥 THIS is what triggers animation on text change
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -93,7 +90,7 @@ export function Hero() {
                   className="overflow-hidden"
                 >
                   <HeroHeading title={slide.title} />
-                </m.div>
+                </motion.div>
               </AnimatePresence>
             </div>
 
@@ -112,7 +109,7 @@ export function Hero() {
               "
             >
               <AnimatePresence mode="wait">
-                <m.div
+                <motion.div
                   key={slide.title}
                   initial="hidden"
                   animate="visible"
@@ -132,7 +129,7 @@ export function Hero() {
                   className="overflow-hidden"
                 >
                   {/* Paragraph 1 */}
-                  <m.p
+                  <motion.p
                     variants={{
                       hidden: { opacity: 0, y: 10 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -154,10 +151,10 @@ export function Hero() {
                         </>
                       );
                     })()}
-                  </m.p>
+                  </motion.p>
 
                   {/* Paragraph 2 */}
-                  <m.p
+                  <motion.p
                     variants={{
                       hidden: { opacity: 0, y: 10 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
@@ -190,8 +187,8 @@ export function Hero() {
                       }
                       return <span className="opacity-80">{p2}</span>;
                     })()}
-                  </m.p>
-                </m.div>
+                  </motion.p>
+                </motion.div>
               </AnimatePresence>
 
               {/* CTA */}
@@ -225,6 +222,5 @@ export function Hero() {
         <FeatureCards />
       </div>
     </section>
-    </LazyMotion>
   );
 }
