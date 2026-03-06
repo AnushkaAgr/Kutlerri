@@ -8,7 +8,7 @@ import HeroImage from "@/public/images/HomePage/hero2.webp";
 import { heroSlides } from "./heroData";
 import { HeroHeading } from "./HeroHeading";
 import { FeatureCards } from "./feature-cards";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence, LazyMotion,domAnimation } from "framer-motion";
 
 export function Hero() {
   const [index, setIndex] = useState(0);
