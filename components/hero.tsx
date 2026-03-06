@@ -8,7 +8,7 @@ import HeroImage from "@/public/images/HomePage/hero2.webp";
 import { heroSlides } from "./heroData";
 import { HeroHeading } from "./HeroHeading";
 import { FeatureCards } from "./feature-cards";
-import { m, AnimatePresence, LazyMotion,domAnimation } from "framer-motion";
+import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 
 export function Hero() {
   const [index, setIndex] = useState(0);
@@ -49,7 +49,8 @@ export function Hero() {
         <div
           className="absolute bottom-0 left-0 right-0 h-[40%] pointer-events-none"
           style={{
-            background: 'linear-gradient(180deg, rgba(30, 7, 88, 0.00) 0%, #1E0758 100%)'
+            background:
+              "linear-gradient(180deg, rgba(30, 7, 88, 0.00) 0%, #1E0758 100%)",
           }}
         />
 
@@ -128,9 +129,9 @@ export function Hero() {
                         transition: {
                           staggerChildren: 0.1,
                           delayChildren: 0.1,
-                          duration: 0.5
-                        }
-                      }
+                          duration: 0.5,
+                        },
+                      },
                     }}
                     className="overflow-hidden"
                   >
@@ -138,7 +139,11 @@ export function Hero() {
                     <m.p
                       variants={{
                         hidden: { opacity: 0, y: 10 },
-                        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                        visible: {
+                          opacity: 1,
+                          y: 0,
+                          transition: { duration: 0.5 },
+                        },
                       }}
                       className="text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed"
                     >
@@ -163,7 +168,11 @@ export function Hero() {
                     <m.p
                       variants={{
                         hidden: { opacity: 0, y: 10 },
-                        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                        visible: {
+                          opacity: 1,
+                          y: 0,
+                          transition: { duration: 0.5 },
+                        },
                       }}
                       className="mt-6 text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed"
                     >
@@ -171,7 +180,12 @@ export function Hero() {
                         const p2 = slide.rightContent.paragraph2;
                         const agentsIndex = p2.indexOf("Agents");
                         const colonIndex = p2.indexOf(":");
-                        const splitIndex = colonIndex !== -1 ? colonIndex : (agentsIndex !== -1 ? agentsIndex + 6 : -1);
+                        const splitIndex =
+                          colonIndex !== -1
+                            ? colonIndex
+                            : agentsIndex !== -1
+                              ? agentsIndex + 6
+                              : -1;
 
                         if (splitIndex !== -1) {
                           const namePart = p2.substring(0, splitIndex).trim();
@@ -180,14 +194,16 @@ export function Hero() {
                           return (
                             <>
                               <span className="font-semibold ">
-                                {namePart.startsWith("Kutlerri’s") ? "Kutlerri’s" : ""}
+                                {namePart.startsWith("Kutlerri’s")
+                                  ? "Kutlerri’s"
+                                  : ""}
                               </span>{" "}
                               <span className="font-semibold">
-                                {namePart.startsWith("Kutlerri’s") ? namePart.replace("Kutlerri’s", "").trim() : namePart}
+                                {namePart.startsWith("Kutlerri’s")
+                                  ? namePart.replace("Kutlerri’s", "").trim()
+                                  : namePart}
                               </span>{" "}
-                              <span className="opacity-80">
-                                {descPart}
-                              </span>
+                              <span className="opacity-80">{descPart}</span>
                             </>
                           );
                         }
@@ -198,7 +214,7 @@ export function Hero() {
                 </AnimatePresence>
 
                 {/* CTA */}
-                <div className="mt-auto pt-8 pb-4 lg:pb-3">
+                <div className="absolute bottom-[40px] sm:bottom-[100px] md:bottom-[90px] lg:bottom-[40px] xl:bottom-[70px] 2xl: pt-8 pb-4 lg:pb-3">
                   <Link
                     href="/get-a-demo"
                     className="
