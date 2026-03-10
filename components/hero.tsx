@@ -8,7 +8,7 @@ import HeroImage from "@/public/images/HomePage/hero2.webp";
 import { heroSlides } from "./heroData";
 import { HeroHeading } from "./HeroHeading";
 import { FeatureCards } from "./feature-cards";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 
 export function Hero() {
   const [index, setIndex] = useState(0);
@@ -16,7 +16,7 @@ export function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
+    }, 12000);
 
     return () => clearInterval(interval);
   }, []);
@@ -27,76 +27,82 @@ export function Hero() {
   if (!slide) return null;
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden">
-      {/* Background */}
-      <Image
-        src={HeroImage}
-        alt="Hero background"
-        fill
-        priority
-        sizes="100vw"
-        quality={80}
-        className="object-cover object-[center_30%]"
-      />
+    <LazyMotion features={domAnimation}>
+      <section className="relative w-full min-h-screen overflow-hidden">
+        {/* Background */}
+        <Image
+          src={HeroImage}
+          alt="Hero background"
+          fill
+          priority
+          sizes="100vw"
+          quality={80}
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRrAAAABXRUJQVlA4WAoAAAAQAAAAEwAADwAAQUxQSBsAAAABF9D/iAgoaNuG8YZs/IFdBBH9n4BEjQI6zwEAVlA4IG4AAABQAwCdASoUABAAPzmEuVOvKKWisAgB4CcJZQAAKuBSQWKvgAD+O2kGEyKmqdwMUcRbX2g1JLQGQ4T6lXAG8spoVpi8eaXfsd8QVC6My+TRYwcorr2QGHXqo+f67tBNmU6OGj+xKsVacKBfVwAAAA=="
+          className="object-cover object-[center_30%]"
+        />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
 
-      {/* Bottom purple gradient */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-[40%] pointer-events-none"
-        style={{
-          background: 'linear-gradient(180deg, rgba(30, 7, 88, 0.00) 0%, #1E0758 100%)'
-        }}
-      />
+        {/* Bottom purple gradient */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-[40%] pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(30, 7, 88, 0.00) 0%, #1E0758 100%)",
+          }}
+        />
 
-      {/* Content */}
-      <div className="relative z-10 w-full px-6 sm:px-10 md:px-14 lg:px-[72px]">
-        <div className="max-w-[1400px] mx-auto">
-          <div
-            className="
+        {/* Content */}
+        <div className="relative z-10 w-full px-6 sm:px-10 md:px-14 lg:px-[72px]">
+          <div className="max-w-[1400px] mx-auto">
+            <div
+              className="
               grid
               grid-cols-1
               lg:grid-cols-[1.1fr_0.9fr]
               gap-12
-              pt-[140px]
-              md:pt-[170px]
-              lg:pt-[190px]
-              pb-[220px]
-              md:pb-[260px]
-              lg:pb-[340px]
+              pt-[200px]
+              md:pt-[200px]
+              lg:pt-[260px]
+              xl:pt-[300px]
+              pb-[240px]
+              md:pb-[280px]
+              lg:pb-[420px]
+              xl:pb-[480px]
             "
-          >
-            {/* LEFT */}
-            <div
-              className="
+            >
+              {/* LEFT */}
+              <div
+                className="
                 max-w-[620px]
                 relative
                 lg:-top-[32px]
                 xl:-top-[48px]
-                min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[220px]
+                min-h-[160px] sm:min-h-[160px] md:min-h-[180px] lg:min-h-[220px]
               "
-            >
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={slide.title} // 🔥 THIS is what triggers animation on text change
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -16 }}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeInOut",
-                  }}
-                  className="overflow-hidden"
-                >
-                  <HeroHeading title={slide.title} />
-                </motion.div>
-              </AnimatePresence>
-            </div>
+              >
+                <AnimatePresence mode="wait">
+                  <m.div
+                    key={slide.title} // 🔥 THIS is what triggers animation on text change
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -16 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: "easeInOut",
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <HeroHeading title={slide.title} />
+                  </m.div>
+                </AnimatePresence>
+              </div>
 
-            {/* RIGHT */}
-            <div
-              className="
+              {/* RIGHT */}
+              <div
+                className="
                 max-w-[620px] lg:max-w-[600px]
                 text-white
                 font-gotham
@@ -105,97 +111,113 @@ export function Hero() {
                 xl:top-[48px]
                 lg:ml-[40px]
                 xl:ml-[100px]
-                min-h-[300px] sm:min-h-[420px] md:min-h-[380px] lg:min-h-[400px]
+                min-h-[420px] sm:min-h-[380px] md:min-h-[350px] lg:min-h-[420px]
+                flex flex-col
               "
-            >
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={slide.title}
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={{
-                    hidden: { opacity: 0, y: 10 },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        staggerChildren: 0.1,
-                        delayChildren: 0.1,
-                        duration: 0.5
-                      }
-                    }
-                  }}
-                  className="overflow-hidden"
-                >
-                  {/* Paragraph 1 */}
-                  <motion.p
+              >
+                <AnimatePresence mode="wait">
+                  <m.div
+                    key={slide.title}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
                     variants={{
                       hidden: { opacity: 0, y: 10 },
-                      visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                          staggerChildren: 0.1,
+                          delayChildren: 0.1,
+                          duration: 0.5,
+                        },
+                      },
                     }}
-                    className="text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed"
+                    className="overflow-hidden"
                   >
-                    {(() => {
-                      const p1 = slide.rightContent.paragraph1;
-                      const sentences = p1.match(/[^.!?]+[.!?]+/g) || [p1];
-                      if (sentences.length <= 1) {
-                        return <span className="font-semibold">{p1}</span>;
-                      }
-                      const last = sentences.pop();
-                      const rest = sentences.join(" ");
-                      return (
-                        <>
-                          <span className="opacity-80">{rest} </span>
-                          <span className="font-semibold">{last}</span>
-                        </>
-                      );
-                    })()}
-                  </motion.p>
-
-                  {/* Paragraph 2 */}
-                  <motion.p
-                    variants={{
-                      hidden: { opacity: 0, y: 10 },
-                      visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-                    }}
-                    className="mt-6 text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed"
-                  >
-                    {(() => {
-                      const p2 = slide.rightContent.paragraph2;
-                      const agentsIndex = p2.indexOf("Agents");
-                      const colonIndex = p2.indexOf(":");
-                      const splitIndex = colonIndex !== -1 ? colonIndex : (agentsIndex !== -1 ? agentsIndex + 6 : -1);
-
-                      if (splitIndex !== -1) {
-                        const namePart = p2.substring(0, splitIndex).trim();
-                        const descPart = p2.substring(splitIndex).trim();
-
+                    {/* Paragraph 1 */}
+                    <m.p
+                      variants={{
+                        hidden: { opacity: 0, y: 10 },
+                        visible: {
+                          opacity: 1,
+                          y: 0,
+                          transition: { duration: 0.5 },
+                        },
+                      }}
+                      className="text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed"
+                    >
+                      {(() => {
+                        const p1 = slide.rightContent.paragraph1;
+                        const sentences = p1.match(/[^.!?]+[.!?]+/g) || [p1];
+                        if (sentences.length <= 1) {
+                          return <span className="font-semibold">{p1}</span>;
+                        }
+                        const last = sentences.pop();
+                        const rest = sentences.join(" ");
                         return (
                           <>
-                            <span className="font-semibold ">
-                              {namePart.startsWith("Kutlerri’s") ? "Kutlerri’s" : ""}
-                            </span>{" "}
-                            <span className="font-semibold">
-                              {namePart.startsWith("Kutlerri’s") ? namePart.replace("Kutlerri’s", "").trim() : namePart}
-                            </span>{" "}
-                            <span className="opacity-80">
-                              {descPart}
-                            </span>
+                            <span className="opacity-80">{rest} </span>
+                            <span className="font-semibold">{last}</span>
                           </>
                         );
-                      }
-                      return <span className="opacity-80">{p2}</span>;
-                    })()}
-                  </motion.p>
-                </motion.div>
-              </AnimatePresence>
+                      })()}
+                    </m.p>
 
-              {/* CTA */}
-              <div className="mt-6 lg:absolute lg:bottom-0 lg:left-0 lg:mb-3">
-                <Link
-                  href="/get-a-demo"
-                  className="
+                    {/* Paragraph 2 */}
+                    <m.p
+                      variants={{
+                        hidden: { opacity: 0, y: 10 },
+                        visible: {
+                          opacity: 1,
+                          y: 0,
+                          transition: { duration: 0.5 },
+                        },
+                      }}
+                      className="mt-6 text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed"
+                    >
+                      {(() => {
+                        const p2 = slide.rightContent.paragraph2;
+                        const agentsIndex = p2.indexOf("Agents");
+                        const colonIndex = p2.indexOf(":");
+                        const splitIndex =
+                          colonIndex !== -1
+                            ? colonIndex
+                            : agentsIndex !== -1
+                              ? agentsIndex + 6
+                              : -1;
+
+                        if (splitIndex !== -1) {
+                          const namePart = p2.substring(0, splitIndex).trim();
+                          const descPart = p2.substring(splitIndex).trim();
+
+                          return (
+                            <>
+                              <span className="font-semibold ">
+                                {namePart.startsWith("Kutlerri’s")
+                                  ? "Kutlerri’s"
+                                  : ""}
+                              </span>{" "}
+                              <span className="font-semibold">
+                                {namePart.startsWith("Kutlerri’s")
+                                  ? namePart.replace("Kutlerri’s", "").trim()
+                                  : namePart}
+                              </span>{" "}
+                              <span className="opacity-80">{descPart}</span>
+                            </>
+                          );
+                        }
+                        return <span className="opacity-80">{p2}</span>;
+                      })()}
+                    </m.p>
+                  </m.div>
+                </AnimatePresence>
+
+                {/* CTA */}
+                <div className="absolute bottom-[40px] sm:bottom-[100px] md:bottom-[90px] lg:bottom-[40px] xl:bottom-[70px] 2xl: pt-8 pb-4 lg:pb-3">
+                  <Link
+                    href="/get-a-demo"
+                    className="
             inline-flex
             items-center
             justify-center
@@ -212,15 +234,16 @@ export function Hero() {
             transition-all duration-300
             cursor-pointer
           "
-                >
-                  {slide.rightContent.ctaText}
-                </Link>
+                  >
+                    {slide.rightContent.ctaText}
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
+          <FeatureCards />
         </div>
-        <FeatureCards />
-      </div>
-    </section>
+      </section>
+    </LazyMotion>
   );
 }
