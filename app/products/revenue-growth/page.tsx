@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     "Menu optimization AI",
     "Restaurant customer retention",
   ],
+  alternates: { canonical: "/products/revenue-growth" },
   openGraph: {
     title: "Revenue Growth AI Agents | Kutlerri",
     description:

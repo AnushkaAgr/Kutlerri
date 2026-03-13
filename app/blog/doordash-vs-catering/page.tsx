@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "Paying 25% to DoorDash on Every Order? There's a Channel Delivery Apps Can't Touch. | Kutlerri",
   description:
     "There is a channel that charges none of what DoorDash takes. Most operators running it are doing so quietly, growing it steadily. It's called catering. And delivery platforms cannot touch it.",
+  alternates: { canonical: "/blog/doordash-vs-catering" },
   openGraph: {
     title:
       "Paying 25% to DoorDash? There's a Channel Delivery Apps Can't Touch | Kutlerri",
@@ -168,6 +169,24 @@ EZCater is a useful starting point for operators who have never run catering bef
 export default function DoorDashVsCateringPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: blogData.title,
+            datePublished: "2026-02-24",
+            author: { "@type": "Organization", name: "Kutlerri" },
+            publisher: {
+              "@type": "Organization",
+              name: "Kutlerri",
+              url: "https://kutlerri.ai",
+            },
+            mainEntityOfPage: "https://kutlerri.ai/blog/doordash-vs-catering",
+          }),
+        }}
+      />
       <Navbar />
       <BlogArticle data={blogData} />
       {/*<BlogBottomCTA

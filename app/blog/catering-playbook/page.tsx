@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "The Catering Playbook: How to Build a Revenue Channel That Runs Without Chaos | Kutlerri",
   description:
     "The exact playbook for turning catering from a chaotic side habit into the most predictable revenue channel in your operation.",
+  alternates: { canonical: "/blog/catering-playbook" },
   openGraph: {
     title: "The Catering Playbook | Kutlerri",
     description: "How to build a catering revenue channel that runs without chaos.",
@@ -178,6 +179,24 @@ const blogData: BlogData = {
 export default function CateringPlaybookPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: blogData.title,
+            datePublished: "2026-02-26",
+            author: { "@type": "Organization", name: "Kutlerri" },
+            publisher: {
+              "@type": "Organization",
+              name: "Kutlerri",
+              url: "https://kutlerri.ai",
+            },
+            mainEntityOfPage: "https://kutlerri.ai/blog/catering-playbook",
+          }),
+        }}
+      />
       <Navbar />
       <BlogArticle data={blogData} />
 

@@ -12,12 +12,14 @@ export const metadata: Metadata = {
   description:
     "Kutlerri unifies POS, delivery, inventory, labor, and review data into daily revenue-driving and cost-cutting actions.",
   keywords: [
+    "Kutlerri",
     "Restaurant AI agents",
     "Restaurant revenue growth",
     "Restaurant cost control",
     "Restaurant data analytics",
     "AI for restaurants",
   ],
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Kutlerri | Restaurant AI Agents",
     description:

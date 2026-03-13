@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Get a Demo | Kutlerri",
   description:
     "Schedule a personalized demo to see how Kutlerri's AI agents optimize restaurant revenue, control costs, and automate operations.",
+  alternates: { canonical: "/get-a-demo" },
   openGraph: {
     title: "Get a Demo | Kutlerri",
     description:

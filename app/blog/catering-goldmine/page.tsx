@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "Your Restaurant Is Sitting on a Catering Goldmine. Here's What's Blocking It. | Kutlerri",
   description:
     "Most restaurant operators know catering is an opportunity. What they don't know is how large the gap is between what they're capturing and what's sitting right outside their door.",
+  alternates: { canonical: "/blog/catering-goldmine" },
   openGraph: {
     title: "Your Restaurant Is Sitting on a Catering Goldmine | Kutlerri",
     description:
@@ -136,6 +137,24 @@ const blogData: BlogData = {
 export default function CateringGoldminePage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: blogData.title,
+            datePublished: "2026-02-26",
+            author: { "@type": "Organization", name: "Kutlerri" },
+            publisher: {
+              "@type": "Organization",
+              name: "Kutlerri",
+              url: "https://kutlerri.ai",
+            },
+            mainEntityOfPage: "https://kutlerri.ai/blog/catering-goldmine",
+          }),
+        }}
+      />
       <Navbar />
       <BlogArticle data={blogData} />
       {/*<BlogBottomCTA
