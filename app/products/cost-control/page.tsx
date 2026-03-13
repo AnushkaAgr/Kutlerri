@@ -23,10 +23,11 @@ export const metadata: Metadata = {
     "Reduce restaurant waste",
     "Restaurant margin improvement",
   ],
+  alternates: { canonical: "/products/cost-control" },
   openGraph: {
     title: "Prime Cost Optimization AI | Kutlerri",
     description: "AI-driven prime cost control for food and labor efficiency.",
-    url: "https://kutlerri.ai/prime-cost-optimization",
+    url: "https://kutlerri.ai/products/cost-control",
     type: "website",
   },
 };

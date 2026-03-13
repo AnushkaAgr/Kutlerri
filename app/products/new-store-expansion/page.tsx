@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "New store location intelligence",
     "Restaurant growth strategy",
   ],
+  alternates: { canonical: "/products/new-store-expansion" },
   openGraph: {
     title: "New Store Expansion AI | Kutlerri",
     description:

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [],
     },
-    sitemap: "https://kutlerri.com/sitemap.xml",
+    sitemap: "https://kutlerri.ai/sitemap.xml",
   }
 }

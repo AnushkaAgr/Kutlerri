@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   title: "Resources | Kutlerri",
   description:
     "Industry news, insights, and playbooks for restaurant operators building a catering channel.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Resources | Kutlerri",
+    description:
+      "Industry news, insights, and playbooks for restaurant operators building a catering channel.",
+    url: "https://kutlerri.ai/blog",
+    type: "website",
+  },
 };
 
 // ─── Featured post ────────────────────────────────────────────────────────────
