@@ -105,7 +105,7 @@ export function BlogArticle({ data }: Props) {
                 {/* TOC Header - collapsible on mobile */}
                 <button
                   onClick={() => setTocOpen(!tocOpen)}
-                  className="w-full flex items-center justify-between px-5 py-4 bg-[#FAFAFA] border-b border-[#E5E5E5] lg:cursor-default"
+                  className="w-full flex items-center justify-between px-5 py-3 bg-[#FAFAFA] border-b border-[#E5E5E5] lg:cursor-default"
                 >
                   <h3 className="font-avant font-bold text-[#1A1A1A] text-sm uppercase tracking-wider">
                     Table of Contents
@@ -127,13 +127,13 @@ export function BlogArticle({ data }: Props) {
 
                 {/* TOC Links */}
                 <nav className={`${tocOpen ? "block" : "hidden"} lg:block`}>
-                  <ul className="py-2">
+                  <ul className="py-1">
                     {data.sections.map((section) => (
                       <li key={section.id}>
                         <button
                           onClick={() => scrollToSection(section.id)}
                           className={`
-                            w-full text-left px-5 py-2.5 text-sm font-gotham transition-all duration-200
+                            w-full text-left px-5 py-2 text-sm font-gotham transition-all duration-200
                             border-l-[3px] hover:bg-[#F8F5FF]
                             ${
                               activeSection === section.id
@@ -151,8 +151,8 @@ export function BlogArticle({ data }: Props) {
               </div>
 
               {/* Bottom CTA */}
-              <div className="rounded-2xl bg-[#2B145F] p-6 md:p-8">
-                <p className="font-avant font-bold text-white leading-snug mb-6">
+              <div className="rounded-2xl bg-[#2B145F] p-6 md:p-6">
+                <p className="font-avant font-bold text-white leading-snug mb-3">
                   {data.ctaText}
                 </p>
                 <Link
@@ -201,7 +201,7 @@ export function BlogArticle({ data }: Props) {
                     </p>
                     <p className="text-[#999]">{data.author.designation}</p>
                   </div>
-                  <p className="text-[#999]">{data.publishDate}</p>
+                  <p className="text-[#999]">Read time : {data.readTime}</p>
                 </div>
                 <hr className="border-gray-200" />
               </div>

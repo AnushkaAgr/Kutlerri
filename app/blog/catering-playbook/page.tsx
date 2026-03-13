@@ -20,7 +20,7 @@ const blogData: BlogData = {
   title:
     "The Catering Playbook: How to Build a Revenue Channel That Runs Without Chaos",
   tags: ["AI", "Tech Innovations"],
-  readTime: "8 min read",
+  readTime: "2 min",
   publishDate: "February 26, 2026",
   author: {
     name: "Sthita",

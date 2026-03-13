@@ -1,29 +1,32 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { BlogArticle, type BlogData } from "@/components/blog/BlogArticle"
-import { BlogBottomCTA } from "@/components/blog/BlogBottomCTA"
-import type { Metadata } from "next"
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { BlogArticle, type BlogData } from "@/components/blog/BlogArticle";
+import { BlogBottomCTA } from "@/components/blog/BlogBottomCTA";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Your Restaurant Is Sitting on a Catering Goldmine. Here's What's Blocking It. | Kutlerri",
+  title:
+    "Your Restaurant Is Sitting on a Catering Goldmine. Here's What's Blocking It. | Kutlerri",
   description:
     "Most restaurant operators know catering is an opportunity. What they don't know is how large the gap is between what they're capturing and what's sitting right outside their door.",
   openGraph: {
     title: "Your Restaurant Is Sitting on a Catering Goldmine | Kutlerri",
-    description: "What's blocking your restaurant from capturing its full catering potential.",
+    description:
+      "What's blocking your restaurant from capturing its full catering potential.",
     url: "https://kutlerri.ai/blog/catering-goldmine",
     type: "article",
   },
-}
+};
 
 const blogData: BlogData = {
-  title: "Your Restaurant Is Sitting on a Catering Goldmine. Here's What's Blocking It.",
+  title:
+    "Your Restaurant Is Sitting on a Catering Goldmine. Here's What's Blocking It.",
   tags: ["AI", "Tech Innovations"],
-  readTime: "6 min read",
+  readTime: "2 min",
   publishDate: "February 26, 2026",
   author: {
     name: "Sthita",
-    designation: "Kutlerri"
+    designation: "Kutlerri",
     //avatar: "/images/blogPageImages/author.png",
   },
   sidebarImage: "/images/blogPageImages/catering-goldmine.png",
@@ -35,7 +38,10 @@ const blogData: BlogData = {
     { id: "why-8-percent", title: "Why 8% Feels Normal When it Shouldn't" },
     { id: "blocking-goldmine", title: "What's Actually Blocking the Goldmine" },
     { id: "twenty-percent", title: "The 20% is Not a Stretch Target" },
-    { id: "question-not-asked", title: "Start With the Question You Haven't Asked" },
+    {
+      id: "question-not-asked",
+      title: "Start With the Question You Haven't Asked",
+    },
   ],
   contentHtml: `
     <p style="font-size:1.125rem;line-height:1.75;margin-bottom:2rem;color:#323232;">
@@ -125,7 +131,7 @@ const blogData: BlogData = {
       The demand is already there. It was there last week. It will be there next week. The only variable is whether your operation is built to capture it before someone else does.
     </p>
   `,
-}
+};
 
 export default function CateringGoldminePage() {
   return (
@@ -138,5 +144,5 @@ export default function CateringGoldminePage() {
         buttonHref="/get-a-demo"
       />*/}
     </main>
-  )
+  );
 }

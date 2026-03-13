@@ -123,7 +123,7 @@ export default function BlogIndexPage() {
       <Navbar />
 
       {/* ── Hero + Featured Post ── */}
-      <section className="bg-[#2B145F]">
+      <section className="bg-[#6c3fd9]">
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-[72px] pt-32 md:pt-36 pb-16">
           {/* Heading */}
           <h1 className="font-avant font-bold text-white text-4xl md:text-5xl lg:text-[58px] leading-tight mb-12">
