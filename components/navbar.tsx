@@ -148,7 +148,7 @@ export function Navbar() {
 
             {/* Resources */}
             <Link
-              href="/Resources"
+              href="/blog"
               className="
                 relative text-white font-gotham font-medium
                 text-[16px] md:text-[18px] lg:text-[20.778px]
@@ -365,7 +365,7 @@ export function Navbar() {
             </div>
           )}
 
-          <Link href="/404" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
+          <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block text-white py-2">
             Resources
           </Link>
 
