@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const blogData: BlogData = {
   title:
     "Paying 25% to DoorDash on Every Order? There's a Channel Delivery Apps Can't Touch.",
-  tags: ["AI", "Tech Innovations"],
+  tags: ["AI", "Restaurant Tech", "Catering"],
   readTime: "2 min",
   publishDate: "February 24, 2026",
   author: {

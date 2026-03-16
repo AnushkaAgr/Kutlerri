@@ -3,7 +3,7 @@ export type BlogPost = {
   tag?: string;
   title: string;
   description: string;
-  date: string | null;
+  readTime: string | null;
   href: string | null;
   /** Path to the card image (relative to /public). Set to null if not ready yet. */
   image: string | null;
@@ -21,7 +21,7 @@ export const featuredBlog: BlogPost = {
     "Paying 25% to DoorDash on Every Order? There's a Channel Delivery Apps Can't Touch.",
   description:
     "You're doing $800 in delivery revenue but only seeing $600 in your account. DoorDash kept the rest. Multiply that across every order, every location, every week of the year and you are looking at hundreds of thousands of dollars walking out the door through a platform you do not own. What if there was an entire revenue channel that charges no commission, builds relationships you actually keep, and that delivery platforms cannot touch and never will?",
-  date: "February 24, 2026",
+  readTime: "2 min",
   href: "/blog/doordash-vs-catering",
   image: "/images/blogPageImages/doordash.png",
 };
@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
       "The Catering Playbook: How to Build a Revenue Channel That Runs Without Chaos",
     description:
       "Most restaurants capture 4 to 8% of their catering potential. The benchmark for operators running it as a real channel is 20%. What is sitting uncaptured within ten miles of your location right now?",
-    date: "February 24, 2026",
+    readTime: "2 min",
     href: "/blog/catering-playbook",
     image: "/images/blogPageImages/catering-playbook.png",
   },
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
       "Your Restaurant Is Sitting on a Catering Goldmine. Here's What's Blocking It.",
     description:
       "Most restaurants don't have a catering operation. They have a catering habit. What would change if every inquiry, every quote, and every follow-up ran through the same system every single time?",
-    date: "February 23, 2026",
+    readTime: "2 min",
     href: "/blog/catering-goldmine",
     image: "/images/blogPageImages/catering-goldmine.png",
   },
@@ -56,7 +56,7 @@ export const blogPosts: BlogPost[] = [
     id: "coming-soon-1",
     title: "We are COOKING more playbooks for you. Wait for it.",
     description: 'Most "resources" are marketing. Ours will be instructions.',
-    date: null,
+    readTime: "2 min",
     href: null,
     // Replace with image path when the illustration is ready
     image: null,
