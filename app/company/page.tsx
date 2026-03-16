@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "About Kutlerri | Restaurant AI Company",
   description:
     "Kutlerri is a restaurant intelligence company building AI agents for revenue growth and prime cost control.",
+  alternates: { canonical: "/company" },
   openGraph: {
     title: "About Kutlerri | Restaurant AI Company",
     description:

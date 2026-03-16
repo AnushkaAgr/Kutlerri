@@ -39,9 +39,34 @@ const avantGarde = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Kutlerri- Restaurant growth backed by data. ",
+  metadataBase: new URL("https://kutlerri.ai"),
+  title: {
+    default: "Kutlerri — Restaurant Growth Backed by Data",
+    template: "%s | Kutlerri",
+  },
   description:
-    "Restaurant growth backed by data.",
+    "Kutlerri is a restaurant intelligence company. AI agents that unify POS, delivery, inventory, labor, and review data into daily revenue-driving and cost-cutting actions.",
+  keywords: [
+    "Kutlerri",
+    "Kutlerri AI",
+    "Kutlerri restaurant",
+    "restaurant AI agents",
+    "restaurant data analytics",
+    "restaurant revenue growth",
+    "restaurant cost control",
+  ],
+  openGraph: {
+    siteName: "Kutlerri",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@kutlerri",
+  },
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       {
@@ -71,6 +96,46 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${gotham.variable} ${avantGarde.variable} antialiased`}>
+        {/* Organization JSON-LD — tells Google "Kutlerri" is a company/brand, not "cutlery" */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Kutlerri",
+              alternateName: ["Kutlerri AI", "Kutlerri Inc, kutlerri"],
+              url: "https://kutlerri.ai",
+              logo: "https://kutlerri.ai/icon.svg",
+              description:
+                "Kutlerri is a restaurant intelligence company building AI agents for revenue growth and prime cost control.",
+              foundingDate: "2024",
+              sameAs: [
+                // Add your actual social profile URLs here:
+                // "https://www.linkedin.com/company/kutlerri",
+                // "https://twitter.com/kutlerri",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "sales",
+                url: "https://kutlerri.ai/get-a-demo",
+              },
+            }),
+          }}
+        />
+        {/* WebSite JSON-LD — enables sitelinks search and brand recognition */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Kutlerri",
+              alternateName: "Kutlerri AI",
+              url: "https://kutlerri.ai",
+            }),
+          }}
+        />
         {children}
         <Footer />
       </body>
