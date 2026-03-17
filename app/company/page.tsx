@@ -5,12 +5,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Kutlerri | Restaurant AI Company",
   description:
-    "Kutlerri was built by people who know what a real growth system looks like — and got close enough to restaurants to know they've never had one.",
+    "Kutlerri was built by people who know what a real growth system looks like and got close enough to restaurants to know they've never had one.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Kutlerri | Restaurant AI Company",
     description:
-      "Kutlerri was built by people who know what a real growth system looks like — and got close enough to restaurants to know they've never had one.",
+      "Kutlerri was built by people who know what a real growth system looks like and got close enough to restaurants to know they've never had one.",
     url: "https://kutlerri.ai/about",
     type: "website",
   },
@@ -47,7 +47,7 @@ export default function AboutPage() {
               </h1>
               <p className="font-gotham text-[#323232]/80 text-base sm:text-lg leading-relaxed max-w-[520px]">
                 Kutlerri was built by people who know what a real growth system
-                looks like — and got close enough to restaurants to know
+                looks like and got close enough to restaurants to know
                 they&apos;ve never had one.
               </p>
             </div>
@@ -110,7 +110,7 @@ export default function AboutPage() {
               we&apos;d ever encounter was in restaurants.
             </p>
             <p>
-              It started with someone we cared about. We watched them work —
+              It started with someone we cared about. We watched them work
               opening shifts, closing shifts, vendor calls, staffing fires. The
               food was good. The regulars came back. By every visible measure,
               the restaurant was working.
@@ -136,7 +136,7 @@ export default function AboutPage() {
             </p>
             <p>That bothered us. So we built Kutlerri.</p>
             <p>
-              Starting with catering — the cleanest win on the board. Then the
+              Starting with catering the cleanest win on the board. Then the
               next lever. And the next. <br /> The goal has never changed: make
               profit less random.
             </p>
