@@ -26,7 +26,7 @@ const blogData: BlogData = {
   readTime: "2 min",
   publishDate: "February 26, 2026",
   author: {
-    name: "Sthita",
+    name: "Payal",
     designation: "Kutlerri",
     //avatar: "/images/blogPageImages/author.png",
   },
