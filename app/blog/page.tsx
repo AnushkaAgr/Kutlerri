@@ -64,8 +64,8 @@ function FeaturedPost({ post }: { post: BlogPost }) {
             </p>
           </div>
 
-          {post.date && (
-            <p className="font-gotham text-[#999] text-sm mt-8">{post.date}</p>
+          {post.readTime && (
+            <p className="font-gotham text-[#999] text-sm mt-8">Read time : {post.readTime}</p>
           )}
         </div>
       </div>

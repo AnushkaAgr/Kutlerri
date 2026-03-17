@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const blogData: BlogData = {
   title:
     "The Catering Playbook: How to Build a Revenue Channel That Runs Without Chaos",
-  tags: ["AI", "Tech Innovations"],
+  tags: ["AI", "Restaurant Tech", "Catering"],
   readTime: "2 min",
   publishDate: "February 26, 2026",
   author: {

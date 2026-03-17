@@ -47,8 +47,8 @@ export default function BlogCard({ post }: { post: BlogPost }) {
             <span className="font-gotham text-[#9F7CEF] text-sm font-medium tracking-widest uppercase">
               Coming Soon
             </span>
-          ) : post.date ? (
-            <p className="font-gotham text-[#999] text-sm">{post.date}</p>
+          ) : post.readTime ? (
+            <p className="font-gotham text-[#999] text-sm">Read time : {post.readTime}</p>
           ) : null}
         </div>
       </div>
