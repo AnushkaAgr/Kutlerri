@@ -3,69 +3,22 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Kutlerri - AI Built for Restaurant Operators",
+  title: "About Kutlerri | Restaurant AI Company",
   description:
-    "Kutlerri is a restaurant AI company building task-focused agents to help operators grow revenue, control costs, and expand smarter.",
-  alternates: { canonical: "/company" },
+    "Kutlerri was built by people who know what a real growth system looks like and got close enough to restaurants to know they've never had one.",
+  alternates: { canonical: "/about" },
   openGraph: {
-    title: "We Build AI Agents for the People Running Restaurants | Kutlerri",
+    title: "About Kutlerri | Restaurant AI Company",
     description:
-      "Kutlerri is outcome-focused, operations-rooted, and built by people who believe restaurant data should drive daily decisions.",
-    url: "https://kutlerri.ai/company",
+      "Kutlerri was built by people who know what a real growth system looks like and got close enough to restaurants to know they've never had one.",
+    url: "https://kutlerri.ai/about",
     type: "website",
   },
-  robots: { index: true, follow: true },
 };
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      {/* AboutPage + BreadcrumbList JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            name: "About Kutlerri",
-            description:
-              "Kutlerri is a restaurant AI company building task-focused agents to help operators grow revenue, control costs, and expand smarter.",
-            url: "https://kutlerri.ai/company",
-            mainEntity: {
-              "@type": "Organization",
-              name: "Kutlerri",
-              foundingDate: "2024",
-              url: "https://kutlerri.ai",
-              logo: "https://kutlerri.ai/icon.svg",
-              description:
-                "Restaurant intelligence company building AI agents for revenue growth and prime cost control.",
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://kutlerri.ai",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "About",
-                item: "https://kutlerri.ai/company",
-              },
-            ],
-          }),
-        }}
-      />
       <Navbar />
 
       {/* ═══════════════════ HERO SECTION ═══════════════════ */}
@@ -86,11 +39,11 @@ export default function AboutPage() {
             {/* Left — Text */}
             <div className="order-2 lg:order-1">
               <h1 className="font-avant text-[#2B145F] text-3xl sm:text-4xl md:text-[44px] font-bold leading-[1.1] tracking-tight mb-6">
-                We&apos;re Building AI
+                We Came to Make
                 <br />
-                That Works Like Your
+                Restaurant Profit Less
                 <br />
-                Best Operator
+                Random.
               </h1>
               <p className="font-gotham text-[#323232]/80 text-base sm:text-lg leading-relaxed max-w-[520px]">
                 Kutlerri was built by people who know what a real growth system
@@ -103,8 +56,8 @@ export default function AboutPage() {
             <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end lg:-mr-[72px] xl:-mr-[90px]">
               <div className="relative w-full">
                 <Image
-                  src="/images/aboutUsPage/kutlerri_team.webp"
-                  alt="Kutlerri founding team photo with company mission statement"
+                  src="/images/aboutUsPage/kutlerri_team.png"
+                  alt="Kutlerri team"
                   width={900}
                   height={675}
                   className="w-full h-auto object-contain rounded-lg"
@@ -228,8 +181,8 @@ export default function AboutPage() {
             {/* Desk Image — no rounded corners, no shadow */}
             <div className="relative order-2 w-full aspect-[4/3] overflow-hidden">
               <Image
-                src="/images/aboutUsPage/desk.webp"
-                alt="Kutlerri team collaboration showing data-driven restaurant operations"
+                src="/images/aboutUsPage/desk.png"
+                alt="Team working at desk"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -242,8 +195,8 @@ export default function AboutPage() {
             {/* Meeting Image — no rounded corners, no shadow */}
             <div className="relative order-2 md:order-1 w-full aspect-[4/3] overflow-hidden">
               <Image
-                src="/images/aboutUsPage/meeting.webp"
-                alt="Kutlerri team meeting discussing outcome-focused AI strategy"
+                src="/images/aboutUsPage/meeting.png"
+                alt="Team meeting"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

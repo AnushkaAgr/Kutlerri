@@ -8,17 +8,17 @@ import { Footer } from "@/components/footer"
 const gotham = localFont({
   src: [
     {
-      path: "../public/fonts/Gotham-Book.woff2",
+      path: "../public/fonts/Gotham-Book.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/Gotham-Medium.woff2",
+      path: "../public/fonts/Gotham-Medium.otf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../public/fonts/Gotham-Bold.woff2",
+      path: "../public/fonts/Gotham-Bold.otf",
       weight: "700",
       style: "normal",
     },
@@ -104,7 +104,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Kutlerri",
-              alternateName: ["Kutlerri AI", "Restaurant Intelligence System"],
+              alternateName: ["Kutlerri AI", "Kutlerri Inc, kutlerri"],
               url: "https://kutlerri.ai",
               logo: "https://kutlerri.ai/icon.svg",
               description:
@@ -131,29 +131,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Kutlerri",
-              alternateName: "Restaurant Intelligence System",
+              alternateName: "Kutlerri AI",
               url: "https://kutlerri.ai",
-            }),
-          }}
-        />
-        {/* SoftwareApplication JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: "Kutlerri",
-              applicationCategory: "BusinessApplication",
-              operatingSystem: "Web",
-              url: "https://kutlerri.ai",
-              description:
-                "AI agents that unify POS, delivery, inventory, labor, and review data into daily revenue-driving and cost-cutting actions for restaurant operators.",
-              offers: {
-                "@type": "Offer",
-                url: "https://kutlerri.ai/get-a-demo",
-                availability: "https://schema.org/OnlineOnly",
-              },
             }),
           }}
         />
