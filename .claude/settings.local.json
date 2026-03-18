@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:kutlerri.ai)",
+      "WebFetch(domain:www.googleapis.com)"
+    ]
+  }
+}
