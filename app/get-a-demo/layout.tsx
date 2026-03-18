@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get a Demo | Kutlerri",
+  title: "Get a Demo – See Kutlerri AI Agents in Action",
   description:
-    "Schedule a personalized demo to see how Kutlerri's AI agents optimize restaurant revenue, control costs, and automate operations.",
+    "Book a personalized demo and see how Kutlerri's AI agents can grow your restaurant revenue, cut costs, and support smarter expansion.",
   alternates: { canonical: "/get-a-demo" },
   openGraph: {
-    title: "Get a Demo | Kutlerri",
+    title: "See Kutlerri in Action – Book Your Demo Today",
     description:
-      "See how AI agents can scale your restaurant with a personalized walkthrough.",
+      "30-minute walkthrough tailored to your restaurant operation. See real agents, real data, real results.",
     url: "https://kutlerri.ai/get-a-demo",
     type: "website",
   },
+  robots: { index: true, follow: true },
 };
 
 export default function GetDemoLayout({

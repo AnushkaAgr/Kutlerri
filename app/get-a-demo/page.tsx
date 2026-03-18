@@ -8,6 +8,25 @@ import { motion } from "framer-motion"
 export default function GetDemoPage() {
     return (
         <main className="min-h-screen bg-[#F6F0FF]">
+            {/* ContactPage JSON-LD */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ContactPage",
+                        name: "Get a Demo - Kutlerri",
+                        description:
+                            "Book a personalized demo and see how Kutlerri's AI agents can grow your restaurant revenue, cut costs, and support smarter expansion.",
+                        url: "https://kutlerri.ai/get-a-demo",
+                        potentialAction: {
+                            "@type": "ReserveAction",
+                            target: "https://kutlerri.ai/get-a-demo",
+                            name: "Book a Demo",
+                        },
+                    }),
+                }}
+            />
             <Navbar />
 
             <div className="relative pt-32 pb-20 px-6">
@@ -31,10 +50,10 @@ export default function GetDemoPage() {
                             Experience Kutlerri
                         </div>
 
-                        <h2 className="text-4xl md:text-6xl font-bold text-[#300B60] leading-[1.1] font-avant tracking-tight">
-                            See how our agents {" "}
-                            <span className="text-[#7C5CFA] whitespace-nowrap">scale your restaurant.</span>
-                        </h2>
+                        <h1 className="text-4xl md:text-6xl font-bold text-[#300B60] leading-[1.1] font-avant tracking-tight">
+                            See What Kutlerri Can Do {" "}
+                            <span className="text-[#7C5CFA] whitespace-nowrap">for Your Restaurant</span>
+                        </h1>
 
                         <p className="text-lg md:text-xl text-[#2E312E]/70 max-w-lg leading-relaxed">
                             Get a personalized walkthrough of how our AI agents can optimize your revenue,

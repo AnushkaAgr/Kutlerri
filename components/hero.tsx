@@ -32,7 +32,7 @@ export function Hero() {
         {/* Background */}
         <Image
           src={HeroImage}
-          alt="Hero background"
+          alt="Kutlerri AI dashboard showing restaurant revenue insights"
           fill
           priority
           sizes="100vw"
@@ -165,7 +165,7 @@ export function Hero() {
                     </m.p>
 
                     {/* Paragraph 2 */}
-                    <m.p
+                    <m.div
                       variants={{
                         hidden: { opacity: 0, y: 10 },
                         visible: {
@@ -191,17 +191,22 @@ export function Hero() {
                           const namePart = p2.substring(0, splitIndex).trim();
                           const descPart = p2.substring(splitIndex).trim();
 
+                          // Extract "Kutlerri" or "Kutlerri’s" prefix
+                          const kutlerriMatch = namePart.match(/^(Kutlerri(?:’s)?)\s*/);
+                          const kutlerriText = kutlerriMatch ? kutlerriMatch[1] : null;
+                          const restOfName = kutlerriText
+                            ? namePart.replace(kutlerriText, "").trim()
+                            : namePart;
+
                           return (
                             <>
-                              <span className="font-semibold ">
-                                {namePart.startsWith("Kutlerri’s")
-                                  ? "Kutlerri’s"
-                                  : ""}
-                              </span>{" "}
+                              {kutlerriText && (
+                                <h1 className="font-semibold inline">
+                                  {kutlerriText}
+                                </h1>
+                              )}{" "}
                               <span className="font-semibold">
-                                {namePart.startsWith("Kutlerri’s")
-                                  ? namePart.replace("Kutlerri’s", "").trim()
-                                  : namePart}
+                                {restOfName}
                               </span>{" "}
                               <span className="opacity-80">{descPart}</span>
                             </>
@@ -209,7 +214,7 @@ export function Hero() {
                         }
                         return <span className="opacity-80">{p2}</span>;
                       })()}
-                    </m.p>
+                    </m.div>
                   </m.div>
                 </AnimatePresence>
 
