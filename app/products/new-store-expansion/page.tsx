@@ -2,18 +2,18 @@ import { AgentSection, type Agent } from "@/components/products/AgentSection"
 import { ManagedServices } from "@/components/managed-services"
 import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
-import RevenueImg from "@/public/images/AgentGraphs/NewStoreExpansion.png"
+import RevenueImg from "@/public/images/AgentGraphs/NewStoreExpansion.webp"
 import { ProductHero } from "@/components/products/ProductHero"
-import StoreSuccessImg from "@/public/images/AgentGraphs/NewStoreDecision.png"
-import TradeAreaMatchImg from "@/public/images/AgentGraphs/TradeAreaDemand.png"
+import StoreSuccessImg from "@/public/images/AgentGraphs/NewStoreDecision.webp"
+import TradeAreaMatchImg from "@/public/images/AgentGraphs/TradeAreaDemand.webp"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "New Store Expansion AI | Site Selection & Trade Area Analysis | Kutlerri",
+  title: "New Store Expansion Intelligence | Kutlerri AI",
   description:
-    "Kutlerri's New Store Expansion AI agents analyze trade areas, forecast demand, and deliver Go/No-Go recommendations to help restaurants expand with confidence.",
+    "De-risk your next location with Kutlerri's AI agents for trade-area demand analysis and data-driven site selection built for restaurant operators.",
   keywords: [
-    "Restaurant site selection AI",
+    "restaurant site selection AI",
     "Trade area analysis software",
     "Restaurant expansion planning",
     "New store location intelligence",
@@ -21,12 +21,13 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/products/new-store-expansion" },
   openGraph: {
-    title: "New Store Expansion AI | Kutlerri",
+    title: "Smarter Restaurant Expansion Starts With Better Data | Kutlerri",
     description:
-      "AI-powered site selection and trade area analysis for confident restaurant expansion.",
+      "Trade-area demand signals, cannibalization risk, and site scoring — Kutlerri's expansion agents turn data into confident location decisions.",
     url: "https://kutlerri.ai/products/new-store-expansion",
     type: "website",
   },
+  robots: { index: true, follow: true },
 };
 
 const agentsData: Agent[] = [
@@ -36,7 +37,7 @@ const agentsData: Agent[] = [
     description:
       "The Expansion Fit & Go/No-Go Decision Agent helps you choose the right next location by learning what makes your current stores succeed, comparing that “success fingerprint” against each candidate trade area, and producing a clear Go/No-Go decision with conditions and risks.",
     image: StoreSuccessImg,
-    imageAlt: "New store decision dashboard",
+    imageAlt: "Kutlerri new store expansion agent showing trade area heat map and site score",
     cards: [
       {
         title: "Store Success Blueprint Agent",
@@ -71,7 +72,7 @@ const agentsData: Agent[] = [
     description:
       "The Trade Area Demand Heatmap & Forecast Agent estimates how much demand exists in each trade area, when it shows up by daypart and day-of-week",
     image: TradeAreaMatchImg,
-    imageAlt: "Trade area demand intelligence dashboard",
+    imageAlt: "Demand map highlighting high-opportunity restaurant locations",
     cards: [
       {
         title: "Trade Area Demand Heatmap Agent",
@@ -109,6 +110,20 @@ const agentsData: Agent[] = [
 export default function Page() {
   return (
     <main className="">
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://kutlerri.ai" },
+              { "@type": "ListItem", position: 2, name: "New Store Expansion Agents", item: "https://kutlerri.ai/products/new-store-expansion" },
+            ],
+          }),
+        }}
+      />
       <Navbar />
       <ProductHero
         title="New Store Expansion Agents"

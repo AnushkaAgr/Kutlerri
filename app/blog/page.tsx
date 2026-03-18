@@ -7,17 +7,18 @@ import BlogCard from "@/components/blog/BlogCard";
 import { ManagedServices } from "@/components/managed-services";
 
 export const metadata: Metadata = {
-  title: "Resources | Kutlerri",
+  title: "Restaurant AI Insights & Guides | Kutlerri Blog",
   description:
-    "Industry news, insights, and playbooks for restaurant operators building a catering channel.",
+    "Practical guides, operator case studies, and AI strategies for growing restaurant revenue and controlling costs. From the Kutlerri team.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Resources | Kutlerri",
+    title: "The Kutlerri Blog - AI for Restaurant Operators",
     description:
-      "Industry news, insights, and playbooks for restaurant operators building a catering channel.",
+      "Actionable reads on revenue growth, cost control, and smart expansion for multi-unit restaurant operators.",
     url: "https://kutlerri.ai/blog",
     type: "website",
   },
+  robots: { index: true, follow: true },
 };
 
 // ─── Featured post ────────────────────────────────────────────────────────────
@@ -113,7 +114,7 @@ function CtaBanner() {
       <div className="z-10 flex-1 hidden md:flex items-center justify-end">
         <Image
           src="/images/blogPageImages/blog-image-asset.png"
-          alt="Kutlerri dashboard preview"
+          alt="Kutlerri blog page showing latest articles on restaurant AI and operations"
           width={520}
           height={320}
           className="absolute bottom-0 right-0 w-full max-w-[450px] h-auto rounded-xl object-contain drop-shadow-2xl"
@@ -128,6 +129,49 @@ function CtaBanner() {
 export default function BlogIndexPage() {
   return (
     <main className="min-h-screen bg-white">
+      {/* Blog + BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: "Kutlerri Blog",
+            description:
+              "Practical guides, operator case studies, and AI strategies for growing restaurant revenue and controlling costs.",
+            url: "https://kutlerri.ai/blog",
+            publisher: {
+              "@type": "Organization",
+              name: "Kutlerri",
+              url: "https://kutlerri.ai",
+              logo: "https://kutlerri.ai/icon.svg",
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://kutlerri.ai",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://kutlerri.ai/blog",
+              },
+            ],
+          }),
+        }}
+      />
       <Navbar />
 
       {/* ── Hero + Featured Post ── */}
@@ -135,9 +179,7 @@ export default function BlogIndexPage() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-[72px] pt-32 md:pt-36 pb-16">
           {/* Heading */}
           <h1 className="font-avant font-bold text-white text-4xl md:text-5xl lg:text-[58px] leading-tight mb-12">
-            Industry news,
-            <br />
-            insights and more.
+            Insights for Restaurant Operators
           </h1>
 
           {/* Featured card */}

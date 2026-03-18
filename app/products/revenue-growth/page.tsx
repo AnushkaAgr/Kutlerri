@@ -3,23 +3,22 @@ import { Navbar } from "@/components/navbar"
 import { ProductHero } from "@/components/products/ProductHero"
 import { AgentSection, type Agent } from "@/components/products/AgentSection"
 import { ManagedServices } from "@/components/managed-services"
-import CateringImg from "@/public/images/AgentGraphs/Catering.png"
-import UpsellnAttachImg from "@/public/images/AgentGraphs/UpsellandAttachAgent.png"
-import CustomerLifecycleImg from "@/public/images/AgentGraphs/CustomerLifecycle.png"
-import OnlineReputationImg from "@/public/images/AgentGraphs/OnlineReputation.png"
-import DemandDrivenMenuImg from "@/public/images/AgentGraphs/Demand-DrivenMenuAgent.png"
+import CateringImg from "@/public/images/AgentGraphs/Catering.webp"
+import UpsellnAttachImg from "@/public/images/AgentGraphs/UpsellandAttachAgent.webp"
+import CustomerLifecycleImg from "@/public/images/AgentGraphs/CustomerLifecycle.webp"
+import OnlineReputationImg from "@/public/images/AgentGraphs/OnlineReputation.webp"
+import DemandDrivenMenuImg from "@/public/images/AgentGraphs/Demand-DrivenMenuAgent.webp"
 
 
-import RevenueImg from "@/public/images/ProductPage/RevenueGrowthHomePage.png"
+import RevenueImg from "@/public/images/ProductPage/RevenueGrowthHomePage.webp"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Revenue Growth AI Agents | Increase Restaurant Sales & Orders | Kutlerri",
+  title: "Revenue Growth Agents for Restaurants | Kutlerri",
   description:
-    "Kutlerri's Revenue Growth AI agents help restaurants increase sales through catering growth, menu optimization, upselling, customer retention, and online reputation management.",
+    "Kutlerri's AI agents uncover catering leads, upsell opportunities, and lapsed-customer wins — so your team acts on revenue, not reports.",
   keywords: [
-    "Restaurant revenue growth AI",
+    "restaurant revenue growth AI",
     "Restaurant sales optimization",
     "Catering growth software",
     "Menu optimization AI",
@@ -27,12 +26,13 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/products/revenue-growth" },
   openGraph: {
-    title: "Revenue Growth AI Agents | Kutlerri",
+    title: "Find More Revenue in Your Restaurant Data | Kutlerri",
     description:
-      "AI agents that grow restaurant revenue through menu optimization, catering, upselling, and customer retention.",
+      "AI agents for catering, upsells, repeat customers & review management. Kutlerri turns your data into top-line sales.",
     url: "https://kutlerri.ai/products/revenue-growth",
     type: "website",
   },
+  robots: { index: true, follow: true },
 };
 
 export default function RevenueGrowthPage() {
@@ -43,7 +43,7 @@ export default function RevenueGrowthPage() {
       description:
         "The Catering Growth Agents helps your restaurant to identify nearby catering demand, seize the opportunity, benchmark performance, and guide targeted outreach to convert high-potential businesses into steady catering orders.",
       image: CateringImg,
-      imageAlt: "Catering growth dashboard",
+      imageAlt: "Kutlerri catering growth agent highlighting upsell and catering opportunities",
       cards: [
         {
           title: "Location-Level Catering Demand Agent",
@@ -80,7 +80,7 @@ export default function RevenueGrowthPage() {
       description:
         "Demand to Menu Agents aligns your menu with what customers actually want and structures it so the right items sell better across dine-in, delivery, and catering.",
       image: DemandDrivenMenuImg,
-      imageAlt: "Demand driven menu dashboard",
+      imageAlt: "Kutlerri demand-driven menu agent aligning restaurant menu to customer demand",
       cards: [
         {
           title: "Menu Market Alignment Agent",
@@ -118,7 +118,7 @@ export default function RevenueGrowthPage() {
       description:
         "The Upsell and Attach Agents increase average order value by identifying missed add-on opportunities and optimizing when, where, and how sides, extras, and upgrades are suggested across delivery, in-store, and catering orders.",
       image: UpsellnAttachImg,
-      imageAlt: "Upsell and attach dashboard",
+      imageAlt: "AI-generated upsell recommendation on restaurant POS screen",
       cards: [
         {
           title: "Attach Opportunity Detection Agent",
@@ -152,7 +152,7 @@ export default function RevenueGrowthPage() {
       description:
         "The Customer Lifecycle and Retention Agents help your restaurant understand how customers behave over time, identify where revenue is being lost due to drop-offs, and highlight the best opportunities to retain, reactivate, and upgrade customers.",
       image: CustomerLifecycleImg,
-      imageAlt: "Customer lifecycle dashboard",
+      imageAlt: "Restaurant sales dashboard showing repeat customer recovery rate",
       cards: [
         {
           title: "Customer Behavioural Agent",
@@ -186,7 +186,7 @@ export default function RevenueGrowthPage() {
       description:
         "The Online Reputation Management Agents protect your restaurant visibility and order flow by monitoring reviews and ratings, identifying the real causes behind rating changes, and prioritizing fixes before performance is impacted.",
       image: OnlineReputationImg,
-      imageAlt: "Online reputation dashboard",
+      imageAlt: "Kutlerri online reviews management agent tracking restaurant ratings",
       cards: [
         {
           title: "Uber Eats Reputation Agent",
@@ -224,6 +224,20 @@ export default function RevenueGrowthPage() {
 
   return (
     <>
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://kutlerri.ai" },
+              { "@type": "ListItem", position: 2, name: "Revenue Growth Agents", item: "https://kutlerri.ai/products/revenue-growth" },
+            ],
+          }),
+        }}
+      />
       <Navbar />
 
       {/* HERO */}
