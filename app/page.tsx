@@ -8,12 +8,11 @@ const QuestionsSection = dynamic(() => import("@/components/questions-section").
 const ManagedServices = dynamic(() => import("@/components/managed-services").then(mod => ({ default: mod.ManagedServices })))
 
 export const metadata: Metadata = {
-  title: "Kutlerri - AI Agents for Restaurant Operators",
+  title: "AI Agents for Restaurant Revenue Growth & Cost Control | Kutlerri",
   description:
-    "Kutlerri turns your POS and delivery data into AI agents that grow revenue, cut costs, and de-risk expansion. Built for restaurant operators.",
+    "Kutlerri unifies POS, delivery, inventory, labor, and review data into daily revenue-driving and cost-cutting actions.",
   keywords: [
     "Kutlerri",
-    "AI agents for restaurants",
     "Restaurant AI agents",
     "Restaurant revenue growth",
     "Restaurant cost control",
@@ -22,13 +21,12 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Kutlerri - AI Agents Built for Restaurant Operations",
+    title: "Kutlerri | Restaurant AI Agents",
     description:
-      "From upsells to labor forecasting, Kutlerri's task-focused AI agents give operators actionable guidance — not more dashboards.",
+      "Turn scattered restaurant data into clear daily actions that reduce costs and increase revenue.",
     url: "https://kutlerri.ai",
     type: "website",
   },
-  robots: { index: true, follow: true },
 };
 
 export default function Home() {
