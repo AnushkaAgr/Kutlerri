@@ -48,7 +48,6 @@ export const metadata: Metadata = {
     "Restaurant intelligence company. AI agents that unify POS, delivery, inventory, labor, and review data into revenue-driving actions.",
   keywords: [
     "Kutlerri",
-    "Kutlerri AI",
     "Kutlerri restaurant",
     "restaurant AI agents",
     "restaurant data analytics",
@@ -113,7 +112,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Kutlerri",
-              alternateName: ["Kutlerri AI", "Kutlerri Inc, kutlerri"],
+              alternateName: ["Kutlerri Inc", "kutlerri"],
               url: "https://kutlerri.ai",
               logo: "https://kutlerri.ai/icon.svg",
               description:
@@ -140,7 +139,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Kutlerri",
-              alternateName: "Kutlerri AI",
+              alternateName: "Kutlerri",
               url: "https://kutlerri.ai",
             }),
           }}
