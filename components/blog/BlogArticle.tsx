@@ -87,8 +87,8 @@ export function BlogArticle({ data }: Props) {
       <div className="px-6 md:px-10 lg:px-[72px] pb-20 md:pb-28">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
           {/* Sidebar */}
-          <aside className="w-full lg:w-[300px] xl:w-[340px] shrink-0">
-            <div className="lg:sticky lg:top-[96px] flex flex-col gap-3 lg:max-h-[calc(100vh-110px)]">
+          <aside className="w-full lg:w-[280px] xl:w-[300px] shrink-0">
+            <div className="lg:sticky lg:top-[80px] flex flex-col gap-3 lg:max-h-[calc(100vh-90px)]">
               {/* Top image */}
               <div className="rounded-2xl overflow-hidden shrink-0">
                 <Image
@@ -105,9 +105,9 @@ export function BlogArticle({ data }: Props) {
                 {/* TOC Header - collapsible on mobile */}
                 <button
                   onClick={() => setTocOpen(!tocOpen)}
-                  className="w-full flex items-center justify-between px-5 py-3 bg-[#FAFAFA] border-b border-[#E5E5E5] lg:cursor-default shrink-0"
+                  className="w-full flex items-center justify-between px-5 py-2 bg-[#FAFAFA] border-b border-[#E5E5E5] lg:cursor-default shrink-0"
                 >
-                  <h3 className="font-avant font-bold text-[#1A1A1A] text-sm uppercase tracking-wider">
+                  <h3 className="font-avant font-bold text-[#1A1A1A] text-xs uppercase tracking-wider">
                     Table of Contents
                   </h3>
                   <svg
@@ -133,7 +133,7 @@ export function BlogArticle({ data }: Props) {
                         <button
                           onClick={() => scrollToSection(section.id)}
                           className={`
-                            w-full text-left px-5 py-2 text-sm font-gotham transition-all duration-200
+                            w-full text-left px-5 py-1 text-xs font-gotham transition-all duration-200
                             border-l-[3px] hover:bg-[#F8F5FF]
                             ${
                               activeSection === section.id
@@ -151,7 +151,7 @@ export function BlogArticle({ data }: Props) {
               </div>
 
               {/* Bottom CTA */}
-              <div className="rounded-2xl bg-[#2B145F] p-6 md:p-6 shrink-0">
+              <div className="rounded-2xl bg-[#2B145F] p-4 md:p-4 shrink-0">
                 <p className="font-avant font-bold text-white leading-snug mb-3">
                   {data.ctaText}
                 </p>
