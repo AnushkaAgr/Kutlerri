@@ -1,6 +1,7 @@
 import React from "react"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
+import Script from "next/script"
 import "./globals.css"
 import { Footer } from "@/components/footer"
 
@@ -103,6 +104,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-11Y1CTW5G2"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-11Y1CTW5G2');
+          `}
+        </Script>
+      </head>
       <body className={`${gotham.variable} ${avantGarde.variable} antialiased`}>
         {/* Organization JSON-LD — tells Google "Kutlerri" is a company/brand, not "cutlery" */}
         <script
