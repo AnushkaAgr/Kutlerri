@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get a Demo | Kutlerri",
+  title: "Get a Demo",
   description:
     "Schedule a personalized demo to see how Kutlerri's AI agents optimize restaurant revenue, control costs, and automate operations.",
   alternates: { canonical: "/get-a-demo" },

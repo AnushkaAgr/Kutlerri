@@ -89,6 +89,7 @@ export function FeatureCards() {
                 <Image
                   src={CardPattern}
                   alt=""
+                  aria-hidden="true"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover opacity-[0.08]"
@@ -103,6 +104,7 @@ export function FeatureCards() {
                       <Image
                         src={PointerIcon}
                         alt=""
+                        aria-hidden="true"
                         width={12}
                         height={12}
                         className="shrink-0 opacity-85 w-[10px] h-[10px] lg:w-[11px] lg:h-[11px] xl:w-[13px] xl:h-[13px]"

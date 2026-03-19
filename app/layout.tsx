@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     template: "%s | Kutlerri",
   },
   description:
-    "Kutlerri is a restaurant intelligence company. AI agents that unify POS, delivery, inventory, labor, and review data into daily revenue-driving and cost-cutting actions.",
+    "Restaurant intelligence company. AI agents that unify POS, delivery, inventory, labor, and review data into revenue-driving actions.",
   keywords: [
     "Kutlerri",
     "Kutlerri AI",
@@ -59,10 +59,19 @@ export const metadata: Metadata = {
     siteName: "Kutlerri",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/images/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Kutlerri — AI Agents for Restaurant Growth",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@kutlerri",
+    images: ["/images/og-default.png"],
   },
   alternates: {
     canonical: "/",

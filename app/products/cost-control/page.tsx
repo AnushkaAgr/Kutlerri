@@ -13,9 +13,9 @@ import MarketingSpendImg from "@/public/images/AgentGraphs/MarketingSpendDoorDas
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Prime Cost Optimization AI | Reduce Food & Labor Costs | Kutlerri",
+  title: "Prime Cost Optimization AI | Reduce Food & Labor Costs",
   description:
-    "Kutlerri’s Prime Cost Optimization AI helps restaurants reduce food waste, optimize labor scheduling, and improve profitability through actionable insights.",
+    "Prime Cost Optimization AI helps restaurants reduce food waste, optimize labor scheduling, and improve profitability.",
   keywords: [
     "Prime cost optimization software",
     "Restaurant food cost control",
@@ -218,6 +218,20 @@ const agentsData: Agent[] = [
 export default function AgentsScrollPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://kutlerri.ai" },
+              { "@type": "ListItem", position: 2, name: "Products" },
+              { "@type": "ListItem", position: 3, name: "Cost Control" },
+            ],
+          }),
+        }}
+      />
       <Navbar />
       <ProductHero
         title="Cost Control Agents"

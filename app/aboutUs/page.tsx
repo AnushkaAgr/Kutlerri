@@ -3,15 +3,15 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Kutlerri | Restaurant AI Company",
+  title: "About Us | Restaurant AI Company",
   description:
     "Kutlerri was built by people who know what a real growth system looks like and got close enough to restaurants to know they've never had one.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/aboutUs" },
   openGraph: {
     title: "About Kutlerri | Restaurant AI Company",
     description:
       "Kutlerri was built by people who know what a real growth system looks like and got close enough to restaurants to know they've never had one.",
-    url: "https://kutlerri.ai/about",
+    url: "https://kutlerri.ai/aboutUs",
     type: "website",
   },
 };
@@ -19,6 +19,19 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://kutlerri.ai" },
+              { "@type": "ListItem", position: 2, name: "About Us" },
+            ],
+          }),
+        }}
+      />
       <Navbar />
 
       {/* ═══════════════════ HERO SECTION ═══════════════════ */}

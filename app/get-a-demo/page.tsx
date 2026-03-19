@@ -31,10 +31,10 @@ export default function GetDemoPage() {
                             Experience Kutlerri
                         </div>
 
-                        <h2 className="text-4xl md:text-6xl font-bold text-[#300B60] leading-[1.1] font-avant tracking-tight">
+                        <h1 className="text-4xl md:text-6xl font-bold text-[#300B60] leading-[1.1] font-avant tracking-tight">
                             See how our agents {" "}
                             <span className="text-[#7C5CFA] whitespace-nowrap">scale your restaurant.</span>
-                        </h2>
+                        </h1>
 
                         <p className="text-lg md:text-xl text-[#2E312E]/70 max-w-lg leading-relaxed">
                             Get a personalized walkthrough of how our AI agents can optimize your revenue,

@@ -6,9 +6,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Paying 25% to DoorDash on Every Order? There's a Channel Delivery Apps Can't Touch. | Kutlerri",
+    "Paying 25% to DoorDash on Every Order? There's a Channel Delivery Apps Can't Touch.",
   description:
-    "There is a channel that charges none of what DoorDash takes. Most operators running it are doing so quietly, growing it steadily. It's called catering. And delivery platforms cannot touch it.",
+    "There's a channel that charges none of what DoorDash takes. Operators are growing it quietly and steadily. It's called catering.",
   alternates: { canonical: "/blog/doordash-vs-catering" },
   openGraph: {
     title:
@@ -174,14 +174,37 @@ export default function DoorDashVsCateringPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://kutlerri.ai" },
+              { "@type": "ListItem", position: 2, name: "Resources", item: "https://kutlerri.ai/blog" },
+              { "@type": "ListItem", position: 3, name: "DoorDash vs Catering" },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "Article",
             headline: blogData.title,
+            description:
+              "Why corporate catering outperforms delivery on every margin metric that matters.",
+            image: "https://kutlerri.ai/images/blogPageImages/doordash.png",
             datePublished: "2026-02-24",
-            author: { "@type": "Organization", name: "Kutlerri" },
+            author: {
+              "@type": "Person",
+              name: "Kiran",
+              url: "https://kutlerri.ai/aboutUs",
+              worksFor: { "@type": "Organization", name: "Kutlerri" },
+            },
             publisher: {
               "@type": "Organization",
               name: "Kutlerri",
               url: "https://kutlerri.ai",
+              logo: "https://kutlerri.ai/icon.svg",
             },
             mainEntityOfPage: "https://kutlerri.ai/blog/doordash-vs-catering",
           }),

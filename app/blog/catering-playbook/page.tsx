@@ -5,7 +5,7 @@ import { BlogBottomCTA } from "@/components/blog/BlogBottomCTA"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "The Catering Playbook: How to Build a Revenue Channel That Runs Without Chaos | Kutlerri",
+  title: "The Catering Playbook: How to Build a Revenue Channel That Runs Without Chaos",
   description:
     "The exact playbook for turning catering from a chaotic side habit into the most predictable revenue channel in your operation.",
   alternates: { canonical: "/blog/catering-playbook" },
@@ -184,14 +184,37 @@ export default function CateringPlaybookPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://kutlerri.ai" },
+              { "@type": "ListItem", position: 2, name: "Resources", item: "https://kutlerri.ai/blog" },
+              { "@type": "ListItem", position: 3, name: "Catering Playbook" },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "Article",
             headline: blogData.title,
+            description:
+              "The exact playbook for turning catering from a chaotic side habit into the most predictable revenue channel.",
+            image: "https://kutlerri.ai/images/blogPageImages/catering-playbook.png",
             datePublished: "2026-02-26",
-            author: { "@type": "Organization", name: "Kutlerri" },
+            author: {
+              "@type": "Person",
+              name: "Sthita",
+              url: "https://kutlerri.ai/aboutUs",
+              worksFor: { "@type": "Organization", name: "Kutlerri" },
+            },
             publisher: {
               "@type": "Organization",
               name: "Kutlerri",
               url: "https://kutlerri.ai",
+              logo: "https://kutlerri.ai/icon.svg",
             },
             mainEntityOfPage: "https://kutlerri.ai/blog/catering-playbook",
           }),

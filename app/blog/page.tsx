@@ -7,7 +7,7 @@ import BlogCard from "@/components/blog/BlogCard";
 import { ManagedServices } from "@/components/managed-services";
 
 export const metadata: Metadata = {
-  title: "Resources | Kutlerri",
+  title: "Resources",
   description:
     "Industry news, insights, and playbooks for restaurant operators building a catering channel.",
   alternates: { canonical: "/blog" },
