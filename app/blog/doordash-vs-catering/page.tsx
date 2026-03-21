@@ -68,7 +68,7 @@ const blogData: BlogData = {
       There is a channel that charges none of that. Most operators running it are doing so quietly, growing it steadily, ordering larger order sizes, and with a predictability that almost no other channel offers. It's called catering. And delivery platforms cannot touch it.
     </p>
 
-    <h2 id="what-delivery-costs" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="what-delivery-costs" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       What Delivery Platforms Are Actually Costing You
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -84,7 +84,7 @@ const blogData: BlogData = {
       That is not a cost of doing business. That is a structural dependency that gets more expensive the more successful your delivery channel becomes. You pay more for being on DoorDash, the more you pay DoorDash. And the customer who ordered from you last Tuesday? DoorDash knows who they are. You don't.
     </p>
 
-    <h2 id="catering-different-category" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="catering-different-category" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       Why Company Catering is a Different Category Entirely
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -103,7 +103,7 @@ const blogData: BlogData = {
       At scale, that difference compounds into something significant. A fast casual operator running five locations who builds catering to just 15% of total revenue, at direct margin, is generating a channel that outperforms delivery margin per dollar by a factor the delivery numbers will never catch up to.
     </p>
 
-    <h2 id="businesses-already-ordering" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="businesses-already-ordering" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       The Businesses Around You Are Already Ordering Catering
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -119,7 +119,7 @@ const blogData: BlogData = {
       For a fast casual restaurant — whether that's a taco concept, a sandwich shop, a pizza operation, or a Mediterranean food brand — the corporate catering fit is often stronger than operators realize. Office buyers are not looking for fine dining. They are looking for food that travels well, portions consistently, and arrives on time. That description fits fast casual almost perfectly.
     </p>
 
-    <h2 id="businesses-already-ordering" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="businesses-already-ordering" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       The EZCater Trap
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -132,7 +132,7 @@ EZCater is a useful starting point for operators who have never run catering bef
       The goal is direct relationships. Direct billing. A prospect database of every business within your delivery radius that is a realistic catering buyer, contacted on your cadence, converting into accounts that reorder without a platform taking a cut of every single transaction. That is what separates a catering channel from a catering marketplace listing.
     </p>
 
-    <h2 id="channel-is-running" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="channel-is-running" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       What It Looks Like When the Channel Is Running
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -148,7 +148,7 @@ EZCater is a useful starting point for operators who have never run catering bef
       A check-in within 48 hours of the event. A follow-up at 30 days. A proactive reach-out before the next seasonal moment when their ordering intent is naturally high. End of quarter. Back to office periods. Holiday event planning. These are the windows when a well-timed message from a vendor who understands their purchasing preferences converts immediately. None of this is complicated. All of it requires a system to enforce it, because without one, it always loses to the next immediate fire in the kitchen.
     </p>
 
-    <h2 id="shift-worth-making" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="shift-worth-making" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       The Shift Worth Making
     </h2>
     <p style="margin-bottom:1.25rem;">
