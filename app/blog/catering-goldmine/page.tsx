@@ -58,7 +58,7 @@ const blogData: BlogData = {
       The question worth sitting with isn't whether catering is an opportunity. It's why the gap is this wide, and whether it's your food, your market, or your system that's responsible. Almost always, it's the system. And that's actually good news, because system problems are fixable.
     </p>
 
-    <h2 id="goldmine-bigger" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="goldmine-bigger" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       The Goldmine is Bigger Than You Think
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -71,7 +71,7 @@ const blogData: BlogData = {
       Catering is not a three-mile game. A well-run catering operation with reliable delivery can realistically serve a ten-mile radius, which in most markets multiplies the addressable opportunity several times over. Most operators are pursuing a fraction of their available catering territory simply because nobody ever mapped the full picture. That demand exists whether you pursue it or not. The only question is who captures it.
     </p>
 
-    <h2 id="why-8-percent" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="why-8-percent" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       Why 8% Feels Normal When it Shouldn't
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -84,7 +84,7 @@ const blogData: BlogData = {
       The gap between 8% and 20% doesn't feel like a gap from the inside. It feels like catering just being what catering is: unpredictable, hard to scale, dependent on word of mouth. That feeling is not a market reality. It's a systems problem wearing a market disguise.
     </p>
 
-    <h2 id="blocking-goldmine" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="blocking-goldmine" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       What's Actually Blocking the Goldmine
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -103,7 +103,7 @@ const blogData: BlogData = {
       <strong>Accounts that ordered once and were never followed up.</strong> The single most expensive blockage in most catering operations isn't acquiring new clients. It's failing to retain the ones already won. A customer who ordered a corporate lunch in March and received no follow-up by May is not a loyal account. They're a one-time transaction who happened to call first. Turning single orders into recurring accounts is where catering revenue compounds, and it requires a retention system that almost no restaurant has built.
     </p>
 
-    <h2 id="twenty-percent" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="twenty-percent" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       The 20% is Not a Stretch Target
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -119,7 +119,7 @@ const blogData: BlogData = {
       The goldmine isn't locked because demand is low or the market is saturated. It's locked because the tools to access it were never built. And tool problems, unlike market problems, have a direct solution.
     </p>
 
-    <h2 id="question-not-asked" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="question-not-asked" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       Start With the Question You Haven't Asked
     </h2>
     <p style="margin-bottom:1.25rem;">

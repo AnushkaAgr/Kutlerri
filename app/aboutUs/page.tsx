@@ -48,8 +48,8 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 lg:px-[72px]">
-          <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-12 items-center">
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 lg:pr-[72px] lg:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-[70px] items-center">
             {/* Left — Text */}
             <div className="order-2 lg:order-1">
               <h1 className="font-avant text-[#2B145F] text-3xl sm:text-4xl md:text-[44px] font-bold leading-[1.1] tracking-tight mb-6">

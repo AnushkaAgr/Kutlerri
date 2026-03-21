@@ -63,7 +63,7 @@ const blogData: BlogData = {
       This is that system. The exact playbook for turning catering from a chaotic side habit into the most predictable revenue channel in your operation.
     </p>
 
-    <h2 id="diagnosis-before-playbook" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="diagnosis-before-playbook" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       The Diagnosis Before the Playbook
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -79,7 +79,7 @@ const blogData: BlogData = {
       Most operators instinctively fix the inbound side first because the problems are more visible. An unanswered inquiry stings in a way that an unpursued prospect never does. But the outbound side is where the real revenue growth lives. Both need to work. And neither works well without a deliberate system behind it.
     </p>
 
-    <h2 id="getting-inbound-right" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="getting-inbound-right" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       Getting Inbound Right
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -98,7 +98,7 @@ const blogData: BlogData = {
       Get these three right and inbound catering starts to feel less like a guessing game and more like a process with a predictable conversion rate you can actually improve.
     </p>
 
-    <h2 id="building-outbound-engine" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="building-outbound-engine" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       Building the Outbound Engine
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -123,7 +123,7 @@ const blogData: BlogData = {
       And then the follow-up. Most catering deals in outbound, exactly like inbound, are not lost in the first message. They are lost in the silence after it. A structured sequence across two to three weeks, with an initial email, a follow-up, and a final check-in, gives a prospect three opportunities to engage before they are moved to a slower nurture cycle. The restaurants consistently breaking into new corporate accounts are not sending single emails. They are sending consistently, over a longer period, with more patience than anyone else in the market.
     </p>
 
-    <h2 id="turning-first-orders" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="turning-first-orders" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       Turning First Orders Into Recurring Revenue
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -136,7 +136,7 @@ const blogData: BlogData = {
       The math is worth understanding clearly. A corporate account ordering twice a month at $600 per order is worth $14,400 over twelve months, and retaining it costs almost nothing. That profile per month across five locations is over $865,000 in incremental annual catering revenue. That number doesn't come from running food or chasing leads. It comes from a retention process that converts single orders into accounts and accounts into long-term revenue.
     </p>
 
-    <h2 id="metrics-tell-you" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="metrics-tell-you" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       The Metrics That Tell You If It's Working
     </h2>
     <p style="margin-bottom:1.25rem;">
@@ -158,7 +158,7 @@ const blogData: BlogData = {
       <strong>Pipeline coverage.</strong> How much confirmed catering revenue sits beyond the current week? This number means the outbound system is working or that it isn't.
     </p>
 
-    <h2 id="system-is-the-point" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:3rem;margin-bottom:1.25rem;">
+    <h2 id="system-is-the-point" style="font-size:1.5rem;font-weight:700;color:#1A1A1A;margin-top:0;margin-bottom:1.25rem;">
       The System Is the Whole Point
     </h2>
     <p style="margin-bottom:1.25rem;">

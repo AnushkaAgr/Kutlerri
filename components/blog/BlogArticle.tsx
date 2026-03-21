@@ -76,7 +76,7 @@ export function BlogArticle({ data }: Props) {
   return (
     <article className="min-h-screen bg-white">
       {/* Blog Hero - aligned with the content column */}
-      <div className="pt-28 md:pt-32 lg:pt-36 pb-10 md:pb-14 px-6 md:px-10 lg:px-[72px]">
+      <div className="pt-9 md:pt-8 lg:pt-9 pb-10 md:pb-14 px-6 md:px-10 lg:px-[72px]">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
           {/* Spacer matching sidebar width */}
           <div className="hidden lg:block lg:w-[300px] xl:w-[340px] shrink-0" />
@@ -192,7 +192,7 @@ export function BlogArticle({ data }: Props) {
               </h1>
 
               {/* Author + publish date */}
-              <div className="mb-14">
+              <div className="mb-6">
                 <hr className="border-gray-200" />
                 <div className="flex items-center justify-between gap-3 font-gotham text-sm leading-tight my-[10px]">
                   <div className="font-gotham text-sm leading-tight">
