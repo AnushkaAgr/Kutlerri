@@ -32,7 +32,8 @@ export function Hero() {
         {/* Background */}
         <Image
           src={HeroImage}
-          alt="Hero background"
+          alt=""
+          aria-hidden="true"
           fill
           priority
           sizes="100vw"

@@ -31,7 +31,7 @@ export function Navbar() {
 
   // White navbar for blog & about pages
   const isLightNav =
-    pathname.startsWith("/blog") || pathname.startsWith("/company");
+    pathname.startsWith("/blog") || pathname.startsWith("/aboutUs");
 
   // Close dropdowns on route change
   useEffect(() => {
@@ -261,7 +261,7 @@ export function Navbar() {
 
             {/* Company */}
             <Link
-              href="/company"
+              href="/aboutUs"
               className={`
                 relative font-gotham font-medium
                 text-[16px] md:text-[18px] lg:text-[20.778px]
@@ -507,7 +507,7 @@ export function Navbar() {
           />
 
           <Link
-            href="/company"
+            href="/aboutUs"
             onClick={() => setMobileMenuOpen(false)}
             className={`block py-2 ${isLightNav ? "text-[#2B145F]" : "text-white"}`}
           >

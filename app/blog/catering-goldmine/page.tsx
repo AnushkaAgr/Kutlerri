@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Your Restaurant Is Sitting on a Catering Goldmine. Here's What's Blocking It. | Kutlerri",
+    "Your Restaurant Is Sitting on a Catering Goldmine. Here's What's Blocking It.",
   description:
     "Most restaurant operators know catering is an opportunity. What they don't know is how large the gap is between what they're capturing and what's sitting right outside their door.",
   alternates: { canonical: "/blog/catering-goldmine" },
@@ -142,14 +142,37 @@ export default function CateringGoldminePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://kutlerri.ai" },
+              { "@type": "ListItem", position: 2, name: "Resources", item: "https://kutlerri.ai/blog" },
+              { "@type": "ListItem", position: 3, name: "Catering Goldmine" },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "Article",
             headline: blogData.title,
+            description:
+              "Most restaurant operators know catering is an opportunity. What they don't know is how large the gap is.",
+            image: "https://kutlerri.ai/images/blogPageImages/catering-goldmine.png",
             datePublished: "2026-02-26",
-            author: { "@type": "Organization", name: "Kutlerri" },
+            author: {
+              "@type": "Person",
+              name: "Payal",
+              url: "https://kutlerri.ai/aboutUs",
+              worksFor: { "@type": "Organization", name: "Kutlerri" },
+            },
             publisher: {
               "@type": "Organization",
               name: "Kutlerri",
               url: "https://kutlerri.ai",
+              logo: "https://kutlerri.ai/icon.svg",
             },
             mainEntityOfPage: "https://kutlerri.ai/blog/catering-goldmine",
           }),

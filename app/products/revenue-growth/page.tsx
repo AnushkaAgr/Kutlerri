@@ -14,10 +14,9 @@ import RevenueImg from "@/public/images/ProductPage/RevenueGrowthHomePage.png"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Revenue Growth AI Agents | Increase Restaurant Sales & Orders | Kutlerri",
+  title: "Revenue Growth Agents for Restaurants",
   description:
-    "Kutlerri's Revenue Growth AI agents help restaurants increase sales through catering growth, menu optimization, upselling, customer retention, and online reputation management.",
+    "Kutlerri's AI agents uncover catering leads, upsell opportunities, and lapsed-customer wins so your team acts on revenue, not reports.",
   keywords: [
     "Restaurant revenue growth AI",
     "Restaurant sales optimization",
@@ -224,6 +223,20 @@ export default function RevenueGrowthPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://kutlerri.ai" },
+              { "@type": "ListItem", position: 2, name: "Products" },
+              { "@type": "ListItem", position: 3, name: "Revenue Growth" },
+            ],
+          }),
+        }}
+      />
       <Navbar />
 
       {/* HERO */}
