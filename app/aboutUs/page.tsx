@@ -3,9 +3,10 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Restaurant AI Company",
+  title: "About Kutlerri - AI Built for Restaurant Operators",
   description:
-    "Kutlerri was built by people who know what a real growth system looks like and got close enough to restaurants to know they've never had one.",
+    "Kutlerri is a restaurant AI company building task-focused agents to help operators grow revenue, control costs, and expand smarter.",
+  keywords: ["Kutlerri: AI restaurant technology company"],
   alternates: { canonical: "/aboutUs" },
   openGraph: {
     title: "About Kutlerri | Restaurant AI Company",

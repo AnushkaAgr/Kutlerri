@@ -8,12 +8,12 @@ const QuestionsSection = dynamic(() => import("@/components/questions-section").
 const ManagedServices = dynamic(() => import("@/components/managed-services").then(mod => ({ default: mod.ManagedServices })))
 
 export const metadata: Metadata = {
-  title: "AI Agents for Restaurant Revenue Growth & Cost Control",
+  title: "Kutlerri - AI Agents for Restaurant Operators",
   description:
-    "Kutlerri unifies POS, delivery, inventory, labor, and review data into daily revenue-driving and cost-cutting actions.",
+    "Kutlerri turns your POS and delivery data into AI agents that grow revenue, cut costs, and de-risk expansion. Built for restaurant operators.",
   keywords: [
     "Kutlerri",
-    "Restaurant AI agents",
+    "AI agents for restaurants",
     "Restaurant revenue growth",
     "Restaurant cost control",
     "Restaurant data analytics",

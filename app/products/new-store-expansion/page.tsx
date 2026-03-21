@@ -9,9 +9,9 @@ import TradeAreaMatchImg from "@/public/images/AgentGraphs/TradeAreaDemand.png"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "New Store Expansion AI | Site Selection & Trade Area Analysis",
+  title: "New Store Expansion Intelligence ",
   description:
-    "New Store Expansion AI agents analyze trade areas, forecast demand, and deliver Go/No-Go recommendations for confident expansion.",
+    "De-risk your next location with Kutlerri's AI agents for trade-area demand analysis and data-driven site selection built for restaurant operators.",
   keywords: [
     "Restaurant site selection AI",
     "Trade area analysis software",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/products/new-store-expansion" },
   openGraph: {
-    title: "New Store Expansion AI | Kutlerri",
+    title: "New Store Expansion Intelligence | Kutlerri",
     description:
       "AI-powered site selection and trade area analysis for confident restaurant expansion.",
     url: "https://kutlerri.ai/products/new-store-expansion",

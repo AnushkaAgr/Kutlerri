@@ -14,9 +14,9 @@ import RevenueImg from "@/public/images/ProductPage/RevenueGrowthHomePage.png"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Revenue Growth AI Agents | Increase Restaurant Sales & Orders",
+  title: "Revenue Growth Agents for Restaurants",
   description:
-    "Revenue Growth AI agents help restaurants increase sales through catering, menu optimization, upselling, and customer retention.",
+    "Kutlerri's AI agents uncover catering leads, upsell opportunities, and lapsed-customer wins so your team acts on revenue, not reports.",
   keywords: [
     "Restaurant revenue growth AI",
     "Restaurant sales optimization",

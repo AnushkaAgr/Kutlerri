@@ -7,10 +7,11 @@ import BlogCard from "@/components/blog/BlogCard";
 import { ManagedServices } from "@/components/managed-services";
 
 export const metadata: Metadata = {
-  title: "Resources",
+  title: "Restaurant AI Insights & Guides | Kutlerri Blog",
   description:
-    "Industry news, insights, and playbooks for restaurant operators building a catering channel.",
+    "Practical guides, operator case studies, and AI strategies for growing restaurant revenue and controlling costs. From the Kutlerri team.",
   alternates: { canonical: "/blog" },
+  keywords: ["restaurant AI insights blog"],
   openGraph: {
     title: "Resources | Kutlerri",
     description:

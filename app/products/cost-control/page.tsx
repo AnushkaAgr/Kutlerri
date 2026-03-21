@@ -13,11 +13,11 @@ import MarketingSpendImg from "@/public/images/AgentGraphs/MarketingSpendDoorDas
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Prime Cost Optimization AI | Reduce Food & Labor Costs",
+  title: "Cost Control Agents for Restaurants",
   description:
-    "Prime Cost Optimization AI helps restaurants reduce food waste, optimize labor scheduling, and improve profitability.",
+    "Cut food waste, optimize labor schedules, and sharpen menu margins with Kutlerri's AI agents built on your real operational data.",
   keywords: [
-    "Prime cost optimization software",
+    "restaurant cost control AI software",
     "Restaurant food cost control",
     "Restaurant labor optimization",
     "Reduce restaurant waste",
