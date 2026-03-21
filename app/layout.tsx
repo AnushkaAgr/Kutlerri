@@ -105,6 +105,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="msvalidate.01" content="078EE65FB1EDC05D717F091FB3DD9E36" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-11Y1CTW5G2"
           strategy="afterInteractive"
