@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 
 const blogData: BlogData = {
   title: "How RASA Added 3% Weekly Catering Revenue Without Hiring Anyone",
-  tags: ["Case Study", "Catering", "Restaurant Tech"],
-  readTime: "3 min",
+  tags: ["Case Study"],
+  readTime: "2 min",
   publishDate: "March 27, 2026",
   author: {
-    name: "Payal",
+    name: "Sthita",
     designation: "Kutlerri",
   },
   sidebarImage: "/images/blogPageImages/rasa.jpeg",
