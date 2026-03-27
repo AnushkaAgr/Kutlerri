@@ -54,11 +54,10 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "rasa-case-study",
-    title:
-      "How RASA Added 3% Weekly Catering Revenue Without Hiring Anyone",
+    title: "How RASA Added 3% Weekly Catering Revenue Without Hiring Anyone",
     description:
       "Four months ago, RASA waited for catering orders to arrive. Today they go after them. See how Kutlerri built and ran the full catering motion — no new hires, no paid ads, no discounting.",
-    readTime: "3 min",
+    readTime: "2 min",
     href: "/blog/rasa-case-study",
     image: "/images/blogPageImages/rasa.jpeg",
   },
