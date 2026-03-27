@@ -53,13 +53,13 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blogPageImages/catering-goldmine.png",
   },
   {
-    id: "coming-soon-1",
-    title: "We are COOKING more playbooks for you. Wait for it.",
-    description: 'Most "resources" are marketing. Ours will be instructions.',
-    readTime: "2 min",
-    href: null,
-    // Replace with image path when the illustration is ready
-    image: null,
-    comingSoon: true,
+    id: "rasa-case-study",
+    title:
+      "How RASA Added 3% Weekly Catering Revenue Without Hiring Anyone",
+    description:
+      "Four months ago, RASA waited for catering orders to arrive. Today they go after them. See how Kutlerri built and ran the full catering motion — no new hires, no paid ads, no discounting.",
+    readTime: "3 min",
+    href: "/blog/rasa-case-study",
+    image: "/images/blogPageImages/rasa.jpeg",
   },
 ];
