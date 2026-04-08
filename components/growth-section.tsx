@@ -17,65 +17,55 @@ import Icon12 from "../public/images/icons/ExpansionFit.svg"
 
 const agents = [
   {
-    title: "Catering Growth Agent",
-    desc: "Finds real catering demand nearby and helps turn it into reliable weekly orders.",
+    title: "Catering Agent",
+    desc: "Maps catering-fit businesses within 3, 5, and 10 miles, builds a prospect list with contact details, and runs outreach to generate recurring catering orders.",
     icon: Icon1,
   },
   {
-    title: "Demand-Driven Menu Agent",
-    desc: "Adjusts your menu based on what actually sells by location, channel, and time of day.",
-    icon: Icon2,
-  },
-  {
-    title: "Upsell & Attach Agent",
-    desc: "Boosts order value by adding the right sides and add-ons at the right time.",
-    icon: Icon3,
-  },
-  {
-    title: "Customer Lifecycle & Retention Agent",
-    desc: "Shows who your regulars are, who’s dropping off, and where repeat revenue is leaking.",
-    icon: Icon4,
-  },
-  {
-    title: "Online Reviews Management Agent",
-    desc: "Tracks reviews and ratings so that problems get fixed before they hurt traffic and orders.",
-    icon: Icon5,
-  },
-  {
-    title: "Waste Control Agent",
-    desc: "Flags food getting wasted from over-prep, spoilage, and poor shelf control before margins drop.",
-    icon: Icon6,
-  },
-  {
     title: "Prep Forecast Agent",
-    desc: "Tells your kitchen exactly what to prep and how much, so you don’t overcook or run out.",
+    desc: "Forecasts how much of each item to prep by day and daypart, breaks it down to ingredient quantities, and flags over-prep and shortages before they happen.",
     icon: Icon7,
   },
   {
-    title: "Labor Cost Optimization Agent",
-    desc: "Helps schedule the right number of staff for each shift. No overstaffing. No burnout.",
-    icon: Icon8,
+    title: "Waste Control Agent",
+    desc: "Finds your biggest waste sources, compares what was prepped against what was sold, and flags where over-prep is turning into spoilage.",
+    icon: Icon6,
   },
   {
-    title: "Menu Mix & Margin Optimization ",
-    desc: "Shows which menu items hurt profits and what to fix, remove, or reposition.",
-    icon: Icon9,
+    title: "Menu Engineering Agent",
+    desc: "Classifies every item by demand and margin across dine-in, delivery, and catering, and flags what to reprice, reposition, simplify, or remove.",
+    icon: Icon2,
   },
   {
-    title: "DoorDash Spend Efficiency Agent",
-    desc: "Makes sure promos and ads bring orders,not losses. Also, cuts wasted spend.",
-    icon: Icon10,
-  },
-  {
-    title: "Trade Area Demand Intelligence Agent",
-    desc: "For a potential trade area, produces a daypart heatmap and weekly demand forecast.",
+    title: "Site Selection Agent",
+    desc: "Benchmarks a new location against your top-performing stores, produces a daypart demand forecast, and tells you where the new store should be open.",
     icon: Icon11,
   },
+
   {
-    title: "New Store Decision Agent",
-    desc: "Evaluates potential trade areas, learns what made your current stores win, and scores each new area against those drivers.",
-    icon: Icon12,
+    title: "Guest Retention Agent",
+    desc: "Tracks how often customers order, flags early drop-offs, and shows how much repeat revenue you’re losing each month.",
+    icon: Icon4,
   },
+  {
+    title: "Online Review Agent",
+    desc: "Monitors ratings across Uber Eats, DoorDash, and Google, links negative reviews to specific operational issues, and surfaces problems across all locations in one view.",
+    icon: Icon5,
+  },
+
+
+  {
+    title: "Labor Scheduling Agent",
+    desc: "Identify where staff is sitting idle, where overtime is piling up, and how to match labor to demand across every shift and location.",
+    icon: Icon8,
+  },
+
+  {
+    title: "3P Spend Agent",
+    desc: "Separate the promos that drive real orders from the ones draining your budget with underperforming spend flagged across every location.",
+    icon: Icon10,
+  },
+
 ]
 
 
