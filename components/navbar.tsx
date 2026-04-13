@@ -89,27 +89,23 @@ export function Navbar() {
       icon: TrendingUp,
       subAgents: [
         {
-          title: "Catering Growth Agent",
+          title: "Catering Agent",
           desc: "Unlock corporate and event revenue streams.",
           href: "/products/revenue-growth#catering-growth",
         },
         {
-          title: "Demand-Driven Menu Agent",
+          title: "Menu Engineering Agent",
           desc: "Optimize your menu for profitability.",
           href: "/products/revenue-growth#demand-driven-menu",
         },
+
         {
-          title: "Upsell and Attach Agent",
-          desc: "Increase average order value automatically.",
-          href: "/products/revenue-growth#upsell-attach",
-        },
-        {
-          title: "Customer Lifecycle & Retention Engine",
+          title: "Guest Retention Agent",
           desc: "Reduce churn and boost loyalty.",
           href: "/products/revenue-growth#customer-lifecycle-retention",
         },
         {
-          title: "Online Reviews Management Agent",
+          title: "Online Review Agent",
           desc: "Manage and improve your online presence.",
           href: "/products/revenue-growth#online-reviews-management",
         },
@@ -133,17 +129,13 @@ export function Navbar() {
           href: "/products/cost-control#prep-forecast",
         },
         {
-          title: "Labor Cost Optimization Agent",
+          title: "Labor Scheduling Agent",
           desc: "Schedule smarter to save on labor.",
           href: "/products/cost-control#labor-cost-optimization",
         },
+
         {
-          title: "Menu Mix & Margin Optimisation",
-          desc: "Analyze profitability by item.",
-          href: "/products/cost-control#menu-mix-&-margin-optimization",
-        },
-        {
-          title: "DoorDash Spend Efficiency Agent",
+          title: "3P Spend Agent",
           desc: "Ensure every ad dollar drives revenue.",
           href: "/products/cost-control#doordash-spend-efficiency",
         },
@@ -157,14 +149,9 @@ export function Navbar() {
       icon: MapPin,
       subAgents: [
         {
-          title: "New Store Decision Agent",
+          title: "Site Selection Agent",
           desc: "Evaluate locations with data confidence.",
           href: "/products/new-store-expansion#new-store-decision",
-        },
-        {
-          title: "Trade Area Demand Intelligence Agent",
-          desc: "Map local demand hotspots.",
-          href: "/products/new-store-expansion#trade-area-demand-intelligence",
         },
       ],
     },
@@ -478,11 +465,14 @@ export function Navbar() {
                     className={`border-l-2 pl-4 space-y-2 ${isLightNav ? "border-[#2B145F]/10" : "border-white/10"}`}
                   >
                     {agent.subAgents.map((sub, j) => (
-                      <li
-                        key={j}
-                        className={`text-sm ${isLightNav ? "text-[#2B145F]/70" : "text-white/70"}`}
-                      >
-                        {sub.title}
+                      <li key={j}>
+                        <Link
+                          href={sub.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`block text-sm py-1 ${isLightNav ? "text-[#2B145F]/70 hover:text-[#9F7CEF]" : "text-white/70 hover:text-[#9F7CEF]"} transition-colors`}
+                        >
+                          {sub.title}
+                        </Link>
                       </li>
                     ))}
                   </ul>
