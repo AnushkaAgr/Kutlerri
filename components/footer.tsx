@@ -48,7 +48,7 @@ export function Footer() {
                 Get a Demo
               </Link>
               <p>Copyright @ 2026</p>
-              <p>Kutlerri tech Corporation</p>
+              <p>Kutlerri Tech Corporation</p>
             </div>
           </div>
 

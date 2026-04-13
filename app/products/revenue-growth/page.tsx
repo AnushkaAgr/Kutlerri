@@ -1,16 +1,15 @@
-import { Navbar } from "@/components/navbar"
+import { Navbar } from "@/components/navbar";
 
-import { ProductHero } from "@/components/products/ProductHero"
-import { AgentSection, type Agent } from "@/components/products/AgentSection"
-import { ManagedServices } from "@/components/managed-services"
-import CateringImg from "@/public/images/AgentGraphs/Catering.png"
-import UpsellnAttachImg from "@/public/images/AgentGraphs/UpsellandAttachAgent.png"
-import CustomerLifecycleImg from "@/public/images/AgentGraphs/CustomerLifecycle.png"
-import OnlineReputationImg from "@/public/images/AgentGraphs/OnlineReputation.png"
-import DemandDrivenMenuImg from "@/public/images/AgentGraphs/Demand-DrivenMenuAgent.png"
+import { ProductHero } from "@/components/products/ProductHero";
+import { AgentSection, type Agent } from "@/components/products/AgentSection";
+import { ManagedServices } from "@/components/managed-services";
+import CateringImg from "@/public/images/AgentGraphs/Catering.png";
+import UpsellnAttachImg from "@/public/images/AgentGraphs/UpsellandAttachAgent.png";
+import CustomerLifecycleImg from "@/public/images/AgentGraphs/CustomerLifecycle.png";
+import OnlineReputationImg from "@/public/images/AgentGraphs/OnlineReputation.png";
+import DemandDrivenMenuImg from "@/public/images/AgentGraphs/Demand-DrivenMenuAgent.png";
 
-
-import RevenueImg from "@/public/images/ProductPage/RevenueGrowthHomePage.png"
+import RevenueImg from "@/public/images/ProductPage/RevenueGrowthHomePage.png";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -209,17 +208,14 @@ export default function RevenueGrowthPage() {
           title: "Cross-Platform Review Recovery Agent",
           items: [
             "Unified cross-platform review inbox with issue tagging",
-            "Store-level “Whatto foix” scorecard with top issues and quantify impacts",
+            "Store-level “What to fix” scorecard with top issues and quantify impacts",
             "Plug-and-play response templates",
             "Turn top complaints into short SOP checklists",
           ],
         },
       ],
     },
-  ]
-
-
-
+  ];
 
   return (
     <>
@@ -230,7 +226,12 @@ export default function RevenueGrowthPage() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://kutlerri.ai" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://kutlerri.ai",
+              },
               { "@type": "ListItem", position: 2, name: "Products" },
               { "@type": "ListItem", position: 3, name: "Revenue Growth" },
             ],
@@ -260,8 +261,6 @@ export default function RevenueGrowthPage() {
 
       {/* MANAGED SERVICES */}
       <ManagedServices />
-
-
     </>
-  )
+  );
 }
